@@ -1,0 +1,17 @@
+{
+  "name": "rnwa",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://rizky@bitbucket.org/andromedia/rnwa.git",
+  "author": "rizky <rizky@andromedia.co.id>",
+  "license": "MIT",
+  "scripts": {
+    "web": "cd web && yarn start",
+    "mobile": "cd mobile && yarn start",
+    "android": "cd mobile && react-native run-android",
+    "sync": "cd web && yarn sync"
+  },
+  "dependencies": {
+    "@types/react-native": "^0.57.51"
+  }
+}
