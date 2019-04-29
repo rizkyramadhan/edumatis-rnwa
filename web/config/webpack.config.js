@@ -275,8 +275,7 @@ module.exports = function(webpackEnv) {
         // Support React Native Web
         // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
         "react-native": require.resolve("react-native-web"),
-        "@app": "./src/app",
-        "@component": "./src/component"
+        "@app": "./app"
       },
       plugins: [
         // Adds support for installing with Plug'n'Play, leading to faster installs and adding
@@ -379,8 +378,7 @@ module.exports = function(webpackEnv) {
                 presets: [
                   [
                     require.resolve("babel-preset-react-app/dependencies"),
-                    { helpers: true },
-                    "react"
+                    { helpers: true }
                   ]
                 ],
                 cacheDirectory: true,
