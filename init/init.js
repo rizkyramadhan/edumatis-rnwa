@@ -40,8 +40,6 @@ inquirer
       shell.exit(1);
     }
 
-    shell.cd("../mobile");
-    shell.exec("react-native eject");
 
     console.log("• Removing .git directory");
 
@@ -51,6 +49,7 @@ inquirer
     console.log("• Running yarn on mobile");
     shell.cd("mobile");
     shell.exec("yarn");
+    shell.exec("react-native eject");
 
     console.log("• Running yarn on web");
     shell.cd("../web");
