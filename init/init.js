@@ -23,6 +23,14 @@ inquirer
       }`
     );
 
+
+    if (!!fs.existsSync("../mobile/android") || !!fs.existsSync("../mobile/ios")) {
+      shell.echo(
+        "Sorry, folder mobile/android or mobile/ios already exists. Please remove those folder then try again."
+      );
+      shell.exit(1);
+    }
+
     shell.rm("-rf", "../mobile/android");
     shell.rm("-rf", "../mobile/ios");
 
@@ -39,6 +47,7 @@ inquirer
       );
       shell.exit(1);
     }
+
 
     console.log("• Removing .git directory");
 
