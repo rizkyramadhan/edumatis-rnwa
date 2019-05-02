@@ -40,7 +40,6 @@ inquirer
       shell.exit(1);
     }
 
-
     console.log("• Removing .git directory");
 
     shell.cd("..");
