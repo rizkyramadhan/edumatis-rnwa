@@ -6,12 +6,10 @@
   "author": "rizky <rizky@andromedia.co.id>",
   "license": "MIT",
   "scripts": {
-    "web": "cd web && yarn start",
-    "mobile": "cd mobile && yarn start",
+    "rnwa": "cd init && yarn && node init.js",
+    "web": "cd web && yarn && yarn start",
+    "mobile": "cd mobile && yarn && yarn start",
     "android": "cd mobile && react-native run-android",
     "sync": "cd web && yarn sync"
-  },
-  "dependencies": {
-    "@types/react-native": "^0.57.51"
   }
 }
