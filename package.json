@@ -7,9 +7,15 @@
   "license": "MIT",
   "scripts": {
     "rnwa": "cd init && yarn && node init.js",
-    "web": "cd web && yarn && yarn start",
-    "mobile": "cd mobile && yarn && yarn start",
+    "web": "cd web && yarn start",
+    "mobile": "cd mobile  && yarn start",
     "android": "cd mobile && react-native run-android",
-    "sync": "cd web && yarn sync"
+    "sync": "node init/sync.js"
+  },
+  "devDependencies": {
+    "@types/react-native-web": "npm:@types/react-native"
+  },
+  "dependencies": {
+    "sync-directory": "^2.0.8"
   }
 }
