@@ -60,6 +60,11 @@ inquirer
     shell.cd("..");
     // shell.rm("-rf", ".git");
 
+    console.log("• Cloning backend");
+    shell.exec(
+      "git clone https://rizky@bitbucket.org/andromedia/rnwa-backend.git backend"
+    );
+
     console.log("• Cloning libs");
     shell.exec(
       "git clone https://rizky@bitbucket.org/andromedia/rnwa-libs.git mobile/app/libs"

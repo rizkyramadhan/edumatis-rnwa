@@ -6,7 +6,8 @@
   "author": "rizky <rizky@andromedia.co.id>",
   "license": "MIT",
   "scripts": {
-    "rnwa": "cd init && yarn && node init.js",
+    "boot": "cd init && yarn && node init.js",
+    "update": "cd init && node update.js",
     "web": "node init/web.js",
     "mobile": "cd mobile  && yarn start",
     "android": "cd mobile && react-native run-android",
