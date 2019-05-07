@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/index.js"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static\\development\\pages\\index.js"],{
 
 /***/ "./node_modules/array-find-index/index.js":
 /*!************************************************!*\
@@ -5457,10 +5457,10 @@ module.exports = function (x) {
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2Fhome%2Friz%2FDocuments%2Frnwa%2Fweb%2Fpages%2Findex.js!./":
-/*!**********************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2Fhome%2Friz%2FDocuments%2Frnwa%2Fweb%2Fpages%2Findex.js ***!
-  \**********************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5CSari%5CDownloads%5CAlacritty-v0.3.2-windows-portable%5Crnwa%5Cweb%5Cpages%5Cindex.js!./":
+/*!****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5CSari%5CDownloads%5CAlacritty-v0.3.2-windows-portable%5Crnwa%5Cweb%5Cpages%5Cindex.js ***!
+  \****************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -47116,9 +47116,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-native-web */ "./node_modules/react-native-web/dist/index.js");
-/* harmony import */ var _components_nav_Router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/nav/Router */ "./pages/app/components/nav/Router.tsx");
-var _jsxFileName = "/home/riz/Documents/rnwa/web/pages/app/App.tsx";
-
+var _jsxFileName = "C:\\Users\\Sari\\Downloads\\Alacritty-v0.3.2-windows-portable\\rnwa\\web\\pages\\app\\App.tsx";
 
 
 var instructions = react_native_web__WEBPACK_IMPORTED_MODULE_1__["Platform"].select({
@@ -47140,33 +47138,21 @@ var instructions = react_native_web__WEBPACK_IMPORTED_MODULE_1__["Platform"].sel
       lineNumber: 19
     },
     __self: this
-  }, "geje mantb asd asd ini bisa React Native!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_1__["Text"], {
+  }, "Welcome to React Native!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_1__["Text"], {
     style: styles.instructions,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 22
     },
     __self: this
-  }, "To get asdstarted, edit App.tsx"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_1__["Text"], {
+  }, "To get started, edit App.tsx"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_1__["Text"], {
     style: styles.instructions,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 23
     },
     __self: this
-  }, instructions), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_1__["TouchableOpacity"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_nav_Router__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 25
-    },
-    __self: this
-  })));
+  }, instructions));
 });
 var styles = react_native_web__WEBPACK_IMPORTED_MODULE_1__["StyleSheet"].create({
   container: {
@@ -47188,33 +47174,6 @@ var styles = react_native_web__WEBPACK_IMPORTED_MODULE_1__["StyleSheet"].create(
 
 /***/ }),
 
-/***/ "./pages/app/components/nav/Router.tsx":
-/*!*********************************************!*\
-  !*** ./pages/app/components/nav/Router.tsx ***!
-  \*********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-native-web */ "./node_modules/react-native-web/dist/index.js");
-var _jsxFileName = "/home/riz/Documents/rnwa/web/pages/app/components/nav/Router.tsx";
-
-
-/* harmony default export */ __webpack_exports__["default"] = (function () {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_1__["Text"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 4
-    },
-    __self: this
-  }, "Halo ini web 2");
-});
-
-/***/ }),
-
 /***/ "./pages/index.js":
 /*!************************!*\
   !*** ./pages/index.js ***!
@@ -47231,13 +47190,13 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 0:
-/*!**************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2Fhome%2Friz%2FDocuments%2Frnwa%2Fweb%2Fpages%2Findex.js ***!
-  \**************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5CSari%5CDownloads%5CAlacritty-v0.3.2-windows-portable%5Crnwa%5Cweb%5Cpages%5Cindex.js ***!
+  \********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=%2Fhome%2Friz%2FDocuments%2Frnwa%2Fweb%2Fpages%2Findex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2Fhome%2Friz%2FDocuments%2Frnwa%2Fweb%2Fpages%2Findex.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5CSari%5CDownloads%5CAlacritty-v0.3.2-windows-portable%5Crnwa%5Cweb%5Cpages%5Cindex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5CSari%5CDownloads%5CAlacritty-v0.3.2-windows-portable%5Crnwa%5Cweb%5Cpages%5Cindex.js!./");
 
 
 /***/ }),

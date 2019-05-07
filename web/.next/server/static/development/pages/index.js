@@ -106,9 +106,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-native-web */ "react-native-web");
 /* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_native_web__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_nav_Router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/nav/Router */ "./pages/app/components/nav/Router.tsx");
-var _jsxFileName = "/home/riz/Documents/rnwa/web/pages/app/App.tsx";
-
+var _jsxFileName = "C:\\Users\\Sari\\Downloads\\Alacritty-v0.3.2-windows-portable\\rnwa\\web\\pages\\app\\App.tsx";
 
 
 var instructions = react_native_web__WEBPACK_IMPORTED_MODULE_1__["Platform"].select({
@@ -130,33 +128,21 @@ var instructions = react_native_web__WEBPACK_IMPORTED_MODULE_1__["Platform"].sel
       lineNumber: 19
     },
     __self: this
-  }, "geje mantb asd asd ini bisa React Native!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_1__["Text"], {
+  }, "Welcome to React Native!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_1__["Text"], {
     style: styles.instructions,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 22
     },
     __self: this
-  }, "To get asdstarted, edit App.tsx"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_1__["Text"], {
+  }, "To get started, edit App.tsx"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_1__["Text"], {
     style: styles.instructions,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 23
     },
     __self: this
-  }, instructions), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_1__["TouchableOpacity"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_nav_Router__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 25
-    },
-    __self: this
-  })));
+  }, instructions));
 });
 var styles = react_native_web__WEBPACK_IMPORTED_MODULE_1__["StyleSheet"].create({
   container: {
@@ -174,34 +160,6 @@ var styles = react_native_web__WEBPACK_IMPORTED_MODULE_1__["StyleSheet"].create(
     color: "#333333",
     marginBottom: 5
   }
-});
-
-/***/ }),
-
-/***/ "./pages/app/components/nav/Router.tsx":
-/*!*********************************************!*\
-  !*** ./pages/app/components/nav/Router.tsx ***!
-  \*********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-native-web */ "react-native-web");
-/* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_native_web__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/home/riz/Documents/rnwa/web/pages/app/components/nav/Router.tsx";
-
-
-/* harmony default export */ __webpack_exports__["default"] = (function () {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_1__["Text"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 4
-    },
-    __self: this
-  }, "Halo ini web 2");
 });
 
 /***/ }),
@@ -228,7 +186,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/riz/Documents/rnwa/web/pages/index.js */"./pages/index.js");
+module.exports = __webpack_require__(/*! C:\Users\Sari\Downloads\Alacritty-v0.3.2-windows-portable\rnwa\web\pages\index.js */"./pages/index.js");
 
 
 /***/ }),

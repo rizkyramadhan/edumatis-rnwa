@@ -49,10 +49,10 @@ inquirer
     }
 
 
-    console.log("• Removing .git directory");
+    // console.log("• Removing .git directory");
 
     shell.cd("..");
-    shell.rm("-rf", ".git");
+    // shell.rm("-rf", ".git");
 
     console.log("• Running yarn on mobile");
     shell.cd("mobile");

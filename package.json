@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "rnwa": "cd init && yarn && node init.js",
-    "web": "cd web && yarn dev",
+    "web": "node init/web.js",
     "mobile": "cd mobile  && yarn start",
     "android": "cd mobile && react-native run-android",
     "sync": "node init/sync.js"

@@ -17,13 +17,10 @@ export default () => {
   return (
     <View style={styles.container}>
       <Text style={styles.welcome}>
-        geje mantb asd asd ini bisa React Native!
+        Welcome to React Native!
       </Text>
-      <Text style={styles.instructions}>To get asdstarted, edit App.tsx</Text>
+      <Text style={styles.instructions}>To get started, edit App.tsx</Text>
       <Text style={styles.instructions}>{instructions}</Text>
-      <TouchableOpacity>
-        <Router />
-      </TouchableOpacity>
     </View>
   );
 };

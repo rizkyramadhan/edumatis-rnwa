@@ -12,7 +12,7 @@ const afterSync = e => {
       setTimeout(() => {
         fs.createReadStream(appWebPath).pipe(fs.createWriteStream(appPath));
       }, 100);
-      logtext += " [overriden from app-overide]";
+      logtext += " [overriden from app-override]";
       console.log(logtext);
       return false;
     }
@@ -20,8 +20,8 @@ const afterSync = e => {
 };
 
 setTimeout(() => {
-  const appPath = path.join(process.cwd(), "src", "app");
-  const appWebPath = path.join(process.cwd(), "web", "app-overide");
+  const appPath = path.join(process.cwd(), "mobile", "app");
+  const appWebPath = path.join(process.cwd(), "web", "app-override");
   require("sync-directory")(appWebPath, appPath, {
     watch: true,
     copy: true,
@@ -42,9 +42,8 @@ require("sync-directory")("mobile/app", "web/pages/app", {
     const appPath = path.join(process.cwd(), "web", "pages", "app", relPath);
     const appWebPath = path.join(
       process.cwd(),
-
       "web",
-      "app-overide",
+      "app-override",
       relPath
     );
 
@@ -68,8 +67,8 @@ require("sync-directory")("mobile/app", "web/pages/app", {
   afterSync: function(e) {
     if (e.type === "change") {
       const relPath = e.relativePath;
-      const mobilePath = path.join(process.cwd(), "mobile", "app", relPath);
-      const appPath = path.join(process.cwd(), "src", "app", relPath);
+      const mobilePath = path.join(process.cwd(), relPath);
+      const appPath = path.join(process.cwd(), "web", "pages", "app", relPath.substr("mobile/app".length));
       setTimeout(() => {
         const stat = fs.statSync(mobilePath);
         if (stat.isDirectory()) {
