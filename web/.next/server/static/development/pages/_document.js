@@ -2265,7 +2265,7 @@ var _jsxFileName = "C:\\Users\\Sari\\Downloads\\Alacritty-v0.3.2-windows-portabl
 
  // Force Next-generated DOM elements to fill their parent's height
 
-var normalizeNextElements = "\n  #__next {\n    display: flex;\n    flex-direction: column;\n    height: 100%;\n    user-select: none;\n  }\n";
+var normalizeNextElements = "\n  #__next {\n    display: flex;\n    flex-direction: column;\n    height: 100%;\n  }\n";
 
 var MyDocument =
 /*#__PURE__*/
@@ -2287,13 +2287,13 @@ function (_Document) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 28
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_8__["Head"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 29
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("meta", {
@@ -2301,7 +2301,7 @@ function (_Document) {
         content: "width=device-width, initial-scale=1",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31
+          lineNumber: 30
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("body", {
@@ -2311,19 +2311,19 @@ function (_Document) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 32
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_8__["Main"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 34
+          lineNumber: 33
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_8__["NextScript"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35
+          lineNumber: 34
         },
         __self: this
       })));
@@ -2352,7 +2352,7 @@ function (_Document) {
                   },
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 21
+                    lineNumber: 20
                   },
                   __self: this
                 }), getStyleElement()];
