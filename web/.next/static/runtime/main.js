@@ -6655,7 +6655,7 @@ function connect(options) {
       error.name = err.name;
       error.stack = err.stack; // __NEXT_DIST_DIR is provided by webpack
 
-      source_map_support_1.rewriteStacktrace(error, "C:\\Users\\Sari\\Downloads\\Alacritty-v0.3.2-windows-portable\\rnwa\\web\\.next");
+      source_map_support_1.rewriteStacktrace(error, "/home/riz/Documents/rnwa/web/.next");
       return error;
     }
   };

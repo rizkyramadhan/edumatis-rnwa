@@ -2260,7 +2260,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "C:\\Users\\Sari\\Downloads\\Alacritty-v0.3.2-windows-portable\\rnwa\\web\\pages\\_document.js";
+var _jsxFileName = "/home/riz/Documents/rnwa/web/pages/_document.js";
 
 
  // Force Next-generated DOM elements to fill their parent's height

@@ -1,4 +1,3 @@
-const ora = require("ora");
 const fs = require("fs");
 const inquirer = require("inquirer");
 const shell = require("shelljs");
@@ -9,11 +8,10 @@ inquirer
       name: "Project Name"
     }
   ])
-  .then(answer => {
+  .then(async answer => {
     const name = answer["Project Name"]
       .replace(/[^a-z0-9+]+/gi, "")
       .toLowerCase();
-    const spinner = ora("Generating " + name + "\n").start();
 
     fs.writeFileSync(
       "../mobile/app.json",
@@ -23,16 +21,25 @@ inquirer
       }`
     );
 
-
-    if (!!fs.existsSync("../mobile/android") || !!fs.existsSync("../mobile/ios")) {
-      shell.echo(
-        "Sorry, folder mobile/android or mobile/ios already exists. Please remove those folder then try again."
-      );
-      shell.exit(1);
+    if (
+      !!fs.existsSync("../mobile/android") ||
+      !!fs.existsSync("../mobile/ios")
+    ) {
+      const del = await inquirer.prompt([
+        {
+          name: "delete",
+          type: "confirm",
+          message:
+            "This project is already created, Do you want to remove it (will delete mobile/android and mobile/ios) ?"
+        }
+      ]);
+      if (del.delete) {
+        shell.rm("-rf", "../mobile/android");
+        shell.rm("-rf", "../mobile/ios");
+      } else {
+        shell.exit(1);
+      }
     }
-
-    shell.rm("-rf", "../mobile/android");
-    shell.rm("-rf", "../mobile/ios");
 
     if (!shell.which("react-native")) {
       shell.echo(
@@ -48,11 +55,20 @@ inquirer
       shell.exit(1);
     }
 
-
     // console.log("• Removing .git directory");
 
     shell.cd("..");
     // shell.rm("-rf", ".git");
+
+    console.log("• Cloning libs");
+    shell.exec(
+      "git clone https://rizky@bitbucket.org/andromedia/rnwa-libs.git mobile/app/libs"
+    );
+
+    console.log("• Cloning web-override");
+    shell.exec(
+      "git clone https://rizky@bitbucket.org/andromedia/rnwa-web-override.git web/app-override"
+    );
 
     console.log("• Running yarn on mobile");
     shell.cd("mobile");
@@ -63,6 +79,14 @@ inquirer
     shell.cd("../web");
     shell.exec("yarn");
 
-    console.log("\n• Done ");
-    spinner.stop();
+    const del = await inquirer.prompt([
+      {
+        name: "delete",
+        type: "confirm",
+        message: "Do you want to remove .git folder ?"
+      }
+    ]);
+    if (del.delete) {
+      shell.rm("-rf", ".git");
+    }
   });
