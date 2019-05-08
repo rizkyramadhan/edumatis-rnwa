@@ -95,14 +95,9 @@ inquirer
     shell.cd("../web");
     shell.exec("yarn");
 
-    const del = await inquirer.prompt([
-      {
-        name: "delete",
-        type: "confirm",
-        message: "Do you want to remove .git folder ?"
-      }
-    ]);
-    if (del.delete) {
-      shell.rm("-rf", ".git");
+    shell.cd("..");
+
+    if (!fs.existsSync(".git-original") && fs.existsSync(".git")) {
+      shell.exec("mv .git .git-original");
     }
   });

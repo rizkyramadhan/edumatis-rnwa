@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const shell = require("shelljs");
 const afterSync = e => {
   const relPath = e.relativePath;
   const appPath = path.join(process.cwd(), "web", "pages", "app", relPath);
@@ -33,6 +34,8 @@ setTimeout(() => {
   });
 }, 100);
 
+shell.exec(`rm -rf ${process.cwd()}/web/pages/app`);
+
 require("sync-directory")("mobile/app", "web/pages/app", {
   watch: true,
   copy: true,
@@ -40,12 +43,7 @@ require("sync-directory")("mobile/app", "web/pages/app", {
   filter: e => {
     const relPath = e.substr("mobile/app".length);
     const appPath = path.join(process.cwd(), "web", "pages", "app", relPath);
-    const appWebPath = path.join(
-      process.cwd(),
-      "web",
-      "app-override",
-      relPath
-    );
+    const appWebPath = path.join(process.cwd(), "web", "app-override", relPath);
 
     if (fs.existsSync(appWebPath)) {
       if (fs.lstatSync(appWebPath).isFile()) {
@@ -67,8 +65,14 @@ require("sync-directory")("mobile/app", "web/pages/app", {
   afterSync: function(e) {
     if (e.type === "change") {
       const relPath = e.relativePath;
-      const mobilePath = path.join(process.cwd(), relPath);
-      const appPath = path.join(process.cwd(), "web", "pages", "app", relPath.substr("mobile/app".length));
+      const mobilePath = path.join(process.cwd(), "mobile", "app", relPath);
+      const appPath = path.join(
+        process.cwd(),
+        "web",
+        "pages",
+        "app",
+        relPath
+      );
       setTimeout(() => {
         const stat = fs.statSync(mobilePath);
         if (stat.isDirectory()) {

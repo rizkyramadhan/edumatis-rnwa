@@ -2260,7 +2260,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/home/riz/Documents/rnwa/web/pages/_document.js";
+var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/_document.js";
 
 
  // Force Next-generated DOM elements to fill their parent's height
