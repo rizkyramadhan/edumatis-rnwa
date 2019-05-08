@@ -64,6 +64,12 @@ inquirer
     shell.exec(
       "git clone https://rizky@bitbucket.org/andromedia/rnwa-backend.git backend"
     );
+    shell.cp("init/backend-config.ts", "backend/config.ts");
+    shell.exec("mv backend/.git backend/.git-original");
+    shell.cd("backend");
+    shell.exec("git init");
+    shell.exec("git commit -am 'initial commit'");
+    shell.cd("..");
 
     console.log("• Cloning libs");
     shell.exec(
