@@ -10,7 +10,7 @@ import { checkSession } from "@app/libs/queries/user/checkSession";
 export default observer(({ navigation }: any) => {
   const data = useObservable({
     sekolah_id: "1",
-    nsa: "admin",
+    nsa: "1",
     password: "123"
   });
   const meta = useObservable({
@@ -48,6 +48,7 @@ export default observer(({ navigation }: any) => {
         label="ID Sekolah"
         sublabel={meta.sekolah}
         value={data.sekolah_id}
+        style={{ width: "70%" }}
         setValue={(value: string) => (data.sekolah_id = value)}
         onBlur={async () => {
           let res = await query("sekolah", ["nama_sekolah"], {
@@ -60,12 +61,12 @@ export default observer(({ navigation }: any) => {
             meta.sekolah = "Sekolah tidak ditemukan";
           }
         }}
-        fieldStyle={{ width: "70%" }}
       />
       <UIFieldText
-        label="Nomor Induk"
+        label="Nomor Induk / NSA"
         sublabel={meta.murid}
         value={data.nsa}
+        style={{ width: "70%" }}
         setValue={(value: string) => (data.nsa = value)}
         onBlur={async () => {
           let res = await query("murid", ["nama_murid"], {
@@ -78,14 +79,13 @@ export default observer(({ navigation }: any) => {
             meta.murid = "Nomor Induk tidak ditemukan";
           }
         }}
-        fieldStyle={{ width: "70%" }}
       />
       <UIFieldText
         type="password"
         label="Password"
         value={data.password}
         setValue={(value: string) => (data.password = value)}
-        fieldStyle={{ width: "70%" }}
+        style={{ width: "70%" }}
       />
       <UIButton
         style={{ width: "50%" }}

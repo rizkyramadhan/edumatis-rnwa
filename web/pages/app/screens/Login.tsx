@@ -10,7 +10,7 @@ import { checkSession } from "@app/libs/queries/user/checkSession";
 export default observer(({ navigation }: any) => {
   const data = useObservable({
     sekolah_id: "1",
-    nsa: "admin",
+    nsa: "1",
     password: "123"
   });
   const meta = useObservable({
@@ -63,7 +63,7 @@ export default observer(({ navigation }: any) => {
         }}
       />
       <UIFieldText
-        label="Nomor Induk"
+        label="Nomor Induk / NSA"
         sublabel={meta.murid}
         value={data.nsa}
         style={{ width: "70%" }}

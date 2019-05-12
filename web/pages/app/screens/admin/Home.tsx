@@ -6,9 +6,9 @@ import Kelas from "./Kelas/Kelas";
 
 export default SideNav(
   {
-    Kelas: { screen: Kelas },
     Kewajiban: { screen: Kewajiban },
-    Pengumuman: { screen: Pengumuman }
+    Pengumuman: { screen: Pengumuman },
+    Kelas: { screen: Kelas }
   },
   {
     contentComponent: SideBar
