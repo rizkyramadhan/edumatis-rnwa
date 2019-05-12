@@ -110,7 +110,7 @@ export default observer(({ navigation }: any) => {
                   }}
                 />
                 <Text style={{ padding: 10, paddingLeft: 15, color: "#333" }}>
-                  Kecuali murid dibawah ini:
+                  Khusus untuk murid ini, di set sesuai nominal tertera:
                 </Text>
               </View>
             );
