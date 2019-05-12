@@ -1,20 +1,25 @@
-import React from "react";
-import { Text, View } from "react-native";
+import UIBody from "@app/libs/ui/UIBody";
 import UIButton from "@app/libs/ui/UIButton";
-import { RootStore } from "@app/stores/RootStore";
+import UIContainer from "@app/libs/ui/UIContainer";
+import UIHead from "@app/libs/ui/UIHead";
+import UIList from "@app/libs/ui/UIList";
+import React from "react";
+import { View } from "react-native";
 
 export default ({ navigation }: any) => {
   return (
-    <View>
-      <UIButton
-        onPress={() => {
-          (RootStore.session as any).logout();
-          navigation.popToTop();
-          navigation.replace("Login");
-        }}
-      >
-        Logout
-      </UIButton>
-    </View>
+    <UIContainer>
+      <UIHead title="Kewajiban">
+        <UIButton size="small">+ Kewajiban Baru</UIButton>
+      </UIHead>
+      <UIBody>
+        <UIList
+          data={[1, 2, 3]}
+          render={() => {
+            return <View />;
+          }}
+        />
+      </UIBody>
+    </UIContainer>
   );
 };
