@@ -2,6 +2,40 @@ const fs = require("fs");
 const inquirer = require("inquirer");
 const shell = require("shelljs");
 console.log("\n\n");
+
+if (
+  !!fs.existsSync("../mobile/android") ||
+  !!fs.existsSync("../mobile/ios")
+) {
+  shell.cd("..");
+  if (fs.existsSync("mobile/app/libs/ui")) {
+    shell.exec("git -C mobile/app/libs pull")
+  } else {
+    shell.exec("rm -rf mobile/app/libs")
+    shell.exec(
+      "git clone https://rizky@bitbucket.org/andromedia/rnwa-libs-mobile.git mobile/app/libs"
+    );
+  }
+
+  if (fs.existsSync("web/pages/app/libs/ui")) {
+    shell.exec("git -C web/pages/app/libs pull")
+  } else {
+    shell.exec("rm -rf web/pages/app/libs")
+    shell.exec(
+      "git clone https://rizky@bitbucket.org/andromedia/rnwa-libs-web.git web/pages/app/libs"
+    );
+  }
+
+  console.log("• Running yarn on mobile");
+  shell.cd("mobile");
+  shell.exec("yarn");
+
+  console.log("• Running yarn on web");
+  shell.cd("../web");
+  shell.exec("yarn");
+  return
+}
+
 inquirer
   .prompt([
     {
@@ -21,25 +55,6 @@ inquirer
       }`
     );
 
-    if (
-      !!fs.existsSync("../mobile/android") ||
-      !!fs.existsSync("../mobile/ios")
-    ) {
-      const del = await inquirer.prompt([
-        {
-          name: "delete",
-          type: "confirm",
-          message:
-            "This project is already created, Do you want to remove it (will delete mobile/android and mobile/ios) ?"
-        }
-      ]);
-      if (del.delete) {
-        shell.rm("-rf", "../mobile/android");
-        shell.rm("-rf", "../mobile/ios");
-      } else {
-        shell.exit(1);
-      }
-    }
 
     if (!shell.which("react-native")) {
       shell.echo(
