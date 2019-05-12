@@ -8,7 +8,7 @@
   "scripts": {
     "boot": "cd init && yarn && node init.js",
     "update": "cd init && node update.js",
-    "web": "node init/web.js",
+    "web": "cd web && yarn dev",
     "mobile": "cd mobile  && yarn start",
     "android": "cd mobile && react-native link && react-native run-android",
     "sync": "node init/sync.js"

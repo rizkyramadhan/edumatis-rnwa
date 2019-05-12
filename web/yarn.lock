@@ -3828,6 +3828,11 @@ react-is@16.8.6, react-is@^16.8.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.6.tgz#5bbc1e2d29141c9fbdfed456343fe2bc430a6a16"
   integrity sha512-aUk3bHfZ2bRSVFFbbeVS4i+lNPZr3/WM5jT2J5omUVV1zzcs1nAaf3l51ctA5FFvCRbhrH0bdAsRRQddFJZPtA==
 
+react-json-to-html@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/react-json-to-html/-/react-json-to-html-0.0.3.tgz#910c2aebc39a44389ac505b1971a2ef8f704ce0b"
+  integrity sha512-ir/tiSB3Pi5l0U0uCKKtF3/rJcQ0FG9pw4j1R40AS7km+U/bSkrADn0TPCfSiBq3EeNxYHSJLZOfGyrSNr5Bcw==
+
 react-native-responsive-layout@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/react-native-responsive-layout/-/react-native-responsive-layout-1.1.0.tgz#1f2baa315597abfd0c2544bb38f56fdf7abe47dd"

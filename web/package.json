@@ -17,6 +17,7 @@
     "react": "^16.8.6",
     "react-art": "^16.5.2",
     "react-dom": "^16.8.6",
+    "react-json-to-html": "^0.0.3",
     "react-native-responsive-layout": "^1.1.0",
     "react-native-web": "^0.9.3"
   },

@@ -38,6 +38,7 @@ app.use(async (ctx: Context) => {
     if (!!user) {
       send(ctx, 200, {
         "X-Hasura-User-Id": user[config.identifier.id].toString(),
+        "X-Hasura-Cid": user[config.identifier.client_id].toString(),
         "X-Hasura-Role":
           config.identifier.role[0] === "'"
             ? config.identifier.role.substr(
@@ -63,6 +64,7 @@ app.use(async (ctx: Context) => {
         const session = await addSession(user.id);
         send(ctx, 200, {
           "X-Hasura-User-Id": user[config.identifier.id].toString(),
+          "X-Hasura-Cid": clientId.toString(),
           "X-Hasura-Role":
             config.identifier.role[0] === "'"
               ? config.identifier.role.substr(

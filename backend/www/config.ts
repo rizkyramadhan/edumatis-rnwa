@@ -17,5 +17,5 @@ export default {
     password: "password",
     client_id: "sekolah_id"
   },
-  columns: ["id", "nisn", "role", "nsa", "nama_murid", "password"]
+  columns: ["id", "nisn", "role", "nsa", "nama_murid", "password", "sekolah_id"]
 };
