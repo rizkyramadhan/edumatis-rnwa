@@ -1,35 +1,10 @@
-import React from "react";
-import { Platform, StyleSheet, Text, View } from "react-native";
+import StackNav from "@app/libs/nav/StackNav";
+import Login from "./screens/Login";
+import AdminHome from "./screens/admin/Home";
+import SiswaHome from "./screens/siswa/Home";
 
-const instructions = Platform.select({
-  ios: "Press Cmd+R to reload,\n Cmd+D or shake for dev menu",
-  android: "Double tap R on your keyboard to reload,\n Shake or press menu enu"
-}); 
-
-export default () => {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.welcome}>Welcome to React Native!</Text>
-      <Text style={styles.instructions}>To get started, edit App.tsx</Text>
-      <Text style={styles.instructions}>{instructions}</Text>
-    </View> 
-  ); 
-};
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    backgroundColor: "#F5FCFF"
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: "center",
-    margin: 10
-  },
-  instructions: {
-    textAlign: "center",
-    color: "#333333",
-    marginBottom: 5
-  }
+export default StackNav({
+  Login: { screen: Login },
+  Admin: { screen: AdminHome },
+  Siswa: { screen: SiswaHome }
 });

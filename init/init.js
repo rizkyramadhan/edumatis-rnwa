@@ -76,14 +76,16 @@ inquirer
     shell.exec("git commit -am 'initial commit'");
     shell.cd("..");
 
-    console.log("• Cloning libs");
+    console.log("• Cloning libs - mobile");
+    shell.exec("rm -rf mobile/app/libs");
     shell.exec(
-      "git clone https://rizky@bitbucket.org/andromedia/rnwa-libs.git mobile/app/libs"
+      "git clone https://rizky@bitbucket.org/andromedia/rnwa-libs-mobile.git mobile/app/libs"
     );
 
-    console.log("• Cloning web-override");
+    console.log("• Cloning libs - web");
+    shell.exec("rm -rf web/pages/app/libs");
     shell.exec(
-      "git clone https://rizky@bitbucket.org/andromedia/rnwa-web-override.git web/app-override"
+      "git clone https://rizky@bitbucket.org/andromedia/rnwa-libs-web.git web/pages/app/libs"
     );
 
     console.log("• Running yarn on mobile");

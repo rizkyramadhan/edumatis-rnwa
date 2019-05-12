@@ -1,40 +1,46 @@
 const fs = require("fs");
 const path = require("path");
 const shell = require("shelljs");
-const afterSync = e => {
-  const relPath = e.relativePath;
-  const appPath = path.join(process.cwd(), "web", "pages", "app", relPath);
-  const appWebPath = path.join(process.cwd(), "web", "pages", "index", relPath);
+// const afterSync = e => {
+//   const relPath = e.relativePath;
+//   const appPath = path.join(process.cwd(), "web", "pages", "app", relPath);
+//   const appWebPath = path.join(process.cwd(), "web", "pages", "index", relPath);
 
-  let logtext = `Syncing ${relPath}`;
+//   let logtext = `Syncing ${relPath}`;
 
-  if (fs.existsSync(appWebPath)) {
-    if (fs.lstatSync(appWebPath).isFile()) {
-      setTimeout(() => {
-        fs.createReadStream(appWebPath).pipe(fs.createWriteStream(appPath));
-      }, 100);
-      logtext += " [overriden from app-override]";
-      console.log(logtext);
-      return false;
-    }
-  }
-};
+//   if (fs.existsSync(appWebPath)) {
+//     if (fs.lstatSync(appWebPath).isFile()) {
+//       setTimeout(() => {
+//         fs.createReadStream(appWebPath).pipe(fs.createWriteStream(appPath));
+//       }, 100);
+//       logtext += " [overriden from app-override]";
+//       console.log(logtext);
+//       return false;
+//     }
+//   }
+// };
 
-setTimeout(() => {
-  const appPath = path.join(process.cwd(), "mobile", "app");
-  const appWebPath = path.join(process.cwd(), "web", "app-override");
-  require("sync-directory")(appWebPath, appPath, {
-    watch: true,
-    copy: true,
-    deleteOrphaned: true,
-    filter: e => {
-      return false;
-    },
-    afterSync
-  });
-}, 100);
+// setTimeout(() => {
+//   const appPath = path.join(process.cwd(), "mobile", "app");
+//   const appWebPath = path.join(process.cwd(), "web", "app-override");
+//   require("sync-directory")(appWebPath, appPath, {
+//     watch: true,
+//     copy: true,
+//     deleteOrphaned: true,
+//     filter: e => {
+//       return false;
+//     },
+//     afterSync
+//   });
+// }, 100);
 
 shell.exec(`rm -rf ${process.cwd()}/web/pages/app`);
+console.log("• Cloning libs - web");
+shell.exec("rm -rf web/pages/app/libs");
+shell.exec(
+  "git clone https://rizky@bitbucket.org/andromedia/rnwa-libs-web.git web/pages/app/libs"
+);
+
 
 require("sync-directory")("mobile/app", "web/pages/app", {
   watch: true,
@@ -44,6 +50,10 @@ require("sync-directory")("mobile/app", "web/pages/app", {
     const relPath = e.substr("mobile/app".length);
     const appPath = path.join(process.cwd(), "web", "pages", "app", relPath);
     const appWebPath = path.join(process.cwd(), "web", "app-override", relPath);
+
+    if (e.indexOf("mobile/app/libs") === 0) {
+      return false;
+    }
 
     if (fs.existsSync(appWebPath)) {
       if (fs.lstatSync(appWebPath).isFile()) {
@@ -66,13 +76,12 @@ require("sync-directory")("mobile/app", "web/pages/app", {
     if (e.type === "change") {
       const relPath = e.relativePath;
       const mobilePath = path.join(process.cwd(), "mobile", "app", relPath);
-      const appPath = path.join(
-        process.cwd(),
-        "web",
-        "pages",
-        "app",
-        relPath
-      );
+      const appPath = path.join(process.cwd(), "web", "pages", "app", relPath);
+
+      if (relPath.indexOf("libs") === 1) {
+        return false;
+      }
+
       setTimeout(() => {
         const stat = fs.statSync(mobilePath);
         if (stat.isDirectory()) {

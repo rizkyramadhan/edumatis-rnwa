@@ -4,6 +4,11 @@
 .git-original
 .git-old
 
+pages/app/libs-temp
+
+mobile/app/libs
+web/pages/app/libs
+
 # Xcode
 #
 build/

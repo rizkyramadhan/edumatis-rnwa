@@ -2,6 +2,11 @@
 #
 .DS_Store
 
+android-temp
+ios-temp
+
+app/libs-temp
+
 # Xcode
 #
 build/

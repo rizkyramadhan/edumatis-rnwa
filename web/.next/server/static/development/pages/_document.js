@@ -2227,6 +2227,18 @@ module.exports = __webpack_require__(/*! ./dist/server */ "./node_modules/styled
 
 /***/ }),
 
+/***/ "./node_modules/styled-jsx/style.js":
+/*!******************************************!*\
+  !*** ./node_modules/styled-jsx/style.js ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! ./dist/style */ "./node_modules/styled-jsx/dist/style.js")
+
+
+/***/ }),
+
 /***/ "./pages/_document.js":
 /*!****************************!*\
   !*** ./pages/_document.js ***!
@@ -2246,12 +2258,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
-/* harmony import */ var next_document__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! next/document */ "./node_modules/next/document.js");
-/* harmony import */ var next_document__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(next_document__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-native-web */ "react-native-web");
-/* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react_native_web__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! styled-jsx/style */ "./node_modules/styled-jsx/style.js");
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var next_document__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! next/document */ "./node_modules/next/document.js");
+/* harmony import */ var next_document__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(next_document__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-native-web */ "react-native-web");
+/* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(react_native_web__WEBPACK_IMPORTED_MODULE_11__);
 
 
 
@@ -2261,6 +2275,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/_document.js";
+
 
 
  // Force Next-generated DOM elements to fill their parent's height
@@ -2281,49 +2296,53 @@ function (_Document) {
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_4__["default"])(MyDocument, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("html", {
+      return react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("html", {
         style: {
-          height: '100%'
+          height: "100%"
         },
         __source: {
           fileName: _jsxFileName,
           lineNumber: 28
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_8__["Head"], {
+      }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_9__["Head"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 29
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("meta", {
+      }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("meta", {
         name: "viewport",
         content: "width=device-width, initial-scale=1",
+        className: "jsx-962765224",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 30
         },
         __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("body", {
+      }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_8___default.a, {
+        id: "962765224",
+        __self: this
+      }, "div{font-size:11px;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9tZWRpYS9yaXovZGF0YS9Qcm9qZWN0cy9lZHVtYXRpcy93ZWIvcGFnZXMvX2RvY3VtZW50LmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQThCNkIsQUFHOEIsZUFDakIiLCJmaWxlIjoiL21lZGlhL3Jpei9kYXRhL1Byb2plY3RzL2VkdW1hdGlzL3dlYi9wYWdlcy9fZG9jdW1lbnQuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgRG9jdW1lbnQsIHsgSGVhZCwgTWFpbiwgTmV4dFNjcmlwdCB9IGZyb20gXCJuZXh0L2RvY3VtZW50XCI7XG5pbXBvcnQgUmVhY3QgZnJvbSBcInJlYWN0XCI7XG5pbXBvcnQgeyBBcHBSZWdpc3RyeSB9IGZyb20gXCJyZWFjdC1uYXRpdmUtd2ViXCI7XG5cbi8vIEZvcmNlIE5leHQtZ2VuZXJhdGVkIERPTSBlbGVtZW50cyB0byBmaWxsIHRoZWlyIHBhcmVudCdzIGhlaWdodFxuY29uc3Qgbm9ybWFsaXplTmV4dEVsZW1lbnRzID0gYFxuICAjX19uZXh0IHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gICAgaGVpZ2h0OiAxMDAlO1xuICB9XG5gO1xuXG5leHBvcnQgZGVmYXVsdCBjbGFzcyBNeURvY3VtZW50IGV4dGVuZHMgRG9jdW1lbnQge1xuICBzdGF0aWMgYXN5bmMgZ2V0SW5pdGlhbFByb3BzKHsgcmVuZGVyUGFnZSB9KSB7XG4gICAgQXBwUmVnaXN0cnkucmVnaXN0ZXJDb21wb25lbnQoXCJNYWluXCIsICgpID0+IE1haW4pO1xuICAgIGNvbnN0IHsgZ2V0U3R5bGVFbGVtZW50IH0gPSBBcHBSZWdpc3RyeS5nZXRBcHBsaWNhdGlvbihcIk1haW5cIik7XG4gICAgY29uc3QgcGFnZSA9IHJlbmRlclBhZ2UoKTtcbiAgICBjb25zdCBzdHlsZXMgPSBbXG4gICAgICA8c3R5bGUgZGFuZ2Vyb3VzbHlTZXRJbm5lckhUTUw9e3sgX19odG1sOiBub3JtYWxpemVOZXh0RWxlbWVudHMgfX0gLz4sXG4gICAgICBnZXRTdHlsZUVsZW1lbnQoKVxuICAgIF07XG4gICAgcmV0dXJuIHsgLi4ucGFnZSwgc3R5bGVzOiBSZWFjdC5DaGlsZHJlbi50b0FycmF5KHN0eWxlcykgfTtcbiAgfVxuXG4gIHJlbmRlcigpIHtcbiAgICByZXR1cm4gKFxuICAgICAgPGh0bWwgc3R5bGU9e3sgaGVpZ2h0OiBcIjEwMCVcIiB9fT5cbiAgICAgICAgPEhlYWQ+XG4gICAgICAgICAgPG1ldGEgbmFtZT1cInZpZXdwb3J0XCIgY29udGVudD1cIndpZHRoPWRldmljZS13aWR0aCwgaW5pdGlhbC1zY2FsZT0xXCIgLz5cbiAgICAgICAgICA8c3R5bGUganN4IGdsb2JhbD57YFxuICAgICAgICAgICAgZGl2IHtcbiAgICAgICAgICAgICAgZm9udC1zaXplOiAxMXB4O1xuICAgICAgICAgICAgfVxuICAgICAgICAgIGB9PC9zdHlsZT5cbiAgICAgICAgPC9IZWFkPlxuICAgICAgICA8Ym9keSBzdHlsZT17eyBoZWlnaHQ6IFwiMTAwJVwiLCBvdmVyZmxvdzogXCJoaWRkZW5cIiB9fT5cbiAgICAgICAgICA8TWFpbiAvPlxuICAgICAgICAgIDxOZXh0U2NyaXB0IC8+XG4gICAgICAgIDwvYm9keT5cbiAgICAgIDwvaHRtbD5cbiAgICApO1xuICB9XG59XG4iXX0= */\n/*@ sourceURL=/media/riz/data/Projects/edumatis/web/pages/_document.js */")), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("body", {
         style: {
-          height: '100%',
-          overflow: 'hidden'
+          height: "100%",
+          overflow: "hidden"
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_8__["Main"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 37
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_8__["NextScript"], {
+      }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_9__["Main"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 34
+          lineNumber: 38
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_9__["NextScript"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 39
         },
         __self: this
       })));
@@ -2341,12 +2360,12 @@ function (_Document) {
             switch (_context.prev = _context.next) {
               case 0:
                 renderPage = _ref.renderPage;
-                react_native_web__WEBPACK_IMPORTED_MODULE_10__["AppRegistry"].registerComponent('Main', function () {
-                  return next_document__WEBPACK_IMPORTED_MODULE_8__["Main"];
+                react_native_web__WEBPACK_IMPORTED_MODULE_11__["AppRegistry"].registerComponent("Main", function () {
+                  return next_document__WEBPACK_IMPORTED_MODULE_9__["Main"];
                 });
-                _AppRegistry$getAppli = react_native_web__WEBPACK_IMPORTED_MODULE_10__["AppRegistry"].getApplication('Main'), getStyleElement = _AppRegistry$getAppli.getStyleElement;
+                _AppRegistry$getAppli = react_native_web__WEBPACK_IMPORTED_MODULE_11__["AppRegistry"].getApplication("Main"), getStyleElement = _AppRegistry$getAppli.getStyleElement;
                 page = renderPage();
-                styles = [react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("style", {
+                styles = [react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("style", {
                   dangerouslySetInnerHTML: {
                     __html: normalizeNextElements
                   },
@@ -2357,7 +2376,7 @@ function (_Document) {
                   __self: this
                 }), getStyleElement()];
                 return _context.abrupt("return", Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_1__["default"])({}, page, {
-                  styles: react__WEBPACK_IMPORTED_MODULE_9___default.a.Children.toArray(styles)
+                  styles: react__WEBPACK_IMPORTED_MODULE_10___default.a.Children.toArray(styles)
                 }));
 
               case 6:
@@ -2377,7 +2396,7 @@ function (_Document) {
   }]);
 
   return MyDocument;
-}(next_document__WEBPACK_IMPORTED_MODULE_8___default.a);
+}(next_document__WEBPACK_IMPORTED_MODULE_9___default.a);
 
 
 

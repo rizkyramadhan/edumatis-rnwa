@@ -10,13 +10,8 @@
     "update": "cd init && node update.js",
     "web": "node init/web.js",
     "mobile": "cd mobile  && yarn start",
-    "android": "cd mobile && react-native run-android",
+    "android": "cd mobile && react-native link && react-native run-android",
     "sync": "node init/sync.js"
   },
-  "devDependencies": {
-    "@types/react-native-web": "npm:@types/react-native"
-  },
-  "dependencies": {
-    "sync-directory": "^2.0.8"
-  }
+  "dependencies": {}
 }

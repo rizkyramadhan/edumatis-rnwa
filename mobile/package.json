@@ -7,8 +7,16 @@
     "test": "jest"
   },
   "dependencies": {
+    "@react-native-community/async-storage": "^1.3.4",
+    "lodash.get": "^4.4.2",
+    "mobx": "^5.9.4",
+    "mobx-react-lite": "^1.3.1",
+    "mobx-state-tree": "^3.14.0",
     "react": "16.8.3",
-    "react-native": "0.59.5"
+    "react-native": "0.59.5",
+    "react-native-gesture-handler": "^1.2.1",
+    "react-native-responsive-layout": "^1.1.0",
+    "react-navigation": "^3.9.1"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
@@ -16,6 +24,7 @@
     "@types/jest": "^24.0.12",
     "@types/react": "^16.8.14",
     "@types/react-native": "^0.57.50",
+    "@types/react-navigation": "^3.0.7",
     "@types/react-test-renderer": "^16.8.1",
     "babel-jest": "^24.7.1",
     "babel-plugin-module-resolver": "^3.2.0",
