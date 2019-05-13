@@ -7569,6 +7569,18 @@ module.exports = exports['default'];
 
 /***/ }),
 
+/***/ "./node_modules/dayjs/dayjs.min.js":
+/*!*****************************************!*\
+  !*** ./node_modules/dayjs/dayjs.min.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(t,n){ true?module.exports=n():undefined}(this,function(){"use strict";var t="millisecond",n="second",e="minute",r="hour",i="day",s="week",u="month",o="quarter",a="year",h=/^(\d{4})-?(\d{1,2})-?(\d{0,2})[^0-9]*(\d{1,2})?:?(\d{1,2})?:?(\d{1,2})?.?(\d{1,3})?$/,f=/\[([^\]]+)]|Y{2,4}|M{1,4}|D{1,2}|d{1,4}|H{1,2}|h{1,2}|a|A|m{1,2}|s{1,2}|Z{1,2}|SSS/g,c=function(t,n,e){var r=String(t);return!r||r.length>=n?t:""+Array(n+1-r.length).join(e)+t},d={s:c,z:function(t){var n=-t.utcOffset(),e=Math.abs(n),r=Math.floor(e/60),i=e%60;return(n<=0?"+":"-")+c(r,2,"0")+":"+c(i,2,"0")},m:function(t,n){var e=12*(n.year()-t.year())+(n.month()-t.month()),r=t.clone().add(e,u),i=n-r<0,s=t.clone().add(e+(i?-1:1),u);return Number(-(e+(n-r)/(i?r-s:s-r))||0)},a:function(t){return t<0?Math.ceil(t)||0:Math.floor(t)},p:function(h){return{M:u,y:a,w:s,d:i,h:r,m:e,s:n,ms:t,Q:o}[h]||String(h||"").toLowerCase().replace(/s$/,"")},u:function(t){return void 0===t}},$={name:"en",weekdays:"Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday".split("_"),months:"January_February_March_April_May_June_July_August_September_October_November_December".split("_")},l="en",m={};m[l]=$;var y=function(t){return t instanceof v},M=function(t,n,e){var r;if(!t)return null;if("string"==typeof t)m[t]&&(r=t),n&&(m[t]=n,r=t);else{var i=t.name;m[i]=t,r=i}return e||(l=r),r},g=function(t,n,e){if(y(t))return t.clone();var r=n?"string"==typeof n?{format:n,pl:e}:n:{};return r.date=t,new v(r)},D=d;D.l=M,D.i=y,D.w=function(t,n){return g(t,{locale:n.$L,utc:n.$u})};var v=function(){function c(t){this.$L=this.$L||M(t.locale,null,!0)||l,this.parse(t)}var d=c.prototype;return d.parse=function(t){this.$d=function(t){var n=t.date,e=t.utc;if(null===n)return new Date(NaN);if(D.u(n))return new Date;if(n instanceof Date)return new Date(n);if("string"==typeof n&&!/Z$/i.test(n)){var r=n.match(h);if(r)return e?new Date(Date.UTC(r[1],r[2]-1,r[3]||1,r[4]||0,r[5]||0,r[6]||0,r[7]||0)):new Date(r[1],r[2]-1,r[3]||1,r[4]||0,r[5]||0,r[6]||0,r[7]||0)}return new Date(n)}(t),this.init()},d.init=function(){var t=this.$d;this.$y=t.getFullYear(),this.$M=t.getMonth(),this.$D=t.getDate(),this.$W=t.getDay(),this.$H=t.getHours(),this.$m=t.getMinutes(),this.$s=t.getSeconds(),this.$ms=t.getMilliseconds()},d.$utils=function(){return D},d.isValid=function(){return!("Invalid Date"===this.$d.toString())},d.isSame=function(t,n){var e=g(t);return this.startOf(n)<=e&&e<=this.endOf(n)},d.isAfter=function(t,n){return g(t)<this.startOf(n)},d.isBefore=function(t,n){return this.endOf(n)<g(t)},d.$g=function(t,n,e){return D.u(t)?this[n]:this.set(e,t)},d.year=function(t){return this.$g(t,"$y",a)},d.month=function(t){return this.$g(t,"$M",u)},d.day=function(t){return this.$g(t,"$W",i)},d.date=function(t){return this.$g(t,"$D","date")},d.hour=function(t){return this.$g(t,"$H",r)},d.minute=function(t){return this.$g(t,"$m",e)},d.second=function(t){return this.$g(t,"$s",n)},d.millisecond=function(n){return this.$g(n,"$ms",t)},d.unix=function(){return Math.floor(this.valueOf()/1e3)},d.valueOf=function(){return this.$d.getTime()},d.startOf=function(t,o){var h=this,f=!!D.u(o)||o,c=D.p(t),d=function(t,n){var e=D.w(h.$u?Date.UTC(h.$y,n,t):new Date(h.$y,n,t),h);return f?e:e.endOf(i)},$=function(t,n){return D.w(h.toDate()[t].apply(h.toDate(),(f?[0,0,0,0]:[23,59,59,999]).slice(n)),h)},l=this.$W,m=this.$M,y=this.$D,M="set"+(this.$u?"UTC":"");switch(c){case a:return f?d(1,0):d(31,11);case u:return f?d(1,m):d(0,m+1);case s:var g=this.$locale().weekStart||0,v=(l<g?l+7:l)-g;return d(f?y-v:y+(6-v),m);case i:case"date":return $(M+"Hours",0);case r:return $(M+"Minutes",1);case e:return $(M+"Seconds",2);case n:return $(M+"Milliseconds",3);default:return this.clone()}},d.endOf=function(t){return this.startOf(t,!1)},d.$set=function(s,o){var h,f=D.p(s),c="set"+(this.$u?"UTC":""),d=(h={},h[i]=c+"Date",h.date=c+"Date",h[u]=c+"Month",h[a]=c+"FullYear",h[r]=c+"Hours",h[e]=c+"Minutes",h[n]=c+"Seconds",h[t]=c+"Milliseconds",h)[f],$=f===i?this.$D+(o-this.$W):o;if(f===u||f===a){var l=this.clone().set("date",1);l.$d[d]($),l.init(),this.$d=l.set("date",Math.min(this.$D,l.daysInMonth())).toDate()}else d&&this.$d[d]($);return this.init(),this},d.set=function(t,n){return this.clone().$set(t,n)},d.get=function(t){return this[D.p(t)]()},d.add=function(t,o){var h,f=this;t=Number(t);var c=D.p(o),d=function(n){var e=g(f);return D.w(e.date(e.date()+Math.round(n*t)),f)};if(c===u)return this.set(u,this.$M+t);if(c===a)return this.set(a,this.$y+t);if(c===i)return d(1);if(c===s)return d(7);var $=(h={},h[e]=6e4,h[r]=36e5,h[n]=1e3,h)[c]||1,l=this.valueOf()+t*$;return D.w(l,this)},d.subtract=function(t,n){return this.add(-1*t,n)},d.format=function(t){var n=this;if(!this.isValid())return"Invalid Date";var e=t||"YYYY-MM-DDTHH:mm:ssZ",r=D.z(this),i=this.$locale(),s=this.$H,u=this.$m,o=this.$M,a=i.weekdays,h=i.months,c=function(t,r,i,s){return t&&(t[r]||t(n,e))||i[r].substr(0,s)},d=function(t){return D.s(s%12||12,t,"0")},$=i.meridiem||function(t,n,e){var r=t<12?"AM":"PM";return e?r.toLowerCase():r},l={YY:String(this.$y).slice(-2),YYYY:this.$y,M:o+1,MM:D.s(o+1,2,"0"),MMM:c(i.monthsShort,o,h,3),MMMM:h[o]||h(this,e),D:this.$D,DD:D.s(this.$D,2,"0"),d:String(this.$W),dd:c(i.weekdaysMin,this.$W,a,2),ddd:c(i.weekdaysShort,this.$W,a,3),dddd:a[this.$W],H:String(s),HH:D.s(s,2,"0"),h:d(1),hh:d(2),a:$(s,u,!0),A:$(s,u,!1),m:String(u),mm:D.s(u,2,"0"),s:String(this.$s),ss:D.s(this.$s,2,"0"),SSS:D.s(this.$ms,3,"0"),Z:r};return e.replace(f,function(t,n){return n||l[t]||r.replace(":","")})},d.utcOffset=function(){return 15*-Math.round(this.$d.getTimezoneOffset()/15)},d.diff=function(t,h,f){var c,d=D.p(h),$=g(t),l=6e4*($.utcOffset()-this.utcOffset()),m=this-$,y=D.m(this,$);return y=(c={},c[a]=y/12,c[u]=y,c[o]=y/3,c[s]=(m-l)/6048e5,c[i]=(m-l)/864e5,c[r]=m/36e5,c[e]=m/6e4,c[n]=m/1e3,c)[d]||m,f?y:D.a(y)},d.daysInMonth=function(){return this.endOf(u).$D},d.$locale=function(){return m[this.$L]},d.locale=function(t,n){if(!t)return this.$L;var e=this.clone();return e.$L=M(t,n,!0),e},d.clone=function(){return D.w(this.toDate(),this)},d.toDate=function(){return new Date(this.$d)},d.toJSON=function(){return this.toISOString()},d.toISOString=function(){return this.$d.toISOString()},d.toString=function(){return this.$d.toUTCString()},c}();return g.prototype=v.prototype,g.extend=function(t,n){return t(n,v,g),g},g.locale=M,g.isDayjs=y,g.unix=function(t){return g(1e3*t)},g.en=m[l],g.Ls=m,g});
+
+
+/***/ }),
+
 /***/ "./node_modules/debounce/index.js":
 /*!****************************************!*\
   !*** ./node_modules/debounce/index.js ***!
@@ -65195,34 +65207,39 @@ __webpack_require__.r(__webpack_exports__);
               where: {},
               args: "limit:1"
             }, options);
+
+            if (opt.debug) {
+              console.log(query);
+            }
+
             headers = {
               "Content-Type": "application/json"
             };
 
             if (!opt.useSession) {
-              _context.next = 12;
+              _context.next = 13;
               break;
             }
 
-            _context.next = 5;
+            _context.next = 6;
             return react_native_web__WEBPACK_IMPORTED_MODULE_5__["AsyncStorage"].getItem("SESSION");
 
-          case 5:
+          case 6:
             sessionRaw = _context.sent;
             session = JSON.parse(sessionRaw || "false");
 
             if (session) {
-              _context.next = 11;
+              _context.next = 12;
               break;
             }
 
             return _context.abrupt("return", false);
 
-          case 11:
+          case 12:
             headers["X-Hasura-Session-Id"] = session.id;
 
-          case 12:
-            _context.next = 14;
+          case 13:
+            _context.next = 15;
             return fetch(_config__WEBPACK_IMPORTED_MODULE_4__["default"].url, {
               method: "POST",
               body: _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1___default()({
@@ -65231,16 +65248,16 @@ __webpack_require__.r(__webpack_exports__);
               headers: headers
             });
 
-          case 14:
+          case 15:
             response = _context.sent;
-            _context.next = 17;
+            _context.next = 18;
             return response.json();
 
-          case 17:
+          case 18:
             json = _context.sent;
             return _context.abrupt("return", json.data);
 
-          case 19:
+          case 20:
           case "end":
             return _context.stop();
         }
@@ -66229,20 +66246,23 @@ var St = react_native_web__WEBPACK_IMPORTED_MODULE_2__["StyleSheet"].create({
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-native-web */ "./node_modules/react-native-web/dist/index.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/objectSpread */ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectSpread.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-native-web */ "./node_modules/react-native-web/dist/index.js");
+
 var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/ui/UIBody.tsx";
 
 
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
-  var children = _ref.children;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_1__["ScrollView"], {
-    style: {
+  var children = _ref.children,
+      style = _ref.style;
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_2__["ScrollView"], {
+    style: Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, style || {}, {
       paddingVertical: 10,
       flex: 1,
       paddingHorizontal: 25
-    },
+    }),
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6
@@ -66400,19 +66420,22 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/ui/U
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-native-web */ "./node_modules/react-native-web/dist/index.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/objectSpread */ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectSpread.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-native-web */ "./node_modules/react-native-web/dist/index.js");
+
 var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/ui/UIContainer.tsx";
 
 
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
-  var children = _ref.children;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_1__["View"], {
-    style: {
+  var children = _ref.children,
+      style = _ref.style;
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_2__["View"], {
+    style: Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, style, {
       flex: 1,
       flexDirection: "column"
-    },
+    }),
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6
@@ -66682,10 +66705,12 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/ui/U
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-native-web */ "./node_modules/react-native-web/dist/index.js");
-/* harmony import */ var _UIImage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./UIImage */ "./pages/app/libs/ui/UIImage.tsx");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/objectSpread */ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectSpread.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-native-web */ "./node_modules/react-native-web/dist/index.js");
+/* harmony import */ var _UIImage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./UIImage */ "./pages/app/libs/ui/UIImage.tsx");
+
 var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/ui/UIHead.tsx";
 
 
@@ -66693,32 +66718,33 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/ui/U
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
   var title = _ref.title,
       children = _ref.children,
-      onBack = _ref.onBack;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_1__["View"], {
-    style: {
+      onBack = _ref.onBack,
+      style = _ref.style;
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_2__["View"], {
+    style: Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, style || {}, {
       paddingVertical: 15,
       paddingHorizontal: 25,
       flexBasis: 75,
       flexDirection: "row",
       alignItems: "center",
       justifyContent: "space-between"
-    },
+    }),
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_1__["View"], {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_2__["View"], {
     style: {
       flexDirection: "row",
       alignItems: "center"
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 18
     },
     __self: this
-  }, onBack && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_1__["TouchableOpacity"], {
+  }, onBack && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_2__["TouchableOpacity"], {
     style: {
       width: 20,
       height: 20,
@@ -66729,10 +66755,10 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/ui/U
     onPress: onBack,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 20
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UIImage__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_UIImage__WEBPACK_IMPORTED_MODULE_3__["default"], {
     style: {
       width: 20,
       height: 20
@@ -66740,23 +66766,23 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/ui/U
     source: __webpack_require__(/*! ./imgs/back.png */ "./pages/app/libs/ui/imgs/back.png"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 30
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_1__["Text"], {
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_2__["Text"], {
     style: {
       fontSize: 22,
       color: "#555"
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 39
     },
     __self: this
-  }, (title || "").trim())), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_1__["View"], {
+  }, (title || "").trim())), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_2__["View"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 43
     },
     __self: this
   }, children));
@@ -66930,6 +66956,35 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/ui/U
     },
     __self: this
   }, props.children);
+});
+
+/***/ }),
+
+/***/ "./pages/app/libs/ui/UIWebView.tsx":
+/*!*****************************************!*\
+  !*** ./pages/app/libs/ui/UIWebView.tsx ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/ui/UIWebView.tsx";
+
+/* harmony default export */ __webpack_exports__["default"] = (function (props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    style: props.style,
+    dangerouslySetInnerHTML: {
+      __html: props.source.html
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 3
+    },
+    __self: this
+  });
 });
 
 /***/ }),
@@ -69685,7 +69740,7 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/a
   }, react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement(_libs_ui_UIFieldText__WEBPACK_IMPORTED_MODULE_11__["default"], {
     label: "Nominal",
     setValue: function setValue(value) {
-      data.form.nominal = value;
+      data.form.nominal = Math.max(30000, _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(value));
     },
     value: data.form.nominal,
     __source: {
@@ -69734,7 +69789,7 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/a
         label: "Nominal untuk semua murid kelas ini",
         value: kelas.nominal,
         setValue: function setValue(value) {
-          kelas.nominal = value;
+          kelas.nominal = Math.max(30000, _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(value));
         },
         __source: {
           fileName: _jsxFileName,
@@ -69766,7 +69821,7 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/a
         label: "Nominal",
         value: murid.nominal || kelas.nominal,
         setValue: function setValue(value) {
-          murid.nominal = value;
+          murid.nominal = Math.max(30000, _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(value));
         },
         __source: {
           fileName: _jsxFileName,
@@ -70354,16 +70409,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _libs_queries_crud_rawQuery__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../libs/queries/crud/rawQuery */ "./pages/app/libs/queries/crud/rawQuery.ts");
 /* harmony import */ var _libs_queries_user_getsetSession__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../libs/queries/user/getsetSession */ "./pages/app/libs/queries/user/getsetSession.ts");
 /* harmony import */ var _libs_ui_UIBody__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../libs/ui/UIBody */ "./pages/app/libs/ui/UIBody.tsx");
-/* harmony import */ var _libs_ui_UIButton__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../libs/ui/UIButton */ "./pages/app/libs/ui/UIButton.tsx");
-/* harmony import */ var _libs_ui_UIContainer__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../libs/ui/UIContainer */ "./pages/app/libs/ui/UIContainer.tsx");
-/* harmony import */ var _libs_ui_UIHead__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../libs/ui/UIHead */ "./pages/app/libs/ui/UIHead.tsx");
-/* harmony import */ var _libs_ui_UIList__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../../libs/ui/UIList */ "./pages/app/libs/ui/UIList.tsx");
-/* harmony import */ var _libs_ui_UIListItem__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../../libs/ui/UIListItem */ "./pages/app/libs/ui/UIListItem.tsx");
-/* harmony import */ var mobx_react_lite__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! mobx-react-lite */ "./node_modules/mobx-react-lite/dist/index.module.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react-native-web */ "./node_modules/react-native-web/dist/index.js");
-/* harmony import */ var _KewajibanDetail__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./KewajibanDetail */ "./pages/app/screens/siswa/Kewajiban/KewajibanDetail.tsx");
+/* harmony import */ var _libs_ui_UIContainer__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../libs/ui/UIContainer */ "./pages/app/libs/ui/UIContainer.tsx");
+/* harmony import */ var _libs_ui_UIHead__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../libs/ui/UIHead */ "./pages/app/libs/ui/UIHead.tsx");
+/* harmony import */ var _libs_ui_UIList__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../libs/ui/UIList */ "./pages/app/libs/ui/UIList.tsx");
+/* harmony import */ var _libs_ui_UIListItem__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../../libs/ui/UIListItem */ "./pages/app/libs/ui/UIListItem.tsx");
+/* harmony import */ var mobx_react_lite__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! mobx-react-lite */ "./node_modules/mobx-react-lite/dist/index.module.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! react-native-web */ "./node_modules/react-native-web/dist/index.js");
+/* harmony import */ var _KewajibanDetail__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./KewajibanDetail */ "./pages/app/screens/siswa/Kewajiban/KewajibanDetail.tsx");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_16__);
 
 
 
@@ -70382,20 +70438,20 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/s
 
 
 
-var Kewajiban = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_13__["observer"])(function (_ref) {
+var Kewajiban = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_12__["observer"])(function (_ref) {
   var navigation = _ref.navigation;
-  var data = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_13__["useObservable"])({
+  var data = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_12__["useObservable"])({
     list: [],
     loading: true
   });
-  Object(react__WEBPACK_IMPORTED_MODULE_14__["useEffect"])(function () {
+  Object(react__WEBPACK_IMPORTED_MODULE_13__["useEffect"])(function () {
     var fetch =
     /*#__PURE__*/
     function () {
       var _ref2 = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])(
       /*#__PURE__*/
       _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-        var session, kelasRaw, kelas, result;
+        var session, kelasRaw, kelas, monthStart, monthEnd, result;
         return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -70412,17 +70468,19 @@ var Kewajiban = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_13__["observer"]
                 kelasRaw = _context.sent;
 
                 if (!(kelasRaw && kelasRaw.kelas_murid && kelasRaw.kelas_murid.length > 0)) {
-                  _context.next = 12;
+                  _context.next = 14;
                   break;
                 }
 
                 kelas = kelasRaw.kelas_murid.map(function (k) {
                   return k.kelas_id.toString();
                 });
-                _context.next = 10;
-                return Object(_libs_queries_crud_rawQuery__WEBPACK_IMPORTED_MODULE_5__["default"])("{\n          kewajiban(order_by: [{tipe_pembayaran: asc}, {id: asc}], \n            where: {kelas: {_has_keys_any: ".concat(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_2___default()(kelas), "}}) {\n            id\n            nama_kewajiban\n            nominal\n            tipe_pembayaran\n            kelas\n            transaksi {\n              id\n              status\n              tstamp\n              detail\n            }\n          }  \n        }"));
+                monthStart = dayjs__WEBPACK_IMPORTED_MODULE_16___default()().startOf("month").subtract(1, "day").format("YYYY-MM-DD");
+                monthEnd = dayjs__WEBPACK_IMPORTED_MODULE_16___default()().endOf("month").add(1, "day").format("YYYY-MM-DD");
+                _context.next = 12;
+                return Object(_libs_queries_crud_rawQuery__WEBPACK_IMPORTED_MODULE_5__["default"])("{\n          kewajiban(order_by: [{tipe_pembayaran: asc}, {id: asc}], \n            where: {kelas: {_has_keys_any: ".concat(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_2___default()(kelas), "}}) {\n            id\n            nama_kewajiban\n            nominal\n            tipe_pembayaran\n            kelas\n            transaksi(\n              where: {\n                kewajiban: {\n                  _or:[\n                    {_and:[\n                      {tipe_pembayaran:{_eq:\"Bulanan\"}},\n                      {transaksi: {\n                       \t_and:[\n                          {tstamp: {_gte: \"").concat(monthStart, "\"}},\n                          {tstamp: {_lte: \"").concat(monthEnd, "\"}},\n                        ] \n                      }}\n                    ]},\n                    {tipe_pembayaran:{_eq:\"Insidentil\"}}\n                  ]\n                }\n              }\n            ) {\n              id\n              status\n              tstamp\n              detail\n            }\n          }  \n        }"));
 
-              case 10:
+              case 12:
                 result = _context.sent;
                 data.list = result.kewajiban.map(function (item) {
                   var nominal = item.nominal;
@@ -70451,16 +70509,18 @@ var Kewajiban = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_13__["observer"]
                         item.status = "Lunas";
                       }
                     } else {
-                      console.log(item.tstamp);
+                      if (t.status === "success") {
+                        item.status = "Lunas";
+                      }
                     }
                   });
                   return item;
                 });
 
-              case 12:
+              case 14:
                 data.loading = false;
 
-              case 13:
+              case 15:
               case "end":
                 return _context.stop();
             }
@@ -70475,46 +70535,31 @@ var Kewajiban = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_13__["observer"]
 
     fetch();
   }, []);
-  return react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(_libs_ui_UIContainer__WEBPACK_IMPORTED_MODULE_9__["default"], {
+  return react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement(_libs_ui_UIContainer__WEBPACK_IMPORTED_MODULE_8__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87
+      lineNumber: 118
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(_libs_ui_UIHead__WEBPACK_IMPORTED_MODULE_10__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement(_libs_ui_UIHead__WEBPACK_IMPORTED_MODULE_9__["default"], {
     title: "Kewajiban",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88
+      lineNumber: 119
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(_libs_ui_UIButton__WEBPACK_IMPORTED_MODULE_8__["default"], {
-    size: "small",
-    onPress: function onPress() {
-      navigation.navigate("KewajibanDetail", {
-        item: {
-          nominal: 100000,
-          kelas: {}
-        }
-      });
-    },
+  }), react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement(_libs_ui_UIBody__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
+      lineNumber: 120
     },
     __self: this
-  }, "+ Kewajiban Baru")), react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(_libs_ui_UIBody__WEBPACK_IMPORTED_MODULE_7__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 103
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(_libs_ui_UIList__WEBPACK_IMPORTED_MODULE_11__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement(_libs_ui_UIList__WEBPACK_IMPORTED_MODULE_10__["default"], {
     data: data.list,
     loading: data.loading,
     render: function render(list) {
       var item = list.item;
-      return react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(_libs_ui_UIListItem__WEBPACK_IMPORTED_MODULE_12__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement(_libs_ui_UIListItem__WEBPACK_IMPORTED_MODULE_11__["default"], {
         onPress: function onPress() {
           navigation.navigate("KewajibanDetail", {
             item: item
@@ -70522,16 +70567,16 @@ var Kewajiban = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_13__["observer"]
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 110
+          lineNumber: 127
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_15__["View"], {
+      }, react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_14__["View"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 117
+          lineNumber: 134
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_15__["Text"], {
+      }, react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_14__["Text"], {
         style: {
           fontSize: 15,
           fontWeight: "bold",
@@ -70539,35 +70584,35 @@ var Kewajiban = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_13__["observer"]
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 118
+          lineNumber: 135
         },
         __self: this
-      }, item.nama_kewajiban), react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_15__["Text"], {
+      }, item.nama_kewajiban), react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_14__["Text"], {
         style: {
           fontSize: 14
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 123
+          lineNumber: 140
         },
         __self: this
-      }, "Rp ", item.nominal.toLocaleString(), "  (", item.status, ")")), react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_15__["View"], {
+      }, "Rp ", item.nominal.toLocaleString(), " (", item.status, ")")), react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_14__["View"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 127
+          lineNumber: 144
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_15__["Text"], {
+      }, react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_14__["Text"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 128
+          lineNumber: 145
         },
         __self: this
       }, item.tipe_pembayaran)));
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 104
+      lineNumber: 121
     },
     __self: this
   })));
@@ -70577,7 +70622,7 @@ var Kewajiban = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_13__["observer"]
     screen: Kewajiban
   },
   KewajibanDetail: {
-    screen: _KewajibanDetail__WEBPACK_IMPORTED_MODULE_16__["default"]
+    screen: _KewajibanDetail__WEBPACK_IMPORTED_MODULE_15__["default"]
   }
 }));
 
@@ -70597,14 +70642,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/json/stringify */ "./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js");
 /* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js");
-/* harmony import */ var _libs_ui_UIBody__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../libs/ui/UIBody */ "./pages/app/libs/ui/UIBody.tsx");
-/* harmony import */ var _libs_ui_UIContainer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../libs/ui/UIContainer */ "./pages/app/libs/ui/UIContainer.tsx");
-/* harmony import */ var _libs_ui_UIHead__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../libs/ui/UIHead */ "./pages/app/libs/ui/UIHead.tsx");
-/* harmony import */ var mobx_react_lite__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! mobx-react-lite */ "./node_modules/mobx-react-lite/dist/index.module.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-native-web */ "./node_modules/react-native-web/dist/index.js");
-/* harmony import */ var _libs_queries_user_getsetSession__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../libs/queries/user/getsetSession */ "./pages/app/libs/queries/user/getsetSession.ts");
+/* harmony import */ var _libs_queries_crud_createRecord__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../libs/queries/crud/createRecord */ "./pages/app/libs/queries/crud/createRecord.ts");
+/* harmony import */ var _libs_queries_user_getsetSession__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../libs/queries/user/getsetSession */ "./pages/app/libs/queries/user/getsetSession.ts");
+/* harmony import */ var _libs_ui_UIContainer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../libs/ui/UIContainer */ "./pages/app/libs/ui/UIContainer.tsx");
+/* harmony import */ var _libs_ui_UIHead__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../libs/ui/UIHead */ "./pages/app/libs/ui/UIHead.tsx");
+/* harmony import */ var _libs_ui_UIWebView__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../libs/ui/UIWebView */ "./pages/app/libs/ui/UIWebView.tsx");
+/* harmony import */ var mobx__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! mobx */ "./node_modules/mobx/lib/mobx.module.js");
+/* harmony import */ var mobx_react_lite__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! mobx-react-lite */ "./node_modules/mobx-react-lite/dist/index.module.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-native-web */ "./node_modules/react-native-web/dist/index.js");
+/* harmony import */ var _libs_queries_crud_updateRecord__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../../libs/queries/crud/updateRecord */ "./pages/app/libs/queries/crud/updateRecord.ts");
 
 
 
@@ -70616,30 +70664,70 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/s
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_6__["observer"])(function (_ref) {
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_9__["observer"])(function (_ref) {
   var navigation = _ref.navigation;
-  var data = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_6__["useObservable"])({
+  var data = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_9__["useObservable"])({
+    loading: true,
     form: navigation.getParam("item")
   });
-  Object(react__WEBPACK_IMPORTED_MODULE_7__["useEffect"])(function () {
+  var transaksi = {};
+
+  if (data.form.transaksi.length > 0) {
+    transaksi = data.form.transaksi[0];
+  }
+
+  console.log(Object(mobx__WEBPACK_IMPORTED_MODULE_8__["toJS"])(transaksi.detail));
+  Object(react__WEBPACK_IMPORTED_MODULE_10__["useEffect"])(function () {
     var req =
     /*#__PURE__*/
     function () {
       var _ref2 = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])(
       /*#__PURE__*/
       _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-        var session, params, myHeaders, response, json;
+        var session, nominalBeda, res, params, myHeaders, response, json;
         return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
                 _context.next = 2;
-                return Object(_libs_queries_user_getsetSession__WEBPACK_IMPORTED_MODULE_9__["getSession"])();
+                return Object(_libs_queries_user_getsetSession__WEBPACK_IMPORTED_MODULE_4__["getSession"])();
 
               case 2:
                 session = _context.sent;
+                nominalBeda = data.form.status === "Belum Lunas" && transaksi && transaksi.detail.amount !== data.form.nominal;
+
+                if (!(!transaksi || nominalBeda)) {
+                  _context.next = 25;
+                  break;
+                }
+
+                if (transaksi) {
+                  _context.next = 11;
+                  break;
+                }
+
+                _context.next = 8;
+                return Object(_libs_queries_crud_createRecord__WEBPACK_IMPORTED_MODULE_3__["default"])("transaksi", {
+                  kewajiban_id: Object(mobx__WEBPACK_IMPORTED_MODULE_8__["toJS"])(data.form.id)
+                });
+
+              case 8:
+                res = _context.sent;
+                data.form.transaksi.push({
+                  id: res
+                });
+                transaksi = data.form.transaksi[0];
+
+              case 11:
+                if (nominalBeda) {
+                  data.form.transaksi[0].detail = null;
+                }
+
                 params = {
-                  external_id: data.form.id,
+                  external_id: transaksi.id,
                   payer_email: session.murid.email || "j@edumatis.id",
                   description: data.form.nama_kewajiban,
                   amount: data.form.nominal
@@ -70647,23 +70735,33 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/s
                 myHeaders = new Headers();
                 myHeaders.append("pragma", "no-cache");
                 myHeaders.append("cache-control", "no-cache");
-                _context.next = 9;
-                return fetch("http://localhost/invoice", {
+                _context.next = 18;
+                return fetch("https://backend.cap.edumatis.id/invoice", {
                   method: "POST",
                   body: _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1___default()(params),
                   headers: myHeaders
                 });
 
-              case 9:
+              case 18:
                 response = _context.sent;
-                _context.next = 12;
+                _context.next = 21;
                 return response.json();
 
-              case 12:
+              case 21:
                 json = _context.sent;
-                console.log(json);
+                _context.next = 24;
+                return Object(_libs_queries_crud_updateRecord__WEBPACK_IMPORTED_MODULE_12__["default"])("transaksi", {
+                  id: transaksi.id,
+                  detail: json
+                });
 
-              case 14:
+              case 24:
+                data.form.transaksi[0].detail = json;
+
+              case 25:
+                data.loading = false;
+
+              case 26:
               case "end":
                 return _context.stop();
             }
@@ -70678,35 +70776,74 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/s
 
     req();
   }, []);
-  return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_libs_ui_UIContainer__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  return react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_libs_ui_UIContainer__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    style: {
+      backgroundColor: "#F5FAFD"
+    },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 74
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_libs_ui_UIHead__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    title: " Kewajiban " + (data.form.id ? "#".concat(data.form.id, ": ").concat(data.form.nama_kewajiban) : "Baru"),
+  }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_libs_ui_UIHead__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    title: " Kewajiban " + (data.form.id ? "#".concat(data.form.id, ": ").concat(data.form.nama_kewajiban, " (").concat(data.form.status, ")") : "Baru"),
     onBack: function onBack() {
       navigation.goBack();
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 75
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_libs_ui_UIBody__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_11__["View"], {
+    style: {
+      flex: 1,
+      padding: 10,
+      alignItems: "center",
+      justifyContent: "center"
+    },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 88
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_8__["Text"], {
+  }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_11__["ActivityIndicator"], {
+    size: "large",
+    style: {
+      position: "absolute"
+    },
+    color: "#999",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 96
     },
     __self: this
-  }, "Status: ", data.form.status, " ")));
+  }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_11__["Text"], {
+    style: {
+      marginTop: 70
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 101
+    },
+    __self: this
+  }, !!transaksi.detail ? "Menampilkan Pembayaran..." : "Membuat Invoice..."), transaksi.detail && react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_libs_ui_UIWebView__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    style: {
+      flex: 1,
+      position: "absolute",
+      width: "100%",
+      height: "100%",
+      zIndex: 99
+    },
+    source: {
+      html: "<iframe width=\"100%\" height=\"100%\" src=\"".concat(transaksi.detail.invoice_url, "\"  frameborder=\"0\"></iframe>")
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 107
+    },
+    __self: this
+  })));
 }));
 
 /***/ }),

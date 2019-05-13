@@ -4,7 +4,7 @@ const fetch = require("node-fetch");
 export const query = async (
   query: string,
   headers: { [key: string]: string } = {},
-  opt: { [key: string]: string } = {}
+  opt: { [key: string]: any } = {}
 ): Promise<{ [key: string]: any }> => {
   // console.log(query);
   const response: Response = await fetch(config.url, {

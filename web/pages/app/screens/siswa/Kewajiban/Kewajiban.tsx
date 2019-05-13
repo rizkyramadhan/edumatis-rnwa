@@ -11,6 +11,7 @@ import { observer, useObservable } from "mobx-react-lite";
 import React, { useEffect } from "react";
 import { Text, View } from "react-native";
 import KewajibanDetail from "./KewajibanDetail";
+import dayjs from "dayjs";
 
 const Kewajiban = observer(({ navigation }: any) => {
   const data = useObservable({
@@ -30,7 +31,17 @@ const Kewajiban = observer(({ navigation }: any) => {
         const kelas = kelasRaw.kelas_murid.map((k: any) => {
           return k.kelas_id.toString();
         });
-        const result = await rawQuery(`{
+        const monthStart = dayjs()
+          .startOf("month")
+          .subtract(1, "day")
+          .format("YYYY-MM-DD");
+        const monthEnd = dayjs()
+          .endOf("month")
+          .add(1, "day")
+          .format("YYYY-MM-DD");
+
+        const result = await rawQuery(
+          `{
           kewajiban(order_by: [{tipe_pembayaran: asc}, {id: asc}], 
             where: {kelas: {_has_keys_any: ${JSON.stringify(kelas)}}}) {
             id
@@ -38,14 +49,32 @@ const Kewajiban = observer(({ navigation }: any) => {
             nominal
             tipe_pembayaran
             kelas
-            transaksi {
+            transaksi(
+              where: {
+                kewajiban: {
+                  _or:[
+                    {_and:[
+                      {tipe_pembayaran:{_eq:"Bulanan"}},
+                      {transaksi: {
+                       	_and:[
+                          {tstamp: {_gte: "${monthStart}"}},
+                          {tstamp: {_lte: "${monthEnd}"}},
+                        ] 
+                      }}
+                    ]},
+                    {tipe_pembayaran:{_eq:"Insidentil"}}
+                  ]
+                }
+              }
+            ) {
               id
               status
               tstamp
               detail
             }
           }  
-        }`);
+        }`
+        );
 
         data.list = result.kewajiban.map((item: any) => {
           let nominal = item.nominal;
@@ -71,7 +100,9 @@ const Kewajiban = observer(({ navigation }: any) => {
                 item.status = "Lunas";
               }
             } else {
-              console.log(item.tstamp);
+              if (t.status === "success") {
+                item.status = "Lunas";
+              }
             }
           });
 
@@ -85,21 +116,7 @@ const Kewajiban = observer(({ navigation }: any) => {
   }, []);
   return (
     <UIContainer>
-      <UIHead title="Kewajiban">
-        <UIButton
-          size="small"
-          onPress={() => {
-            navigation.navigate("KewajibanDetail", {
-              item: {
-                nominal: 100000,
-                kelas: {}
-              }
-            });
-          }}
-        >
-          + Kewajiban Baru
-        </UIButton>
-      </UIHead>
+      <UIHead title="Kewajiban" />
       <UIBody>
         <UIList
           data={data.list}
@@ -121,7 +138,7 @@ const Kewajiban = observer(({ navigation }: any) => {
                     {item.nama_kewajiban}
                   </Text>
                   <Text style={{ fontSize: 14 }}>
-                    Rp {item.nominal.toLocaleString()}  ({item.status})
+                    Rp {item.nominal.toLocaleString()} ({item.status})
                   </Text>
                 </View>
                 <View>

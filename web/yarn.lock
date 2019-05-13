@@ -1715,6 +1715,11 @@ date-now@^0.1.4:
   resolved "https://registry.yarnpkg.com/date-now/-/date-now-0.1.4.tgz#eaf439fd4d4848ad74e5cc7dbef200672b9e345b"
   integrity sha1-6vQ5/U1ISK105cx9vvIAZyueNFs=
 
+dayjs@^1.8.14:
+  version "1.8.14"
+  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.8.14.tgz#43e4f62830c2c3342c3fcd25934dc9162dbe6f38"
+  integrity sha512-AVhDmRTe541iWirnoeFSSDDGvCT6HWaNQ4z2WmmzXMGZj6ph6ydao2teKq/eUtR43GPJXlYFD+C/SotG1P9wUQ==
+
 debounce@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/debounce/-/debounce-1.2.0.tgz#44a540abc0ea9943018dc0eaa95cce87f65cd131"
@@ -3756,6 +3761,11 @@ punycode@^2.1.0:
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
 
+qs@^6.5.1:
+  version "6.7.0"
+  resolved "https://registry.yarnpkg.com/qs/-/qs-6.7.0.tgz#41dc1a015e3d581f1621776be31afb2876a9b1bc"
+  integrity sha512-VCdBRNFTX1fyE7Nb6FYoURo/SPe62QCaAyzJvUjwRaIsc+NePBEniHlvxFmmX56+HZphIGtV0XeCirBtpDrTyQ==
+
 querystring-es3@^0.2.0:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/querystring-es3/-/querystring-es3-0.2.1.tgz#9ec61f79049875707d69414596fd907a4d711e73"
@@ -3833,12 +3843,12 @@ react-json-to-html@^0.0.3:
   resolved "https://registry.yarnpkg.com/react-json-to-html/-/react-json-to-html-0.0.3.tgz#910c2aebc39a44389ac505b1971a2ef8f704ce0b"
   integrity sha512-ir/tiSB3Pi5l0U0uCKKtF3/rJcQ0FG9pw4j1R40AS7km+U/bSkrADn0TPCfSiBq3EeNxYHSJLZOfGyrSNr5Bcw==
 
-react-native-responsive-layout@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/react-native-responsive-layout/-/react-native-responsive-layout-1.1.0.tgz#1f2baa315597abfd0c2544bb38f56fdf7abe47dd"
-  integrity sha512-6slkjqvRzX5AkgQvTSjxwm0xjeHLXX0+yroBaO6df4H0Chztq7zHOZc+zfm2dNbdKc5dWmXte8NmXuAwfteX4Q==
+react-native-web-webview@^0.2.8:
+  version "0.2.8"
+  resolved "https://registry.yarnpkg.com/react-native-web-webview/-/react-native-web-webview-0.2.8.tgz#f54fbd417ff6077234d9ea4290803e5480b0a25a"
+  integrity sha512-4MH32EJj5XMNEBJ0urxxSqAc8JnLQ4Z1djjWQX7S4H6X+Ta5NLmuCnMu99lDcSfPiVTGIr1bN6bhqNdbldc21w==
   dependencies:
-    prop-types "^15.6.0"
+    qs "^6.5.1"
 
 react-native-web@^0.9.3:
   version "0.9.13"

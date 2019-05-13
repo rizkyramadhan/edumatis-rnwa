@@ -2,6 +2,7 @@ import { Context } from "koa";
 import { query } from "./api";
 import config from "../config";
 import invoice from "./invoice";
+import payment from "./payment";
 declare var require: any;
 
 const koa = require("koa");
@@ -97,6 +98,8 @@ app.use(async (ctx: Context) => {
   if (unhandled) {
     if (ctx.path === "/invoice") {
       await invoice(ctx);
+    } else if (ctx.path === "/payment") {
+      await payment(ctx);
     } else {
       send(ctx, 200, {
         "X-Hasura-Role": "anonymous"
