@@ -1,12 +1,18 @@
-import tKoa = require("tkoa");
 import { Context } from "koa";
 import { query } from "./api";
 import config from "../config";
+import invoice from "./invoice";
+declare var require: any;
 
+const koa = require("koa");
 const bcrypt = require("bcrypt");
 const get = require("lodash.get");
-const app = new tKoa();
+const app = new koa();
 
+const cors = require("@koa/cors");
+const koabody = require("koa-body");
+app.use(cors());
+app.use(koabody());
 app.use(async (ctx: Context) => {
   const changeUserId = getHeader(ctx, "X-Hasura-ChangePass-Uid");
   const sessionId = getHeader(ctx, "X-Hasura-Session-Id");
@@ -89,9 +95,13 @@ app.use(async (ctx: Context) => {
   }
 
   if (unhandled) {
-    send(ctx, 200, {
-      "X-Hasura-Role": "anonymous"
-    });
+    if (ctx.path === "/invoice") {
+      await invoice(ctx);
+    } else {
+      send(ctx, 200, {
+        "X-Hasura-Role": "anonymous"
+      });
+    }
   }
 });
 
@@ -106,7 +116,7 @@ function getHeader(ctx: any, header: string) {
   return undefined;
 }
 
-function send(ctx: any, statusCode: number, result: object) {
+export function send(ctx: any, statusCode: number, result: object) {
   ctx.res.statusCode = statusCode;
   ctx.res.end(JSON.stringify(result));
 }

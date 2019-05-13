@@ -19,7 +19,7 @@ export default {
   },
   user: {
     login_columns: ["nsa", "nama_murid"],
-    columns: ["id", "nisn", "nsa", "nama_murid", "password"]
+    columns: ["id", "nisn", "nsa", "nama_murid", "password", "email"]
   },
   color: {
     main: "#613EEA",

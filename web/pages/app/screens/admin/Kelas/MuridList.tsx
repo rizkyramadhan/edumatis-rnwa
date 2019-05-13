@@ -129,7 +129,7 @@ export default observer(
                   }}
                 >
                   <Text style={{ fontSize: 20 }}>
-                    {meta.checked.indexOf(parseInt(item.id)) >= 0 ? "🗹" : "☐"}
+                    {meta.checked.indexOf(parseInt(item.id)) >= 0 ? "☑" : "☐"}
                   </Text>
                 </TouchableOpacity>
                 <UIListItem
