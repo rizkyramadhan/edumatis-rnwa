@@ -116,7 +116,7 @@ const Kewajiban = observer(({ navigation }: any) => {
   }, []);
   return (
     <UIContainer>
-      <UIHead title="Kewajiban" />
+      <UIHead title="Kewajiban bulan ini" />
       <UIBody>
         <UIList
           data={data.list}

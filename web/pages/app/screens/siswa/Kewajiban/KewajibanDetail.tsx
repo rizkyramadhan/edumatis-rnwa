@@ -8,6 +8,7 @@ import { observer, useObservable } from "mobx-react-lite";
 import React, { useEffect } from "react";
 import { ActivityIndicator, View, Text } from "react-native";
 import updateRecord from "@app/libs/queries/crud/updateRecord";
+import dayjs from "dayjs";
 
 export default observer(({ navigation }: any) => {
   const data = useObservable({
@@ -18,7 +19,6 @@ export default observer(({ navigation }: any) => {
   if (data.form.transaksi.length > 0) {
     transaksi = data.form.transaksi[0];
   }
-  console.log(toJS(transaksi.detail));
   useEffect(() => {
     const req = async function() {
       const session = await getSession();
@@ -26,8 +26,12 @@ export default observer(({ navigation }: any) => {
         data.form.status === "Belum Lunas" &&
         transaksi &&
         transaksi.detail.amount !== data.form.nominal;
+      const expired =
+        data.form.status === "Belum Lunas" &&
+        transaksi &&
+        dayjs(transaksi.detail.expiry_date).isBefore(dayjs());
 
-      if (!transaksi || nominalBeda) {
+      if (!transaksi || nominalBeda || expired) {
         if (!transaksi) {
           let res = await createRecord("transaksi", {
             kewajiban_id: toJS(data.form.id)
@@ -73,14 +77,7 @@ export default observer(({ navigation }: any) => {
   return (
     <UIContainer style={{ backgroundColor: "#F5FAFD" }}>
       <UIHead
-        title={
-          ` Kewajiban ` +
-          (data.form.id
-            ? `#${data.form.id}: ${data.form.nama_kewajiban} (${
-                data.form.status
-              })`
-            : `Baru`)
-        }
+        title={`${data.form.nama_kewajiban} (${data.form.status})`}
         onBack={() => {
           navigation.goBack();
         }}

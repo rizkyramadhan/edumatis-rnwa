@@ -15,7 +15,8 @@ export default async function(ctx: any) {
     {},
     {
       variables: {
-        paid: json
+        paid: json,
+        status: "success"
       }
     }
   );

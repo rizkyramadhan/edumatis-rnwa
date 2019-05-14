@@ -1,6 +1,6 @@
 import UIImage from "@app/libs/ui/UIImage";
 import { observer } from "mobx-react-lite";
-import React from "react";
+import React, { useEffect } from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import config from "@app/config";
 import { RootStore } from "@app/stores/RootStore";

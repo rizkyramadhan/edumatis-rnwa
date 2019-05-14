@@ -12,11 +12,14 @@ import StackNav from "@app/libs/nav/StackNav";
 import KewajibanDetail from "./KewajibanDetail";
 
 const Kewajiban = observer(({ navigation }: any) => {
+  
   const data = useObservable({
     list: [],
     loading: true
   });
   useEffect(() => {
+    const parent = navigation.dangerouslyGetParent();
+    navigation.openDrawer();
     let fetch = async () => {
       const result = await rawQuery(`{
         kewajiban(order_by: [{tipe_pembayaran: asc},{id: asc}, ]) {

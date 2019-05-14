@@ -70542,7 +70542,7 @@ var Kewajiban = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_12__["observer"]
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement(_libs_ui_UIHead__WEBPACK_IMPORTED_MODULE_9__["default"], {
-    title: "Kewajiban",
+    title: "Kewajiban bulan ini",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 119
@@ -70653,10 +70653,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_10__);
 /* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-native-web */ "./node_modules/react-native-web/dist/index.js");
 /* harmony import */ var _libs_queries_crud_updateRecord__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../../libs/queries/crud/updateRecord */ "./pages/app/libs/queries/crud/updateRecord.ts");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_13__);
 
 
 
 var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/siswa/Kewajiban/KewajibanDetail.tsx";
+
 
 
 
@@ -70679,7 +70682,6 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/s
     transaksi = data.form.transaksi[0];
   }
 
-  console.log(Object(mobx__WEBPACK_IMPORTED_MODULE_8__["toJS"])(transaksi.detail));
   Object(react__WEBPACK_IMPORTED_MODULE_10__["useEffect"])(function () {
     var req =
     /*#__PURE__*/
@@ -70687,7 +70689,7 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/s
       var _ref2 = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])(
       /*#__PURE__*/
       _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-        var session, nominalBeda, res, params, myHeaders, response, json;
+        var session, nominalBeda, expired, res, params, myHeaders, response, json;
         return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -70698,30 +70700,31 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/s
               case 2:
                 session = _context.sent;
                 nominalBeda = data.form.status === "Belum Lunas" && transaksi && transaksi.detail.amount !== data.form.nominal;
+                expired = data.form.status === "Belum Lunas" && transaksi && dayjs__WEBPACK_IMPORTED_MODULE_13___default()(transaksi.detail.expiry_date).isBefore(dayjs__WEBPACK_IMPORTED_MODULE_13___default()());
 
-                if (!(!transaksi || nominalBeda)) {
-                  _context.next = 25;
+                if (!(!transaksi || nominalBeda || expired)) {
+                  _context.next = 26;
                   break;
                 }
 
                 if (transaksi) {
-                  _context.next = 11;
+                  _context.next = 12;
                   break;
                 }
 
-                _context.next = 8;
+                _context.next = 9;
                 return Object(_libs_queries_crud_createRecord__WEBPACK_IMPORTED_MODULE_3__["default"])("transaksi", {
                   kewajiban_id: Object(mobx__WEBPACK_IMPORTED_MODULE_8__["toJS"])(data.form.id)
                 });
 
-              case 8:
+              case 9:
                 res = _context.sent;
                 data.form.transaksi.push({
                   id: res
                 });
                 transaksi = data.form.transaksi[0];
 
-              case 11:
+              case 12:
                 if (nominalBeda) {
                   data.form.transaksi[0].detail = null;
                 }
@@ -70735,33 +70738,33 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/s
                 myHeaders = new Headers();
                 myHeaders.append("pragma", "no-cache");
                 myHeaders.append("cache-control", "no-cache");
-                _context.next = 18;
+                _context.next = 19;
                 return fetch("https://backend.cap.edumatis.id/invoice", {
                   method: "POST",
                   body: _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1___default()(params),
                   headers: myHeaders
                 });
 
-              case 18:
+              case 19:
                 response = _context.sent;
-                _context.next = 21;
+                _context.next = 22;
                 return response.json();
 
-              case 21:
+              case 22:
                 json = _context.sent;
-                _context.next = 24;
+                _context.next = 25;
                 return Object(_libs_queries_crud_updateRecord__WEBPACK_IMPORTED_MODULE_12__["default"])("transaksi", {
                   id: transaksi.id,
                   detail: json
                 });
 
-              case 24:
+              case 25:
                 data.form.transaksi[0].detail = json;
 
-              case 25:
+              case 26:
                 data.loading = false;
 
-              case 26:
+              case 27:
               case "end":
                 return _context.stop();
             }
@@ -70782,17 +70785,17 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/s
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 78
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_libs_ui_UIHead__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    title: " Kewajiban " + (data.form.id ? "#".concat(data.form.id, ": ").concat(data.form.nama_kewajiban, " (").concat(data.form.status, ")") : "Baru"),
+    title: "".concat(data.form.nama_kewajiban, " (").concat(data.form.status, ")"),
     onBack: function onBack() {
       navigation.goBack();
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 79
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_11__["View"], {
@@ -70804,7 +70807,7 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/s
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88
+      lineNumber: 85
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_11__["ActivityIndicator"], {
@@ -70815,7 +70818,7 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/s
     color: "#999",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 96
+      lineNumber: 93
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_11__["Text"], {
@@ -70824,7 +70827,7 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/s
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101
+      lineNumber: 98
     },
     __self: this
   }, !!transaksi.detail ? "Menampilkan Pembayaran..." : "Membuat Invoice..."), transaksi.detail && react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_libs_ui_UIWebView__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -70840,7 +70843,7 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/s
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 107
+      lineNumber: 104
     },
     __self: this
   })));
