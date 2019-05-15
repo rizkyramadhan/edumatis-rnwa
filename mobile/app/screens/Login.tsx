@@ -58,15 +58,17 @@ export default observer(({ navigation }: any) => {
         style={{ width: "70%" }}
         setValue={(value: string) => (data.sekolah_id = value)}
         onBlur={async () => {
-          let res = await query("sekolah", ["nama_sekolah"], {
-            where: { id: data.sekolah_id },
-            useSession: false
-          });
-          if (res && res.nama_sekolah) {
-            meta.sekolah = res.nama_sekolah;
-          } else {
-            meta.sekolah = "Sekolah tidak ditemukan";
-          }
+          try {
+            let res = await query("sekolah", ["nama_sekolah"], {
+              where: { id: parseInt(data.sekolah_id) },
+              useSession: false
+            });
+            if (res && res.nama_sekolah) {
+              meta.sekolah = res.nama_sekolah;
+            } else {
+              meta.sekolah = "Sekolah tidak ditemukan";
+            }
+          } catch (e) {}
         }}
       />
       <UIFieldText
