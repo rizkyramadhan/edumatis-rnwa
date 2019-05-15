@@ -7,6 +7,7 @@ import { StyleSheet, View, Text } from "react-native";
 import { RootStore } from "@app/stores/RootStore";
 import { checkSession } from "@app/libs/queries/user/checkSession";
 import UIImage from "@app/libs/ui/UIImage";
+import { toJS } from "mobx";
 
 export default observer(({ navigation }: any) => {
   const data = useObservable({
@@ -57,15 +58,17 @@ export default observer(({ navigation }: any) => {
         style={{ width: "70%" }}
         setValue={(value: string) => (data.sekolah_id = value)}
         onBlur={async () => {
-          let res = await query("sekolah", ["nama_sekolah"], {
-            where: { id: data.sekolah_id },
-            useSession: false
-          });
-          if (res && res.nama_sekolah) {
-            meta.sekolah = res.nama_sekolah;
-          } else {
-            meta.sekolah = "Sekolah tidak ditemukan";
-          }
+          try {
+            let res = await query("sekolah", ["nama_sekolah"], {
+              where: { id: parseInt(data.sekolah_id) },
+              useSession: false
+            });
+            if (res && res.nama_sekolah) {
+              meta.sekolah = res.nama_sekolah;
+            } else {
+              meta.sekolah = "Sekolah tidak ditemukan";
+            }
+          } catch (e) {}
         }}
       />
       <UIFieldText
@@ -76,7 +79,7 @@ export default observer(({ navigation }: any) => {
         setValue={(value: string) => (data.nsa = value)}
         onBlur={async () => {
           let res = await query("murid", ["nama_murid"], {
-            where: { sekolah_id: data.sekolah_id, nsa: data.nsa },
+            where: { sekolah_id: parseInt(data.sekolah_id), nsa: data.nsa },
             useSession: false
           });
           if (res && res.nama_murid) {

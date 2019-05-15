@@ -74,7 +74,7 @@ const MuridSistem = observer(({ navigation, parentNavigation }: any) => {
         <MuridDetailSide navigation={navigation} form={data.form} />
         <UIBody>
           <UIRow>
-            <UICol size={6}>
+            <UICol size={6} sizexs={12} sizesm={12} sizemd={12}>
               <UIFieldText
                 label="NSA (Username)"
                 setValue={(value: any) => {
@@ -83,7 +83,7 @@ const MuridSistem = observer(({ navigation, parentNavigation }: any) => {
                 value={data.form.nsa}
               />
             </UICol>
-            <UICol size={6}>
+            <UICol size={6} sizexs={12} sizesm={12} sizemd={12}>
               <UIFieldText
                 label="NISN"
                 setValue={(value: any) => {
@@ -101,7 +101,7 @@ const MuridSistem = observer(({ navigation, parentNavigation }: any) => {
             value={data.form.nama_murid}
           />
           <UIRow>
-            <UICol size={4}>
+            <UICol size={4} sizexs={12} sizesm={12} sizemd={12}>
               <UIFieldText
                 label="E-Mail"
                 setValue={(value: any) => {
@@ -113,7 +113,7 @@ const MuridSistem = observer(({ navigation, parentNavigation }: any) => {
           </UIRow>
 
           <UIRow>
-            <UICol size={4}>
+            <UICol size={4} sizexs={12} sizesm={12} sizemd={12}>
               <UIFieldSelectNative
                 label="Status"
                 items={[
@@ -129,7 +129,7 @@ const MuridSistem = observer(({ navigation, parentNavigation }: any) => {
           </UIRow>
 
           <UIRow>
-            <UICol size={4}>
+            <UICol size={4} sizexs={12} sizesm={12} sizemd={12}>
               <UIFieldText
                 label="Ubah Password"
                 type="password"

@@ -75,7 +75,7 @@ export default observer(({ navigation }: any) => {
           value={data.form.nama_kewajiban}
         />
         <UIRow>
-          <UICol size={4}>
+          <UICol size={4} sizesm={6} sizexs={6} sizemd={6}>
             <UIFieldText
               label="Nominal"
               setValue={(value: any) => {
@@ -84,7 +84,7 @@ export default observer(({ navigation }: any) => {
               value={data.form.nominal}
             />
           </UICol>
-          <UICol size={4}>
+          <UICol size={4} sizesm={6} sizexs={6} sizemd={6}>
             <UIFieldSelectNative
               label="Tipe Pembayaran"
               items={["Bulanan", "Insidentil"]}
@@ -118,7 +118,7 @@ export default observer(({ navigation }: any) => {
           }}
           renderMurid={(murid: any, kelas: any) => {
             return (
-              <UICol size={6}>
+              <UICol size={6} >
                 <UIFieldText
                   label="Nominal"
                   value={murid.nominal || kelas.nominal}

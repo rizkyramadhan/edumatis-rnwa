@@ -29,7 +29,7 @@ export default observer(
 
     return (
       <UIRow>
-        <UICol size={6}>
+        <UICol size={6} sizexs={12} sizesm={12} sizemd={12}>
           <UIField label="Berlaku untuk kelas:">
             {data.kelas &&
               data.kelas.map((k: any, index: number) => {

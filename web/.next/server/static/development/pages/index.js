@@ -819,6 +819,9 @@ var container = function container(routes) {
       getParam: function getParam(key) {
         return navParam[key];
       },
+      dangerouslyGetParent: function dangerouslyGetParent() {
+        return props.parentNavigation;
+      },
       goBack: function goBack() {
         if (routeStack.length > 0) {
           var screen = routeStack.pop();
@@ -869,7 +872,7 @@ var container = function container(routes) {
       navigation: navigation,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 65
+        lineNumber: 68
       },
       __self: this
     }));
@@ -884,6 +887,7 @@ var container = function container(routes) {
 var createNavigateTo = function createNavigateTo(navigation) {
   return function (screen) {
     navigation.replace(screen);
+    if (navigation.closeDrawer) navigation.closeDrawer();
   };
 };
 
@@ -930,6 +934,14 @@ var flexSideBar = {
   flexDirection: "row",
   alignItems: "stretch"
 };
+var overlay = {
+  position: "absolute",
+  left: 0,
+  top: 0,
+  bottom: 0,
+  right: 0,
+  zIndex: 90
+};
 /* harmony default export */ __webpack_exports__["default"] = (function (data) {
   var config = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
   var isRoot = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
@@ -939,8 +951,21 @@ var flexSideBar = {
     var SideBar = config.contentComponent;
     return Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_1__["observer"])(function (props) {
       var ref = Object(react__WEBPACK_IMPORTED_MODULE_2__["useRef"])({});
-      var obs = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_1__["useObservable"])({});
+      var obs = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_1__["useObservable"])({
+        opened: false
+      });
       Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(Object(_ui_Style__WEBPACK_IMPORTED_MODULE_4__["ResponsiveHandler"])(obs), []);
+      Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(function () {
+        if (ref.current) {
+          ref.current.toggleDrawer = function () {
+            obs.opened = !obs.opened;
+          };
+
+          ref.current.closeDrawer = function () {
+            obs.opened = false;
+          };
+        }
+      });
       return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_3__["View"], {
         style: {
           position: "absolute",
@@ -953,19 +978,23 @@ var flexSideBar = {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 34
+          lineNumber: 54
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_3__["View"], {
         style: Object(_ui_Style__WEBPACK_IMPORTED_MODULE_4__["Responsive"])({
           xs: Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, absoluteSideBar, {
+            minWidth: "50%"
+          }, {
             transform: [{
-              scale: 0
+              scale: obs.opened ? 1 : 0
             }]
           }),
           sm: Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, absoluteSideBar, {
+            minWidth: "50%"
+          }, {
             transform: [{
-              scale: 0
+              scale: obs.opened ? 1 : 0
             }]
           }),
           md: Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, flexSideBar, {
@@ -991,22 +1020,39 @@ var flexSideBar = {
         }, obs.width),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 65
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(SideBar, {
         navigation: ref.current,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 58
+          lineNumber: 90
         },
         __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Container, {
+      })), obs.opened && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_3__["TouchableOpacity"], {
+        onPress: function onPress() {
+          obs.opened = false;
+        },
+        style: Object(_ui_Style__WEBPACK_IMPORTED_MODULE_4__["Responsive"])({
+          xs: Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, overlay),
+          sm: Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, overlay),
+          md: {},
+          lg: {},
+          xl: {},
+          xxl: {}
+        }, obs.width),
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 93
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Container, {
         ref: ref,
         parentNavigation: props.navigation,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 60
+          lineNumber: 114
         },
         __self: this
       }));
@@ -1016,7 +1062,7 @@ var flexSideBar = {
       return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Container, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 66
+          lineNumber: 120
         },
         __self: this
       });
@@ -2679,17 +2725,40 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/ui/UICol.tsx";
 
 
+var width = react_native_web__WEBPACK_IMPORTED_MODULE_1__["Dimensions"].get("window").width;
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
   var _ref$size = _ref.size,
       size = _ref$size === void 0 ? 12 : _ref$size,
-      children = _ref.children;
+      children = _ref.children,
+      sizexs = _ref.sizexs,
+      sizesm = _ref.sizesm,
+      sizemd = _ref.sizemd,
+      sizelg = _ref.sizelg,
+      sizexl = _ref.sizexl,
+      sizexxl = _ref.sizexxl;
+  var current = size;
+
+  if (width <= 410) {
+    current = sizesm || size;
+  } else if (width >= 411 && width <= 567) {
+    current = sizesm || size;
+  } else if (width >= 568 && width <= 767) {
+    current = sizemd || size;
+  } else if (width >= 768 && width <= 1023) {
+    current = sizelg || size;
+  } else if (width >= 1024 && width <= 1279) {
+    current = sizexl || size;
+  } else if (width >= 1280) {
+    current = sizexxl || size;
+  }
+
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_1__["View"], {
     style: {
-      flexBasis: size / 12 * 100 + "%"
+      flexBasis: current / 12 * 100 + "%"
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 42
     },
     __self: this
   }, children);
@@ -2992,44 +3061,113 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/ui/U
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-native-web */ "react-native-web");
-/* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_native_web__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _UIImage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./UIImage */ "./pages/app/libs/ui/UIImage.tsx");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/objectSpread */ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectSpread.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-native-web */ "react-native-web");
+/* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_native_web__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _UIImage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./UIImage */ "./pages/app/libs/ui/UIImage.tsx");
+/* harmony import */ var mobx_react_lite__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! mobx-react-lite */ "mobx-react-lite");
+/* harmony import */ var mobx_react_lite__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(mobx_react_lite__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _Style__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Style */ "./pages/app/libs/ui/Style.tsx");
+
 var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/ui/UIHead.tsx";
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
+
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_4__["observer"])(function (_ref) {
   var title = _ref.title,
       children = _ref.children,
-      onBack = _ref.onBack;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_1__["View"], {
-    style: {
-      paddingVertical: 15,
-      paddingHorizontal: 25,
-      flexBasis: 75,
-      flexDirection: "row",
-      alignItems: "center",
-      justifyContent: "space-between"
-    },
+      onBack = _ref.onBack,
+      navigation = _ref.navigation;
+  var obs = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_4__["useObservable"])({});
+  Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(Object(_Style__WEBPACK_IMPORTED_MODULE_5__["ResponsiveHandler"])(obs), []);
+  var sideBtnStyle = {};
+  var viewStyle = {
+    paddingVertical: 15,
+    paddingHorizontal: 25,
+    flexBasis: 75,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between"
+  };
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_2__["View"], {
+    style: Object(_Style__WEBPACK_IMPORTED_MODULE_5__["Responsive"])({
+      xs: Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, viewStyle, {
+        paddingRight: 0
+      }),
+      sm: Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, viewStyle, {
+        paddingRight: 0
+      }),
+      md: Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, viewStyle),
+      lg: Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, viewStyle),
+      xl: Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, viewStyle),
+      xxl: Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, viewStyle)
+    }, obs.width),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 21
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_1__["View"], {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_2__["View"], {
     style: {
       flexDirection: "row",
       alignItems: "center"
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 34
     },
     __self: this
-  }, onBack && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_1__["TouchableOpacity"], {
+  }, navigation && !onBack && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_2__["TouchableOpacity"], {
+    style: Object(_Style__WEBPACK_IMPORTED_MODULE_5__["Responsive"])({
+      xs: Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, sideBtnStyle),
+      sm: Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, sideBtnStyle),
+      md: Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, sideBtnStyle, {
+        display: "none"
+      }),
+      lg: Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, sideBtnStyle, {
+        display: "none"
+      }),
+      xl: Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, sideBtnStyle, {
+        display: "none"
+      }),
+      xxl: Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, sideBtnStyle, {
+        display: "none"
+      })
+    }, obs.width),
+    onPress: function onPress() {
+      if (navigation.toggleDrawer) {
+        navigation.toggleDrawer();
+      } else {
+        var parent = navigation.dangerouslyGetParent();
+
+        if (parent.toggleDrawer) {
+          parent.toggleDrawer();
+        }
+      }
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_UIImage__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    style: {
+      width: 20,
+      height: 20,
+      marginLeft: -5,
+      marginRight: 20
+    },
+    source: __webpack_require__(/*! ./imgs/line-menu.png */ "./pages/app/libs/ui/imgs/line-menu.png"),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 59
+    },
+    __self: this
+  })), onBack && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_2__["TouchableOpacity"], {
     style: {
       width: 20,
       height: 20,
@@ -3040,10 +3178,10 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/ui/U
     onPress: onBack,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 72
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UIImage__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_UIImage__WEBPACK_IMPORTED_MODULE_3__["default"], {
     style: {
       width: 20,
       height: 20
@@ -3051,27 +3189,29 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/ui/U
     source: __webpack_require__(/*! ./imgs/back.png */ "./pages/app/libs/ui/imgs/back.png"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 82
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_1__["Text"], {
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_2__["Text"], {
     style: {
       fontSize: 22,
-      color: "#555"
+      color: "#555",
+      flex: 1,
+      flexWrap: "wrap"
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 91
     },
     __self: this
-  }, (title || "").trim())), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_1__["View"], {
+  }, (title || "").trim())), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_2__["View"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 97
     },
     __self: this
   }, children));
-});
+}));
 
 /***/ }),
 
@@ -3291,6 +3431,17 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/ui/U
 /***/ (function(module, exports) {
 
 module.exports = "data:image/png;base64,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"
+
+/***/ }),
+
+/***/ "./pages/app/libs/ui/imgs/line-menu.png":
+/*!**********************************************!*\
+  !*** ./pages/app/libs/ui/imgs/line-menu.png ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,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"
 
 /***/ }),
 
@@ -3855,21 +4006,24 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
-/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js");
-/* harmony import */ var _libs_queries_crud_query__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../libs/queries/crud/query */ "./pages/app/libs/queries/crud/query.ts");
-/* harmony import */ var _libs_ui_UIButton__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../libs/ui/UIButton */ "./pages/app/libs/ui/UIButton.tsx");
-/* harmony import */ var _libs_ui_UIFieldText__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../libs/ui/UIFieldText */ "./pages/app/libs/ui/UIFieldText.tsx");
-/* harmony import */ var mobx_react_lite__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! mobx-react-lite */ "mobx-react-lite");
-/* harmony import */ var mobx_react_lite__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(mobx_react_lite__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-native-web */ "react-native-web");
-/* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_native_web__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _stores_RootStore__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../stores/RootStore */ "./pages/app/stores/RootStore.ts");
-/* harmony import */ var _libs_queries_user_checkSession__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../libs/queries/user/checkSession */ "./pages/app/libs/queries/user/checkSession.ts");
-/* harmony import */ var _libs_ui_UIImage__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../libs/ui/UIImage */ "./pages/app/libs/ui/UIImage.tsx");
+/* harmony import */ var _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/parse-int */ "./node_modules/@babel/runtime-corejs2/core-js/parse-int.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
+/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var _libs_queries_crud_query__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../libs/queries/crud/query */ "./pages/app/libs/queries/crud/query.ts");
+/* harmony import */ var _libs_ui_UIButton__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../libs/ui/UIButton */ "./pages/app/libs/ui/UIButton.tsx");
+/* harmony import */ var _libs_ui_UIFieldText__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../libs/ui/UIFieldText */ "./pages/app/libs/ui/UIFieldText.tsx");
+/* harmony import */ var mobx_react_lite__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! mobx-react-lite */ "mobx-react-lite");
+/* harmony import */ var mobx_react_lite__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(mobx_react_lite__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-native-web */ "react-native-web");
+/* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react_native_web__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _stores_RootStore__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../stores/RootStore */ "./pages/app/stores/RootStore.ts");
+/* harmony import */ var _libs_queries_user_checkSession__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../libs/queries/user/checkSession */ "./pages/app/libs/queries/user/checkSession.ts");
+/* harmony import */ var _libs_ui_UIImage__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../libs/ui/UIImage */ "./pages/app/libs/ui/UIImage.tsx");
+
 
 
 var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/Login.tsx";
@@ -3882,29 +4036,29 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/L
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_5__["observer"])(function (_ref) {
+/* harmony default export */ __webpack_exports__["default"] = (Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_6__["observer"])(function (_ref) {
   var navigation = _ref.navigation;
-  var data = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_5__["useObservable"])({
+  var data = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_6__["useObservable"])({
     sekolah_id: "",
     nsa: "",
     password: ""
   });
-  var meta = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_5__["useObservable"])({
+  var meta = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_6__["useObservable"])({
     sekolah: "",
     murid: "",
     loading: true
   });
-  Object(react__WEBPACK_IMPORTED_MODULE_6__["useEffect"])(function () {
-    Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])(
+  Object(react__WEBPACK_IMPORTED_MODULE_7__["useEffect"])(function () {
+    Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])(
     /*#__PURE__*/
-    _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+    _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
       var session;
-      return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+      return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
               _context.next = 2;
-              return Object(_libs_queries_user_checkSession__WEBPACK_IMPORTED_MODULE_9__["checkSession"])();
+              return Object(_libs_queries_user_checkSession__WEBPACK_IMPORTED_MODULE_10__["checkSession"])();
 
             case 2:
               session = _context.sent;
@@ -3935,30 +4089,30 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/L
   }, []);
 
   if (meta.loading) {
-    return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_7__["View"], {
+    return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_8__["View"], {
       style: styles.container,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 40
-      },
-      __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_7__["Text"], {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 41
       },
       __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_8__["Text"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 42
+      },
+      __self: this
     }, "Loading..."));
   }
 
-  return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_7__["View"], {
+  return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_8__["View"], {
     style: styles.container,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 48
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_libs_ui_UIImage__WEBPACK_IMPORTED_MODULE_10__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_libs_ui_UIImage__WEBPACK_IMPORTED_MODULE_11__["default"], {
     source: __webpack_require__(/*! ../imgs/logob.png */ "./pages/app/imgs/logob.png"),
     mobileStyle: {
       height: 120,
@@ -3969,10 +4123,10 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/L
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 49
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_libs_ui_UIFieldText__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_libs_ui_UIFieldText__WEBPACK_IMPORTED_MODULE_5__["default"], {
     label: "ID Sekolah",
     sublabel: meta.sekolah,
     value: data.sekolah_id,
@@ -3984,23 +4138,24 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/L
     },
     onBlur:
     /*#__PURE__*/
-    Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])(
+    Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])(
     /*#__PURE__*/
-    _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
+    _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee2() {
       var res;
-      return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
+      return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee2$(_context2) {
         while (1) {
           switch (_context2.prev = _context2.next) {
             case 0:
-              _context2.next = 2;
-              return Object(_libs_queries_crud_query__WEBPACK_IMPORTED_MODULE_2__["default"])("sekolah", ["nama_sekolah"], {
+              _context2.prev = 0;
+              _context2.next = 3;
+              return Object(_libs_queries_crud_query__WEBPACK_IMPORTED_MODULE_3__["default"])("sekolah", ["nama_sekolah"], {
                 where: {
-                  id: data.sekolah_id
+                  id: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(data.sekolah_id)
                 },
                 useSession: false
               });
 
-            case 2:
+            case 3:
               res = _context2.sent;
 
               if (res && res.nama_sekolah) {
@@ -4009,19 +4164,26 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/L
                 meta.sekolah = "Sekolah tidak ditemukan";
               }
 
-            case 4:
+              _context2.next = 9;
+              break;
+
+            case 7:
+              _context2.prev = 7;
+              _context2.t0 = _context2["catch"](0);
+
+            case 9:
             case "end":
               return _context2.stop();
           }
         }
-      }, _callee2);
+      }, _callee2, null, [[0, 7]]);
     })),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 54
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_libs_ui_UIFieldText__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_libs_ui_UIFieldText__WEBPACK_IMPORTED_MODULE_5__["default"], {
     label: "Nomor Induk / NSA",
     sublabel: meta.murid,
     value: data.nsa,
@@ -4033,18 +4195,18 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/L
     },
     onBlur:
     /*#__PURE__*/
-    Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])(
+    Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])(
     /*#__PURE__*/
-    _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3() {
+    _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee3() {
       var res;
-      return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee3$(_context3) {
+      return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee3$(_context3) {
         while (1) {
           switch (_context3.prev = _context3.next) {
             case 0:
               _context3.next = 2;
-              return Object(_libs_queries_crud_query__WEBPACK_IMPORTED_MODULE_2__["default"])("murid", ["nama_murid"], {
+              return Object(_libs_queries_crud_query__WEBPACK_IMPORTED_MODULE_3__["default"])("murid", ["nama_murid"], {
                 where: {
-                  sekolah_id: data.sekolah_id,
+                  sekolah_id: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(data.sekolah_id),
                   nsa: data.nsa
                 },
                 useSession: false
@@ -4068,10 +4230,10 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/L
     })),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 74
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_libs_ui_UIFieldText__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_libs_ui_UIFieldText__WEBPACK_IMPORTED_MODULE_5__["default"], {
     type: "password",
     label: "Password",
     value: data.password,
@@ -4083,26 +4245,26 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/L
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
+      lineNumber: 92
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_libs_ui_UIButton__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_libs_ui_UIButton__WEBPACK_IMPORTED_MODULE_4__["default"], {
     style: {
       width: "50%"
     },
     onPress:
     /*#__PURE__*/
-    Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])(
+    Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])(
     /*#__PURE__*/
-    _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee4() {
+    _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee4() {
       var session;
-      return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee4$(_context4) {
+      return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee4$(_context4) {
         while (1) {
           switch (_context4.prev = _context4.next) {
             case 0:
               meta.loading = true;
               _context4.next = 3;
-              return _stores_RootStore__WEBPACK_IMPORTED_MODULE_8__["RootStore"].session.login(data.sekolah_id, data.nsa, data.password);
+              return _stores_RootStore__WEBPACK_IMPORTED_MODULE_9__["RootStore"].session.login(data.sekolah_id, data.nsa, data.password);
 
             case 3:
               session = _context4.sent;
@@ -4132,12 +4294,12 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/L
     })),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 96
+      lineNumber: 99
     },
     __self: this
   }, "Login"));
 }));
-var styles = react_native_web__WEBPACK_IMPORTED_MODULE_7__["StyleSheet"].create({
+var styles = react_native_web__WEBPACK_IMPORTED_MODULE_8__["StyleSheet"].create({
   container: {
     flex: 1,
     alignItems: "center",
@@ -4620,6 +4782,9 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/a
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement(_libs_ui_UICol__WEBPACK_IMPORTED_MODULE_5__["default"], {
     size: 6,
+    sizexs: 12,
+    sizesm: 12,
+    sizemd: 12,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 32
@@ -5008,6 +5173,9 @@ var MuridSistem = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_9__["observer"
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_libs_ui_UICol__WEBPACK_IMPORTED_MODULE_17__["default"], {
     size: 6,
+    sizexs: 12,
+    sizesm: 12,
+    sizemd: 12,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 77
@@ -5026,6 +5194,9 @@ var MuridSistem = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_9__["observer"
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_libs_ui_UICol__WEBPACK_IMPORTED_MODULE_17__["default"], {
     size: 6,
+    sizexs: 12,
+    sizesm: 12,
+    sizemd: 12,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 86
@@ -5061,6 +5232,9 @@ var MuridSistem = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_9__["observer"
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_libs_ui_UICol__WEBPACK_IMPORTED_MODULE_17__["default"], {
     size: 4,
+    sizexs: 12,
+    sizesm: 12,
+    sizemd: 12,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 104
@@ -5085,6 +5259,9 @@ var MuridSistem = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_9__["observer"
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_libs_ui_UICol__WEBPACK_IMPORTED_MODULE_17__["default"], {
     size: 4,
+    sizexs: 12,
+    sizesm: 12,
+    sizemd: 12,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 116
@@ -5116,6 +5293,9 @@ var MuridSistem = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_9__["observer"
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_libs_ui_UICol__WEBPACK_IMPORTED_MODULE_17__["default"], {
     size: 4,
+    sizexs: 12,
+    sizesm: 12,
+    sizemd: 12,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 132
@@ -6071,6 +6251,9 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/a
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement(_libs_ui_UICol__WEBPACK_IMPORTED_MODULE_8__["default"], {
     size: 4,
+    sizesm: 6,
+    sizexs: 6,
+    sizemd: 6,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 78
@@ -6089,6 +6272,9 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/a
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement(_libs_ui_UICol__WEBPACK_IMPORTED_MODULE_8__["default"], {
     size: 4,
+    sizesm: 6,
+    sizexs: 6,
+    sizemd: 6,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 87
