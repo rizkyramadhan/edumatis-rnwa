@@ -54,5 +54,5 @@ const sync = (srcDir, destDir, opts) => {
 };
 
 sync("../mobile/app", "../web/pages/app", {
-  ignored: path.join("../mobile/app", "**", "libs")
+  ignored: path.join("../mobile/app/libs")
 });

@@ -10,7 +10,7 @@
     "update": "cd init && node update.js",
     "web": "cd web && yarn dev",
     "mobile": "cd mobile  && yarn start",
-    "android": "cd mobile && react-native link && react-native run-android",
+    "android": "cd mobile &&  react-native run-android",
     "sync": "cd init && node sync.js"
   }
 }

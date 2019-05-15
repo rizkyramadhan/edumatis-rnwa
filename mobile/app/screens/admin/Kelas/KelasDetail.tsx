@@ -70,7 +70,7 @@ export default observer(({ navigation }: any) => {
           setValue={(value: any) => {
             data.form.nama_kelas = value;
           }}
-          value={data.form.nama_kelas}
+          value={data.form.nama_kelas || ""}
         />
         <MuridList
           kelas={data.form}

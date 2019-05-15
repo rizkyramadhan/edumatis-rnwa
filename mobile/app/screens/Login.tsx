@@ -6,12 +6,14 @@ import React, { useEffect } from "react";
 import { StyleSheet, View, Text } from "react-native";
 import { RootStore } from "@app/stores/RootStore";
 import { checkSession } from "@app/libs/queries/user/checkSession";
+import UIImage from "@app/libs/ui/UIImage";
+import { toJS } from "mobx";
 
 export default observer(({ navigation }: any) => {
   const data = useObservable({
     sekolah_id: "",
     nsa: "",
-    password: "" 
+    password: ""
   });
   const meta = useObservable({
     sekolah: "",
@@ -44,6 +46,11 @@ export default observer(({ navigation }: any) => {
 
   return (
     <View style={styles.container}>
+      <UIImage
+        source={require("@app/imgs/logob.png")}
+        mobileStyle={{ height: 120, marginBottom: 20 }}
+        style={{ width: 200 }}
+      />
       <UIFieldText
         label="ID Sekolah"
         sublabel={meta.sekolah}
@@ -70,7 +77,7 @@ export default observer(({ navigation }: any) => {
         setValue={(value: string) => (data.nsa = value)}
         onBlur={async () => {
           let res = await query("murid", ["nama_murid"], {
-            where: { sekolah_id: data.sekolah_id, nsa: data.nsa },
+            where: { sekolah_id: parseInt(data.sekolah_id), nsa: data.nsa },
             useSession: false
           });
           if (res && res.nama_murid) {
