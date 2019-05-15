@@ -1,9 +1,10 @@
+import config from "@app/config";
+import { createNavigateTo } from "@app/libs/nav/NavContainer";
 import UIImage from "@app/libs/ui/UIImage";
+import { RootStore } from "@app/stores/RootStore";
 import { observer } from "mobx-react-lite";
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import config from "@app/config";
-import { RootStore } from "@app/stores/RootStore";
 
 const Button = observer((props: any) => {
   return (
@@ -19,7 +20,7 @@ const Button = observer((props: any) => {
       <UIImage
         style={{
           width: 20,
-          padding: 10,
+          margin: 10,
           height: 20
         }}
         source={props.image}
@@ -30,11 +31,16 @@ const Button = observer((props: any) => {
 });
 
 export default ({ navigation }: any) => {
+  const navigateTo = createNavigateTo(navigation);
+
   return (
     <View style={s.container}>
       <View style={{ alignItems: "center", justifyContent: "center" }}>
         <UIImage
           source={require("@app/imgs/logo.png")}
+          mobileStyle={{
+            height: 160
+          }}
           style={{
             width: "70%",
             paddingTop: 20,
@@ -45,21 +51,21 @@ export default ({ navigation }: any) => {
       <Button
         text="Kewajiban"
         onPress={() => {
-          navigation.replace("Kewajiban");
+          navigateTo("Kewajiban");
         }}
         image={require("@app/imgs/kewajiban.png")}
       />
       <Button
         text="Pengumuman"
         onPress={() => {
-          navigation.replace("Pengumuman");
+          navigateTo("Pengumuman");
         }}
         image={require("@app/imgs/pengumuman.png")}
       />
       <Button
         text="Kelas & Murid"
         onPress={() => {
-          navigation.replace("Kelas");
+          navigateTo("Kelas");
         }}
         image={require("@app/imgs/kelas.png")}
       />

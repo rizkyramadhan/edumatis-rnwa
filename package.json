@@ -11,6 +11,6 @@
     "web": "cd web && yarn dev",
     "mobile": "cd mobile  && yarn start",
     "android": "cd mobile && react-native link && react-native run-android",
-    "sync": "node init/sync.js"
+    "sync": "cd init && node sync.js"
   }
 }

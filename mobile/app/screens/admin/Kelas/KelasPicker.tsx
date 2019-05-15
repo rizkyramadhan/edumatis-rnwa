@@ -84,7 +84,7 @@ export default observer(
                       }}
                     >
                       <Text style={{ fontSize: 17, height: 25 }}>
-                        {kelas ? "🗹" : "☐"}
+                        {kelas ? "☑" : "☐"}
                         &nbsp;
                         {k.nama_kelas}
                       </Text>

@@ -1,16 +1,14 @@
-import UIButton from "@app/libs/ui/UIButton";
-import { RootStore } from "@app/stores/RootStore";
-import React from "react";
+import Kewajiban from "./Kewajiban/Kewajiban";
+import SideBar from "./SideBar";
+import SideNav from "@app/libs/nav/SideNav";
+import Pengumuman from "./Pengumuman/Pengumuman";
 
-export default ({ navigation }: any) => {
-  return (
-    <UIButton
-      onPress={() => {
-        (RootStore.session as any).logout();
-        console.log(navigation);
-      }}
-    >
-      Logout
-    </UIButton>
-  );
-};
+export default SideNav(
+  {
+    Kewajiban: { screen: Kewajiban },
+    Pengumuman: { screen: Pengumuman }
+  },
+  {
+    contentComponent: SideBar
+  }
+);

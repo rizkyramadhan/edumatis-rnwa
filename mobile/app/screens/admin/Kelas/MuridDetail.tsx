@@ -45,6 +45,7 @@ const MuridSistem = observer(({ navigation, parentNavigation }: any) => {
   return (
     <UIContainer>
       <UIHead
+        navigation={navigation}
         title={
           data.form.id ? `Detail Siswa #${data.form.id}` : `Buat Siswa Baru`
         }

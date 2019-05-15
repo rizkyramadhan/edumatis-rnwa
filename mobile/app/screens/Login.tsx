@@ -9,9 +9,9 @@ import { checkSession } from "@app/libs/queries/user/checkSession";
 
 export default observer(({ navigation }: any) => {
   const data = useObservable({
-    sekolah_id: "1",
-    nsa: "1",
-    password: "123"
+    sekolah_id: "",
+    nsa: "",
+    password: "" 
   });
   const meta = useObservable({
     sekolah: "",

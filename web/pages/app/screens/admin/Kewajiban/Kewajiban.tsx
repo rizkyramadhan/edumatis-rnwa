@@ -35,7 +35,8 @@ const Kewajiban = observer(({ navigation }: any) => {
   }, []);
   return (
     <UIContainer>
-      <UIHead title="Kewajiban">
+      <UIHead 
+        navigation={navigation} title="Kewajiban">
         <UIButton
           size="small"
           onPress={() => {

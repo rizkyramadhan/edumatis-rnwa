@@ -11,7 +11,6 @@ export default SideNav(
     Kelas: { screen: Kelas }
   },
   {
-    drawerType: "slide",
     contentComponent: SideBar
   }
 );

@@ -12,7 +12,7 @@ export default observer(({ navigation }: any) => {
 
   return (
     <UIContainer>
-      <UIHead title="Blank" onBack={() => {}} />
+      <UIHead navigation={navigation} title="Blank" onBack={() => {}} />
       <UIBody>
         <Text>Halo {data.loading}</Text>
       </UIBody>

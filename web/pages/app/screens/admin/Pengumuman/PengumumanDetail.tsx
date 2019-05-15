@@ -22,6 +22,7 @@ export default observer(({ navigation }: any) => {
   return (
     <UIContainer>
       <UIHead
+        navigation={navigation}
         title={` Pengumuman ` + (data.form.id ? `#${data.form.id}` : `Baru`)}
         onBack={() => {
           navigation.goBack();

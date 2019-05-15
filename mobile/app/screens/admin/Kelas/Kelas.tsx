@@ -40,7 +40,7 @@ const Kelas = observer(({ navigation }: any) => {
   }, []);
   return (
     <UIContainer>
-      <UIHead title="Kelas">
+      <UIHead navigation={navigation} title="Kelas">
         <UIButton
           size="small"
           onPress={() => {

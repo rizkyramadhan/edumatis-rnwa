@@ -42,6 +42,7 @@ export default observer(({ navigation }: any) => {
   return (
     <UIContainer>
       <UIHead
+        navigation={navigation}
         title={
           ` Kewajiban ` +
           (data.form.id
@@ -78,7 +79,7 @@ export default observer(({ navigation }: any) => {
             <UIFieldText
               label="Nominal"
               setValue={(value: any) => {
-                data.form.nominal = Math.max(30000, parseInt(value));
+                data.form.nominal = value;
               }}
               value={data.form.nominal}
             />
@@ -106,7 +107,7 @@ export default observer(({ navigation }: any) => {
                   label="Nominal untuk semua murid kelas ini"
                   value={kelas.nominal}
                   setValue={(value: any) => {
-                    kelas.nominal = Math.max(30000, parseInt(value));
+                    kelas.nominal = value;
                   }}
                 />
                 <Text style={{ padding: 10, paddingLeft: 15, color: "#333" }}>
@@ -122,7 +123,7 @@ export default observer(({ navigation }: any) => {
                   label="Nominal"
                   value={murid.nominal || kelas.nominal}
                   setValue={(value: any) => {
-                    murid.nominal = Math.max(30000, parseInt(value));
+                    murid.nominal = value;
                   }}
                 />
               </UICol>

@@ -42,6 +42,7 @@ export default observer(({ navigation }: any) => {
   return (
     <UIContainer>
       <UIHead
+        navigation={navigation}
         title={
           ` Kewajiban ` +
           (data.form.id
