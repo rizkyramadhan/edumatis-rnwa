@@ -102,11 +102,11 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.edumatis"
+        applicationId "id.edumatis.edumatis"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 50
-        versionName "50.0"
+        versionCode 52
+        versionName "52.0"
     }
     signingConfigs {
         release {

@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.edumatis">
+  package="id.edumatis.edumatis">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
