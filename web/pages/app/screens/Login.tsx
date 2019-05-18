@@ -1,13 +1,12 @@
 import query from "@app/libs/queries/crud/query";
+import { checkSession } from "@app/libs/queries/user/checkSession";
 import UIButton from "@app/libs/ui/UIButton";
 import UIFieldText from "@app/libs/ui/UIFieldText";
+import UIImage from "@app/libs/ui/UIImage";
+import { RootStore } from "@app/stores/RootStore";
 import { observer, useObservable } from "mobx-react-lite";
 import React, { useEffect } from "react";
-import { StyleSheet, View, Text } from "react-native";
-import { RootStore } from "@app/stores/RootStore";
-import { checkSession } from "@app/libs/queries/user/checkSession";
-import UIImage from "@app/libs/ui/UIImage";
-import { toJS } from "mobx";
+import { StyleSheet, Text, View, ScrollView } from "react-native";
 
 export default observer(({ navigation }: any) => {
   const data = useObservable({
@@ -38,14 +37,33 @@ export default observer(({ navigation }: any) => {
 
   if (meta.loading) {
     return (
-      <View style={styles.container}>
+      <View
+        style={{
+          flex: 1,
+          alignItems: "center",
+          justifyContent: "center",
+          backgroundColor: "#fff"
+        }}
+      >
         <Text>Loading...</Text>
       </View>
     );
   }
 
   return (
-    <View style={styles.container}>
+    <ScrollView
+      style={{
+        backgroundColor: "#fff"
+      }}
+      contentContainerStyle={{
+        alignItems: "center",
+        paddingTop: 100,
+        maxWidth: 800,
+        justifyContent: "center",
+        alignSelf: "center",
+        minWidth: 430
+      }}
+    >
       <UIImage
         source={require("@app/imgs/logob.png")}
         mobileStyle={{ height: 120, marginBottom: 20 }}
@@ -119,15 +137,6 @@ export default observer(({ navigation }: any) => {
       >
         Login
       </UIButton>
-    </View>
+    </ScrollView>
   );
-});
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "#fff"
-  }
 });

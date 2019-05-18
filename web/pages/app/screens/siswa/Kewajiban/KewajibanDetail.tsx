@@ -1,14 +1,14 @@
 import createRecord from "@app/libs/queries/crud/createRecord";
+import updateRecord from "@app/libs/queries/crud/updateRecord";
 import { getSession } from "@app/libs/queries/user/getsetSession";
 import UIContainer from "@app/libs/ui/UIContainer";
 import UIHead from "@app/libs/ui/UIHead";
 import UIWebView from "@app/libs/ui/UIWebView";
+import dayjs from "dayjs";
 import { toJS } from "mobx";
 import { observer, useObservable } from "mobx-react-lite";
 import React, { useEffect } from "react";
-import { ActivityIndicator, View, Text, Alert } from "react-native";
-import updateRecord from "@app/libs/queries/crud/updateRecord";
-import dayjs from "dayjs";
+import { Text, View } from "react-native";
 
 export default observer(({ navigation }: any) => {
   const data = useObservable({
@@ -33,7 +33,6 @@ export default observer(({ navigation }: any) => {
         transaksi &&
         transaksi.detail &&
         dayjs(transaksi.detail.expiry_date).isBefore(dayjs());
-      console.log(nominalBeda, expired, !transaksi, !transaksi.detail);
 
       if (!transaksi || !transaksi.detail || nominalBeda || expired) {
         if (!transaksi || !transaksi.detail) {
@@ -75,6 +74,7 @@ export default observer(({ navigation }: any) => {
         const json = await response.json();
         await updateRecord("transaksi", {
           id: transaksi.id,
+          nominal: data.form.nominal,
           detail: json
         });
 

@@ -49,6 +49,13 @@ export default ({ navigation }: any) => {
         />
       </View>
       <Button
+        text="Transaksi"
+        onPress={() => {
+          navigateTo("Transaksi");
+        }}
+        image={require("@app/imgs/transaksi.png")}
+      />
+      <Button
         text="Kewajiban"
         onPress={() => {
           navigateTo("Kewajiban");

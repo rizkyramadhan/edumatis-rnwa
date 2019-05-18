@@ -12,13 +12,15 @@ import UIHead from "@app/libs/ui/UIHead";
 import UIRow from "@app/libs/ui/UIRow";
 import { observer, useObservable } from "mobx-react-lite";
 import React, { useEffect } from "react";
-import { Text, View, Alert, Platform } from "react-native";
+import { Alert, Platform, Text, View, TouchableOpacity } from "react-native";
 import KelasPicker from "../Kelas/KelasPicker";
+import get from "lodash.get";
 
 export default observer(({ navigation }: any) => {
   const data = useObservable({
     form: navigation.getParam("item")
   });
+  const count = get(data, "form.transaksi_aggregate.aggregate.count");
   useEffect(() => {
     if (data.form.id) {
       rawQuery(`
@@ -32,6 +34,11 @@ export default observer(({ navigation }: any) => {
           status
           tgl_batas_pembayaran_bulan
           tipe_pembayaran
+          transaksi_aggregate {
+            aggregate {
+              count
+            }
+          }
         }
       }
     `).then((res: any) => {
@@ -67,39 +74,74 @@ export default observer(({ navigation }: any) => {
           >
             Simpan
           </UIButton>
-          <UIButton
-            style={{
-              backgroundColor: "red",
-              marginLeft: -5
-            }}
-            onPress={async () => {
-              if (Platform.OS === "web") {
-                confirm("Apakah anda yakin ingin menghapus kewajiban ini ?")
-              } else {
-                  Alert.alert(
-                    'Menghapus Kewajiban',
-                    'Apakah Anda yakin ingin menghapus kewajiban ini ?', [
-                    {
-                      text: 'NO', style: 'cancel', onPress: () => {}
-                    },
-                    {
-                      text: 'YES', onPress: async () => {
-                        if (data.form.id) {
-                          await deleteRecord("kewajiban", { id: data.form.id });
-                        } 
-                        navigation.goBack();
-                      }
+          {count === 0 && (
+            <UIButton
+              style={{
+                backgroundColor: "red",
+                marginLeft: -5
+              }}
+              onPress={async () => {
+                if (Platform.OS === "web") {
+                  if (
+                    confirm("Apakah anda yakin ingin menghapus kewajiban ini ?")
+                  ) {
+                    if (data.form.id) {
+                      await deleteRecord("kewajiban", { id: data.form.id });
                     }
-                  ])
+                    navigation.goBack();
+                  }
+                } else {
+                  Alert.alert(
+                    "Menghapus Kewajiban",
+                    "Apakah Anda yakin ingin menghapus kewajiban ini ?",
+                    [
+                      {
+                        text: "NO",
+                        style: "cancel",
+                        onPress: () => {}
+                      },
+                      {
+                        text: "YES",
+                        onPress: async () => {
+                          if (data.form.id) {
+                            await deleteRecord("kewajiban", {
+                              id: data.form.id
+                            });
+                          }
+                          navigation.goBack();
+                        }
+                      }
+                    ]
+                  );
                 }
-              }
-            }
-          >
-            Hapus
-          </UIButton>
+              }}
+            >
+              Hapus
+            </UIButton>
+          )}
         </UIRow>
       </UIHead>
       <UIBody>
+        <UIRow style={{ paddingBottom: 25 }}>
+          {count === 0 ? (
+            <Text>Transaksi untuk kewajiban ini masih kosong.</Text>
+          ) : (
+            <TouchableOpacity>
+              <UIRow>
+                <Text>Terdapat</Text>
+                <Text
+                  style={{
+                    marginHorizontal: 5,
+                    textDecorationLine: "underline"
+                  }}
+                >
+                  {count} transaksi
+                </Text>
+                <Text> untuk kewajiban ini.</Text>
+              </UIRow>
+            </TouchableOpacity>
+          )}
+        </UIRow>
         <UIFieldText
           label="Nama Kewajiban"
           setValue={(value: any) => {
@@ -115,6 +157,16 @@ export default observer(({ navigation }: any) => {
                 data.form.nominal = value;
               }}
               value={data.form.nominal}
+            />
+          </UICol>
+          <UICol size={4} sizesm={6} sizexs={6} sizemd={6}>
+            <UIFieldSelectNative
+              label="Status Kewajiban"
+              items={["aktif", "non-aktif"]}
+              setValue={(value: any) => {
+                data.form.status = value;
+              }}
+              value={data.form.status}
             />
           </UICol>
           <UICol size={4} sizesm={6} sizexs={6} sizemd={6}>
@@ -151,7 +203,7 @@ export default observer(({ navigation }: any) => {
           }}
           renderMurid={(murid: any, kelas: any) => {
             return (
-              <UICol size={6} >
+              <UICol size={6}>
                 <UIFieldText
                   label="Nominal"
                   value={murid.nominal || kelas.nominal}

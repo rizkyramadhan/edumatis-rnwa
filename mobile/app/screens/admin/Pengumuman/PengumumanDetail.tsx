@@ -8,10 +8,11 @@ import { observer, useObservable } from "mobx-react-lite";
 import React from "react";
 import UIFieldSelectNative from "@app/libs/ui/UIFieldSelectNative";
 import KelasPicker from "../Kelas/KelasPicker";
-import { Text } from "react-native";
+import { Text, Platform, Alert } from "react-native";
 import UIButton from "@app/libs/ui/UIButton";
 import updateRecord from "@app/libs/queries/crud/updateRecord";
 import createRecord from "@app/libs/queries/crud/createRecord";
+import deleteRecord from "@app/libs/queries/crud/deleteRecord";
 
 export default observer(({ navigation }: any) => {
   const data = useObservable({
@@ -28,19 +29,64 @@ export default observer(({ navigation }: any) => {
           navigation.goBack();
         }}
       >
-        <UIButton
-          onPress={async () => {
-            if (data.form.id) {
-              data.form.id = parseInt(data.form.id);
-              await updateRecord("pengumuman", data.form);
-            } else {
-              await createRecord("pengumuman", data.form);
-            }
-            navigation.goBack();
-          }}
-        >
-          Simpan
-        </UIButton>
+        <UIRow>
+          <UIButton
+            onPress={async () => {
+              if (data.form.id) {
+                data.form.id = parseInt(data.form.id);
+                await updateRecord("pengumuman", data.form);
+              } else {
+                await createRecord("pengumuman", data.form);
+              }
+              navigation.goBack();
+            }}
+          >
+            Simpan
+          </UIButton>
+          <UIButton
+            style={{
+              backgroundColor: "red",
+              marginLeft: -5
+            }}
+            onPress={async () => {
+              if (Platform.OS === "web") {
+                if (
+                  confirm("Apakah anda yakin ingin menghapus pengumuman ini ?")
+                ) {
+                  if (data.form.id) {
+                    await deleteRecord("pengumuman", { id: data.form.id });
+                  }
+                  navigation.goBack();
+                }
+              } else {
+                Alert.alert(
+                  "Menghapus Kewajiban",
+                  "Apakah Anda yakin ingin menghapus pengumuman ini ?",
+                  [
+                    {
+                      text: "NO",
+                      style: "cancel",
+                      onPress: () => {}
+                    },
+                    {
+                      text: "YES",
+                      onPress: async () => {
+                        if (data.form.id) {
+                          await deleteRecord("pengumuman", {
+                            id: data.form.id
+                          });
+                        }
+                        navigation.goBack();
+                      }
+                    }
+                  ]
+                );
+              }
+            }}
+          >
+            Hapus
+          </UIButton>
+        </UIRow>
       </UIHead>
       <UIBody>
         <UIFieldText

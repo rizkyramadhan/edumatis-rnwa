@@ -7,7 +7,7 @@ import { View, Text } from "react-native";
 import MuridDetailSide from "./MuridDetailSide";
 import UIButton from "@app/libs/ui/UIButton";
 import { saveUser } from "./MuridDetail";
-import { JsonTable } from "react-json-to-html";
+import UIJson from "@app/libs/ui/UIJson";
 
 export default observer(({ navigation, parentNavigation }: any) => {
   const data = useObservable({
@@ -48,7 +48,7 @@ export default observer(({ navigation, parentNavigation }: any) => {
         <MuridDetailSide navigation={navigation} form={data.form} />
         <UIBody>
           {data.form.data ? (
-            <JsonTable json={data.form.data} />
+            <UIJson data={data.form.data} />
           ) : (
             <Text>&mdash; Data Diri Kosong &mdash; </Text>
           )}

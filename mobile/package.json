@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.3.4",
+    "@types/lodash.get": "^4.4.6",
     "dayjs": "^1.8.14",
     "lodash.get": "^4.4.2",
     "mobx": "^5.9.4",
