@@ -1,4 +1,5 @@
 import createRecord from "@app/libs/queries/crud/createRecord";
+import deleteRecord from "@app/libs/queries/crud/deleteRecord";
 import rawQuery from "@app/libs/queries/crud/rawQuery";
 import updateRecord from "@app/libs/queries/crud/updateRecord";
 import UIBody from "@app/libs/ui/UIBody";
@@ -11,7 +12,7 @@ import UIHead from "@app/libs/ui/UIHead";
 import UIRow from "@app/libs/ui/UIRow";
 import { observer, useObservable } from "mobx-react-lite";
 import React, { useEffect } from "react";
-import { Text, View } from "react-native";
+import { Text, View, Alert, Platform } from "react-native";
 import KelasPicker from "../Kelas/KelasPicker";
 
 export default observer(({ navigation }: any) => {
@@ -53,18 +54,50 @@ export default observer(({ navigation }: any) => {
           navigation.goBack();
         }}
       >
-        <UIButton
-          onPress={async () => {
-            if (data.form.id) {
-              await updateRecord("kewajiban", data.form);
-            } else {
-              await createRecord("kewajiban", data.form);
+        <UIRow>
+          <UIButton
+            onPress={async () => {
+              if (data.form.id) {
+                await updateRecord("kewajiban", data.form);
+              } else {
+                await createRecord("kewajiban", data.form);
+              }
+              navigation.goBack();
+            }}
+          >
+            Simpan
+          </UIButton>
+          <UIButton
+            style={{
+              backgroundColor: "red",
+              marginLeft: -5
+            }}
+            onPress={async () => {
+              if (Platform.OS === "web") {
+                confirm("Apakah anda yakin ingin menghapus kewajiban ini ?")
+              } else {
+                  Alert.alert(
+                    'Menghapus Kewajiban',
+                    'Apakah Anda yakin ingin menghapus kewajiban ini ?', [
+                    {
+                      text: 'NO', style: 'cancel', onPress: () => {}
+                    },
+                    {
+                      text: 'YES', onPress: async () => {
+                        if (data.form.id) {
+                          await deleteRecord("kewajiban", { id: data.form.id });
+                        } 
+                        navigation.goBack();
+                      }
+                    }
+                  ])
+                }
+              }
             }
-            navigation.goBack();
-          }}
-        >
-          Simpan
-        </UIButton>
+          >
+            Hapus
+          </UIButton>
+        </UIRow>
       </UIHead>
       <UIBody>
         <UIFieldText

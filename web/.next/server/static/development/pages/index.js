@@ -791,7 +791,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var mobx__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(mobx__WEBPACK_IMPORTED_MODULE_4__);
 
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/nav/NavContainer.tsx";
+var _jsxFileName = "/var/www/edumatis/edumatis-rnwa/web/pages/app/libs/nav/NavContainer.tsx";
 
 
 
@@ -912,7 +912,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ui_Style__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../ui/Style */ "./pages/app/libs/ui/Style.tsx");
 /* harmony import */ var _NavContainer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./NavContainer */ "./pages/app/libs/nav/NavContainer.tsx");
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/nav/SideNav.tsx";
+var _jsxFileName = "/var/www/edumatis/edumatis-rnwa/web/pages/app/libs/nav/SideNav.tsx";
 
 
 
@@ -1086,7 +1086,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _NavContainer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./NavContainer */ "./pages/app/libs/nav/NavContainer.tsx");
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/nav/StackNav.tsx";
+var _jsxFileName = "/var/www/edumatis/edumatis-rnwa/web/pages/app/libs/nav/StackNav.tsx";
 
 
 /* harmony default export */ __webpack_exports__["default"] = (function (data) {
@@ -2572,7 +2572,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-native-web */ "react-native-web");
 /* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_native_web__WEBPACK_IMPORTED_MODULE_2__);
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/ui/UIBody.tsx";
+var _jsxFileName = "/var/www/edumatis/edumatis-rnwa/web/pages/app/libs/ui/UIBody.tsx";
 
 
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
@@ -2619,7 +2619,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-native-web */ "react-native-web");
 /* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_native_web__WEBPACK_IMPORTED_MODULE_3__);
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/ui/UIButton.tsx";
+var _jsxFileName = "/var/www/edumatis/edumatis-rnwa/web/pages/app/libs/ui/UIButton.tsx";
 
 
 
@@ -2722,7 +2722,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-native-web */ "react-native-web");
 /* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_native_web__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/ui/UICol.tsx";
+var _jsxFileName = "/var/www/edumatis/edumatis-rnwa/web/pages/app/libs/ui/UICol.tsx";
 
 
 var width = react_native_web__WEBPACK_IMPORTED_MODULE_1__["Dimensions"].get("window").width;
@@ -2779,7 +2779,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-native-web */ "react-native-web");
 /* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_native_web__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/ui/UIContainer.tsx";
+var _jsxFileName = "/var/www/edumatis/edumatis-rnwa/web/pages/app/libs/ui/UIContainer.tsx";
 
 
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
@@ -2813,7 +2813,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-native-web */ "react-native-web");
 /* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_native_web__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/ui/UIField.tsx";
+var _jsxFileName = "/var/www/edumatis/edumatis-rnwa/web/pages/app/libs/ui/UIField.tsx";
 
 
 
@@ -2863,7 +2863,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-native-web */ "react-native-web");
 /* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_native_web__WEBPACK_IMPORTED_MODULE_3__);
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/ui/UIFieldSelectNative.tsx";
+var _jsxFileName = "/var/www/edumatis/edumatis-rnwa/web/pages/app/libs/ui/UIFieldSelectNative.tsx";
 
 
 
@@ -2963,7 +2963,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Style__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Style */ "./pages/app/libs/ui/Style.tsx");
 
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/ui/UIFieldText.tsx";
+var _jsxFileName = "/var/www/edumatis/edumatis-rnwa/web/pages/app/libs/ui/UIFieldText.tsx";
 
 
 
@@ -3071,7 +3071,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var mobx_react_lite__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(mobx_react_lite__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _Style__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Style */ "./pages/app/libs/ui/Style.tsx");
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/ui/UIHead.tsx";
+var _jsxFileName = "/var/www/edumatis/edumatis-rnwa/web/pages/app/libs/ui/UIHead.tsx";
 
 
 
@@ -3228,7 +3228,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/ui/UIImage.tsx";
+var _jsxFileName = "/var/www/edumatis/edumatis-rnwa/web/pages/app/libs/ui/UIImage.tsx";
 
 /* harmony default export */ __webpack_exports__["default"] = (function (props) {
   var myprops = {
@@ -3262,7 +3262,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_native_web__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _UIButton__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./UIButton */ "./pages/app/libs/ui/UIButton.tsx");
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/ui/UIList.tsx";
+var _jsxFileName = "/var/www/edumatis/edumatis-rnwa/web/pages/app/libs/ui/UIList.tsx";
 
 
 
@@ -3357,7 +3357,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-native-web */ "react-native-web");
 /* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_native_web__WEBPACK_IMPORTED_MODULE_2__);
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/ui/UIListItem.tsx";
+var _jsxFileName = "/var/www/edumatis/edumatis-rnwa/web/pages/app/libs/ui/UIListItem.tsx";
 
 
 var width = react_native_web__WEBPACK_IMPORTED_MODULE_2__["Dimensions"].get("window").width;
@@ -3410,7 +3410,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-native-web */ "react-native-web");
 /* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_native_web__WEBPACK_IMPORTED_MODULE_2__);
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/ui/UIRow.tsx";
+var _jsxFileName = "/var/www/edumatis/edumatis-rnwa/web/pages/app/libs/ui/UIRow.tsx";
 
 
 /* harmony default export */ __webpack_exports__["default"] = (function (props) {
@@ -3442,7 +3442,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/ui/UIWebView.tsx";
+var _jsxFileName = "/var/www/edumatis/edumatis-rnwa/web/pages/app/libs/ui/UIWebView.tsx";
 
 /* harmony default export */ __webpack_exports__["default"] = (function (props) {
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
@@ -4062,7 +4062,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/Login.tsx";
+var _jsxFileName = "/var/www/edumatis/edumatis-rnwa/web/pages/app/screens/Login.tsx";
 
 
 
@@ -4411,7 +4411,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _MuridDetail__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./MuridDetail */ "./pages/app/screens/admin/Kelas/MuridDetail.tsx");
 
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/admin/Kelas/Kelas.tsx";
+var _jsxFileName = "/var/www/edumatis/edumatis-rnwa/web/pages/app/screens/admin/Kelas/Kelas.tsx";
 
 
 
@@ -4605,7 +4605,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/admin/Kelas/KelasDetail.tsx";
+var _jsxFileName = "/var/www/edumatis/edumatis-rnwa/web/pages/app/screens/admin/Kelas/KelasDetail.tsx";
 
 
 
@@ -4784,7 +4784,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/admin/Kelas/KelasPicker.tsx";
+var _jsxFileName = "/var/www/edumatis/edumatis-rnwa/web/pages/app/screens/admin/Kelas/KelasPicker.tsx";
 
 
 
@@ -5040,7 +5040,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/admin/Kelas/MuridDetail.tsx";
+var _jsxFileName = "/var/www/edumatis/edumatis-rnwa/web/pages/app/screens/admin/Kelas/MuridDetail.tsx";
 
 
 
@@ -5392,7 +5392,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/admin/Kelas/MuridDetailProfil.tsx";
+var _jsxFileName = "/var/www/edumatis/edumatis-rnwa/web/pages/app/screens/admin/Kelas/MuridDetailProfil.tsx";
 
 
 
@@ -5519,7 +5519,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-native-web */ "react-native-web");
 /* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_native_web__WEBPACK_IMPORTED_MODULE_4__);
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/admin/Kelas/MuridDetailSide.tsx";
+var _jsxFileName = "/var/www/edumatis/edumatis-rnwa/web/pages/app/screens/admin/Kelas/MuridDetailSide.tsx";
 
 
 
@@ -5625,7 +5625,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-native-web */ "react-native-web");
 /* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_native_web__WEBPACK_IMPORTED_MODULE_7__);
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/admin/Kelas/MuridList.tsx";
+var _jsxFileName = "/var/www/edumatis/edumatis-rnwa/web/pages/app/screens/admin/Kelas/MuridList.tsx";
 
 
 
@@ -5978,7 +5978,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _KewajibanDetail__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./KewajibanDetail */ "./pages/app/screens/admin/Kewajiban/KewajibanDetail.tsx");
 
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/admin/Kewajiban/Kewajiban.tsx";
+var _jsxFileName = "/var/www/edumatis/edumatis-rnwa/web/pages/app/screens/admin/Kewajiban/Kewajiban.tsx";
 
 
 
@@ -6156,32 +6156,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var _libs_queries_crud_createRecord__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../libs/queries/crud/createRecord */ "./pages/app/libs/queries/crud/createRecord.ts");
-/* harmony import */ var _libs_queries_crud_rawQuery__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../libs/queries/crud/rawQuery */ "./pages/app/libs/queries/crud/rawQuery.ts");
-/* harmony import */ var _libs_queries_crud_updateRecord__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../libs/queries/crud/updateRecord */ "./pages/app/libs/queries/crud/updateRecord.ts");
-/* harmony import */ var _libs_ui_UIBody__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../libs/ui/UIBody */ "./pages/app/libs/ui/UIBody.tsx");
-/* harmony import */ var _libs_ui_UIButton__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../libs/ui/UIButton */ "./pages/app/libs/ui/UIButton.tsx");
-/* harmony import */ var _libs_ui_UICol__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../libs/ui/UICol */ "./pages/app/libs/ui/UICol.tsx");
-/* harmony import */ var _libs_ui_UIContainer__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../libs/ui/UIContainer */ "./pages/app/libs/ui/UIContainer.tsx");
-/* harmony import */ var _libs_ui_UIFieldSelectNative__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../libs/ui/UIFieldSelectNative */ "./pages/app/libs/ui/UIFieldSelectNative.tsx");
-/* harmony import */ var _libs_ui_UIFieldText__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../../libs/ui/UIFieldText */ "./pages/app/libs/ui/UIFieldText.tsx");
-/* harmony import */ var _libs_ui_UIHead__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../../libs/ui/UIHead */ "./pages/app/libs/ui/UIHead.tsx");
-/* harmony import */ var _libs_ui_UIRow__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../../libs/ui/UIRow */ "./pages/app/libs/ui/UIRow.tsx");
-/* harmony import */ var mobx_react_lite__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! mobx-react-lite */ "mobx-react-lite");
-/* harmony import */ var mobx_react_lite__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(mobx_react_lite__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_15__);
-/* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! react-native-web */ "react-native-web");
-/* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(react_native_web__WEBPACK_IMPORTED_MODULE_16__);
-/* harmony import */ var _Kelas_KelasPicker__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../Kelas/KelasPicker */ "./pages/app/screens/admin/Kelas/KelasPicker.tsx");
+/* harmony import */ var _libs_queries_crud_deleteRecord__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../libs/queries/crud/deleteRecord */ "./pages/app/libs/queries/crud/deleteRecord.ts");
+/* harmony import */ var _libs_queries_crud_rawQuery__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../libs/queries/crud/rawQuery */ "./pages/app/libs/queries/crud/rawQuery.ts");
+/* harmony import */ var _libs_queries_crud_updateRecord__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../libs/queries/crud/updateRecord */ "./pages/app/libs/queries/crud/updateRecord.ts");
+/* harmony import */ var _libs_ui_UIBody__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../libs/ui/UIBody */ "./pages/app/libs/ui/UIBody.tsx");
+/* harmony import */ var _libs_ui_UIButton__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../libs/ui/UIButton */ "./pages/app/libs/ui/UIButton.tsx");
+/* harmony import */ var _libs_ui_UICol__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../libs/ui/UICol */ "./pages/app/libs/ui/UICol.tsx");
+/* harmony import */ var _libs_ui_UIContainer__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../libs/ui/UIContainer */ "./pages/app/libs/ui/UIContainer.tsx");
+/* harmony import */ var _libs_ui_UIFieldSelectNative__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../../libs/ui/UIFieldSelectNative */ "./pages/app/libs/ui/UIFieldSelectNative.tsx");
+/* harmony import */ var _libs_ui_UIFieldText__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../../libs/ui/UIFieldText */ "./pages/app/libs/ui/UIFieldText.tsx");
+/* harmony import */ var _libs_ui_UIHead__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../../libs/ui/UIHead */ "./pages/app/libs/ui/UIHead.tsx");
+/* harmony import */ var _libs_ui_UIRow__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../../libs/ui/UIRow */ "./pages/app/libs/ui/UIRow.tsx");
+/* harmony import */ var mobx_react_lite__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! mobx-react-lite */ "mobx-react-lite");
+/* harmony import */ var mobx_react_lite__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(mobx_react_lite__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_16__);
+/* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! react-native-web */ "react-native-web");
+/* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(react_native_web__WEBPACK_IMPORTED_MODULE_17__);
+/* harmony import */ var _Kelas_KelasPicker__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../Kelas/KelasPicker */ "./pages/app/screens/admin/Kelas/KelasPicker.tsx");
 
 
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/admin/Kewajiban/KewajibanDetail.tsx";
-
-
-
-
-
+var _jsxFileName = "/var/www/edumatis/edumatis-rnwa/web/pages/app/screens/admin/Kewajiban/KewajibanDetail.tsx";
 
 
 
@@ -6192,25 +6188,31 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/a
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_14__["observer"])(function (_ref) {
+
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_15__["observer"])(function (_ref) {
   var navigation = _ref.navigation;
-  var data = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_14__["useObservable"])({
+  var data = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_15__["useObservable"])({
     form: navigation.getParam("item")
   });
-  Object(react__WEBPACK_IMPORTED_MODULE_15__["useEffect"])(function () {
+  Object(react__WEBPACK_IMPORTED_MODULE_16__["useEffect"])(function () {
     if (data.form.id) {
-      Object(_libs_queries_crud_rawQuery__WEBPACK_IMPORTED_MODULE_4__["default"])("\n      {\n        kewajiban(where: {id: {_eq: ".concat(data.form.id, "}}) {\n          kelas\n          batas_pembayaran\n          id\n          nominal\n          nama_kewajiban\n          status\n          tgl_batas_pembayaran_bulan\n          tipe_pembayaran\n        }\n      }\n    ")).then(function (res) {
+      Object(_libs_queries_crud_rawQuery__WEBPACK_IMPORTED_MODULE_5__["default"])("\n      {\n        kewajiban(where: {id: {_eq: ".concat(data.form.id, "}}) {\n          kelas\n          batas_pembayaran\n          id\n          nominal\n          nama_kewajiban\n          status\n          tgl_batas_pembayaran_bulan\n          tipe_pembayaran\n        }\n      }\n    ")).then(function (res) {
         data.form = res.kewajiban[0];
       });
     }
   }, []);
-  return react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement(_libs_ui_UIContainer__WEBPACK_IMPORTED_MODULE_9__["default"], {
+  return react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(_libs_ui_UIContainer__WEBPACK_IMPORTED_MODULE_10__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 44
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement(_libs_ui_UIHead__WEBPACK_IMPORTED_MODULE_12__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(_libs_ui_UIHead__WEBPACK_IMPORTED_MODULE_13__["default"], {
     navigation: navigation,
     title: " Kewajiban " + (data.form.id ? "#".concat(data.form.id, ": ").concat(data.form.nama_kewajiban) : "Baru"),
     onBack: function onBack() {
@@ -6218,10 +6220,16 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/a
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 45
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement(_libs_ui_UIButton__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(_libs_ui_UIRow__WEBPACK_IMPORTED_MODULE_14__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 57
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(_libs_ui_UIButton__WEBPACK_IMPORTED_MODULE_8__["default"], {
     onPress:
     /*#__PURE__*/
     Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])(
@@ -6237,7 +6245,7 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/a
               }
 
               _context.next = 3;
-              return Object(_libs_queries_crud_updateRecord__WEBPACK_IMPORTED_MODULE_5__["default"])("kewajiban", data.form);
+              return Object(_libs_queries_crud_updateRecord__WEBPACK_IMPORTED_MODULE_6__["default"])("kewajiban", data.form);
 
             case 3:
               _context.next = 7;
@@ -6259,16 +6267,89 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/a
     })),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 58
     },
     __self: this
-  }, "Simpan")), react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement(_libs_ui_UIBody__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }, "Simpan"), react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(_libs_ui_UIButton__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    style: {
+      backgroundColor: "red",
+      marginLeft: -5
+    },
+    onPress:
+    /*#__PURE__*/
+    Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])(
+    /*#__PURE__*/
+    _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee3() {
+      return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee3$(_context3) {
+        while (1) {
+          switch (_context3.prev = _context3.next) {
+            case 0:
+              if (react_native_web__WEBPACK_IMPORTED_MODULE_17__["Platform"].OS === "web") {
+                confirm("Apakah anda yakin ingin menghapus kewajiban ini ?");
+              } else {
+                react_native_web__WEBPACK_IMPORTED_MODULE_17__["Alert"].alert('Menghapus Kewajiban', 'Apakah Anda yakin ingin menghapus kewajiban ini ?', [{
+                  text: 'NO',
+                  style: 'cancel',
+                  onPress: function onPress() {}
+                }, {
+                  text: 'YES',
+                  onPress: function () {
+                    var _onPress = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])(
+                    /*#__PURE__*/
+                    _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee2() {
+                      return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee2$(_context2) {
+                        while (1) {
+                          switch (_context2.prev = _context2.next) {
+                            case 0:
+                              if (!data.form.id) {
+                                _context2.next = 3;
+                                break;
+                              }
+
+                              _context2.next = 3;
+                              return Object(_libs_queries_crud_deleteRecord__WEBPACK_IMPORTED_MODULE_4__["default"])("kewajiban", {
+                                id: data.form.id
+                              });
+
+                            case 3:
+                              navigation.goBack();
+
+                            case 4:
+                            case "end":
+                              return _context2.stop();
+                          }
+                        }
+                      }, _callee2);
+                    }));
+
+                    function onPress() {
+                      return _onPress.apply(this, arguments);
+                    }
+
+                    return onPress;
+                  }()
+                }]);
+              }
+
+            case 1:
+            case "end":
+              return _context3.stop();
+          }
+        }
+      }, _callee3);
+    })),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 70
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement(_libs_ui_UIFieldText__WEBPACK_IMPORTED_MODULE_11__["default"], {
+  }, "Hapus"))), react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(_libs_ui_UIBody__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 102
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(_libs_ui_UIFieldText__WEBPACK_IMPORTED_MODULE_12__["default"], {
     label: "Nama Kewajiban",
     setValue: function setValue(value) {
       data.form.nama_kewajiban = value;
@@ -6276,26 +6357,26 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/a
     value: data.form.nama_kewajiban,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 103
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement(_libs_ui_UIRow__WEBPACK_IMPORTED_MODULE_13__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(_libs_ui_UIRow__WEBPACK_IMPORTED_MODULE_14__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
+      lineNumber: 110
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement(_libs_ui_UICol__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(_libs_ui_UICol__WEBPACK_IMPORTED_MODULE_9__["default"], {
     size: 4,
     sizesm: 6,
     sizexs: 6,
     sizemd: 6,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 111
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement(_libs_ui_UIFieldText__WEBPACK_IMPORTED_MODULE_11__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(_libs_ui_UIFieldText__WEBPACK_IMPORTED_MODULE_12__["default"], {
     label: "Nominal",
     setValue: function setValue(value) {
       data.form.nominal = value;
@@ -6303,20 +6384,20 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/a
     value: data.form.nominal,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79
+      lineNumber: 112
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement(_libs_ui_UICol__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  })), react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(_libs_ui_UICol__WEBPACK_IMPORTED_MODULE_9__["default"], {
     size: 4,
     sizesm: 6,
     sizexs: 6,
     sizemd: 6,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87
+      lineNumber: 120
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement(_libs_ui_UIFieldSelectNative__WEBPACK_IMPORTED_MODULE_10__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(_libs_ui_UIFieldSelectNative__WEBPACK_IMPORTED_MODULE_11__["default"], {
     label: "Tipe Pembayaran",
     items: ["Bulanan", "Insidentil"],
     setValue: function setValue(value) {
@@ -6325,28 +6406,28 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/a
     value: data.form.tipe_pembayaran,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88
+      lineNumber: 121
     },
     __self: this
-  }))), react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement(_Kelas_KelasPicker__WEBPACK_IMPORTED_MODULE_17__["default"], {
+  }))), react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(_Kelas_KelasPicker__WEBPACK_IMPORTED_MODULE_18__["default"], {
     form: data.form,
     renderKelasTitle: function renderKelasTitle(kelas) {
-      return react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_16__["Text"], {
+      return react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_17__["Text"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 101
+          lineNumber: 134
         },
         __self: this
       }, "Rp ", _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(kelas.nominal).toLocaleString(), " ");
     },
     renderKelas: function renderKelas(kelas) {
-      return react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_16__["View"], {
+      return react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_17__["View"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 105
+          lineNumber: 138
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement(_libs_ui_UIFieldText__WEBPACK_IMPORTED_MODULE_11__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(_libs_ui_UIFieldText__WEBPACK_IMPORTED_MODULE_12__["default"], {
         label: "Nominal untuk semua murid kelas ini",
         value: kelas.nominal,
         setValue: function setValue(value) {
@@ -6354,10 +6435,10 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/a
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 106
+          lineNumber: 139
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_16__["Text"], {
+      }), react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_17__["Text"], {
         style: {
           padding: 10,
           paddingLeft: 15,
@@ -6365,20 +6446,20 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/a
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 113
+          lineNumber: 146
         },
         __self: this
       }, "Khusus untuk murid ini, di set sesuai nominal tertera:"));
     },
     renderMurid: function renderMurid(murid, kelas) {
-      return react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement(_libs_ui_UICol__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(_libs_ui_UICol__WEBPACK_IMPORTED_MODULE_9__["default"], {
         size: 6,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 121
+          lineNumber: 154
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement(_libs_ui_UIFieldText__WEBPACK_IMPORTED_MODULE_11__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(_libs_ui_UIFieldText__WEBPACK_IMPORTED_MODULE_12__["default"], {
         label: "Nominal",
         value: murid.nominal || kelas.nominal,
         setValue: function setValue(value) {
@@ -6386,14 +6467,14 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/a
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 122
+          lineNumber: 155
         },
         __self: this
       }));
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 98
+      lineNumber: 131
     },
     __self: this
   })));
@@ -6430,7 +6511,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _PengumumanDetail__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./PengumumanDetail */ "./pages/app/screens/admin/Pengumuman/PengumumanDetail.tsx");
 
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/admin/Pengumuman/Pengumuman.tsx";
+var _jsxFileName = "/var/www/edumatis/edumatis-rnwa/web/pages/app/screens/admin/Pengumuman/Pengumuman.tsx";
 
 
 
@@ -6624,7 +6705,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/admin/Pengumuman/PengumumanDetail.tsx";
+var _jsxFileName = "/var/www/edumatis/edumatis-rnwa/web/pages/app/screens/admin/Pengumuman/PengumumanDetail.tsx";
 
 
 
@@ -6799,7 +6880,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-native-web */ "react-native-web");
 /* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_native_web__WEBPACK_IMPORTED_MODULE_7__);
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/admin/SideBar.tsx";
+var _jsxFileName = "/var/www/edumatis/edumatis-rnwa/web/pages/app/screens/admin/SideBar.tsx";
 
 
 
@@ -7006,7 +7087,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/siswa/Kewajiban/Kewajiban.tsx";
+var _jsxFileName = "/var/www/edumatis/edumatis-rnwa/web/pages/app/screens/siswa/Kewajiban/Kewajiban.tsx";
 
 
 
@@ -7237,7 +7318,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/siswa/Kewajiban/KewajibanDetail.tsx";
+var _jsxFileName = "/var/www/edumatis/edumatis-rnwa/web/pages/app/screens/siswa/Kewajiban/KewajibanDetail.tsx";
 
 
 
@@ -7479,7 +7560,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/siswa/Pengumuman/Pengumuman.tsx";
+var _jsxFileName = "/var/www/edumatis/edumatis-rnwa/web/pages/app/screens/siswa/Pengumuman/Pengumuman.tsx";
 
 
 
@@ -7638,7 +7719,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-native-web */ "react-native-web");
 /* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_native_web__WEBPACK_IMPORTED_MODULE_7__);
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/siswa/SideBar.tsx";
+var _jsxFileName = "/var/www/edumatis/edumatis-rnwa/web/pages/app/screens/siswa/SideBar.tsx";
 
 
 
@@ -7964,7 +8045,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Volumes/Data/Projects/edumatis-rnwa/web/pages/index.js */"./pages/index.js");
+module.exports = __webpack_require__(/*! /var/www/edumatis/edumatis-rnwa/web/pages/index.js */"./pages/index.js");
 
 
 /***/ }),
