@@ -27,6 +27,9 @@ const Transaksi = observer(({ navigation }: any) => {
           id
           status
           tstamp
+          amount: detail(path:"amount")
+          detail(path:"status")
+          paid(path:"status")
           murid {
             id
             nama_murid
@@ -75,7 +78,13 @@ const Transaksi = observer(({ navigation }: any) => {
 
             const tgl = dayjs(item.tstamp);
             const fromday = tgl.fromNow();
-            const kelas = get(item, 'murid.kelas_murids[0].kelas.nama_kelas');
+            const kelas =
+              get(item, "murid.kelas_murids[0].kelas.nama_kelas") ||
+              "Semua Kelas";
+            const nominal = parseInt(item.amount || item.nominal);
+            let status = (item.paid || item.detail || item.status).toLowerCase();
+            if (status === "paid") status = "success";
+            
             return (
               <UIListItem
                 onPress={() => {
@@ -88,11 +97,15 @@ const Transaksi = observer(({ navigation }: any) => {
                   <Text
                     style={{ fontSize: 15, fontWeight: "bold", color: "#555" }}
                   >
-                    #{item.id} {item.kewajiban.nama_kewajiban} - Rp {(item.nominal || 0).toLocaleString()}
+                    #{item.id} {item.kewajiban.nama_kewajiban} - Rp{" "}
+                    {(nominal || 0).toLocaleString()}{" "}
+                    ({status})
                   </Text>
-                  <Text style={{ fontSize: 14 }}>{item.murid.nama_murid} - {kelas}</Text>
+                  <Text style={{ fontSize: 14 }}>
+                    {item.murid.nama_murid} - {kelas}
+                  </Text>
                 </View>
-                <View style={{alignItems: "flex-end"}}>
+                <View style={{ alignItems: "flex-end" }}>
                   <Text>{fromday}</Text>
                   <Text style={{ fontSize: 12 }}>
                     {tgl.format("DD MMM YYYY - hh.mm")}

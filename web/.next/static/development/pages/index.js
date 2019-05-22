@@ -66236,7 +66236,7 @@ var width = react_native_web__WEBPACK_IMPORTED_MODULE_1__["Dimensions"].get("win
       lineNumber: 42
     },
     __self: this
-  }, children.map && children.length > 1 ? children.map(function (C, i) {
+  }, children && children.map && children.length > 1 ? children.map(function (C, i) {
     if (typeof C !== "object") {
       if (typeof C === "string" && C.trim() === "") return null;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_1__["Text"], {
@@ -68911,7 +68911,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _MuridDetailSide__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./MuridDetailSide */ "./pages/app/screens/admin/Kelas/MuridDetailSide.tsx");
 /* harmony import */ var _libs_ui_UIButton__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../libs/ui/UIButton */ "./pages/app/libs/ui/UIButton.tsx");
 /* harmony import */ var _MuridDetail__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./MuridDetail */ "./pages/app/screens/admin/Kelas/MuridDetail.tsx");
-/* harmony import */ var _libs_ui_UIJson__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../../libs/ui/UIJson */ "./pages/app/libs/ui/UIJson.tsx");
+/* harmony import */ var _libs_ui_UIJson__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../../libs/ui/UIJson */ "./pages/app/libs/ui/UIJson.tsx");
 
 
 
@@ -69007,7 +69007,7 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/a
       lineNumber: 49
     },
     __self: this
-  }, data.form.data ? react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_libs_ui_UIJson__WEBPACK_IMPORTED_MODULE_13__["default"], {
+  }, data.form.data ? react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_libs_ui_UIJson__WEBPACK_IMPORTED_MODULE_12__["default"], {
     data: data.form.data,
     __source: {
       fileName: _jsxFileName,
@@ -70753,26 +70753,29 @@ var s = react_native_web__WEBPACK_IMPORTED_MODULE_7__["StyleSheet"].create({
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
-/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js");
-/* harmony import */ var _libs_queries_crud_rawQuery__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../libs/queries/crud/rawQuery */ "./pages/app/libs/queries/crud/rawQuery.ts");
-/* harmony import */ var _libs_ui_UIBody__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../libs/ui/UIBody */ "./pages/app/libs/ui/UIBody.tsx");
-/* harmony import */ var _libs_ui_UIButton__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../libs/ui/UIButton */ "./pages/app/libs/ui/UIButton.tsx");
-/* harmony import */ var _libs_ui_UIContainer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../libs/ui/UIContainer */ "./pages/app/libs/ui/UIContainer.tsx");
-/* harmony import */ var _libs_ui_UIHead__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../libs/ui/UIHead */ "./pages/app/libs/ui/UIHead.tsx");
-/* harmony import */ var _libs_ui_UIList__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../libs/ui/UIList */ "./pages/app/libs/ui/UIList.tsx");
-/* harmony import */ var _libs_ui_UIListItem__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../libs/ui/UIListItem */ "./pages/app/libs/ui/UIListItem.tsx");
-/* harmony import */ var mobx_react_lite__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! mobx-react-lite */ "./node_modules/mobx-react-lite/dist/index.module.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-native-web */ "./node_modules/react-native-web/dist/index.js");
-/* harmony import */ var _libs_nav_StackNav__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../../libs/nav/StackNav */ "./pages/app/libs/nav/StackNav.tsx");
-/* harmony import */ var _TransaksiDetail__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./TransaksiDetail */ "./pages/app/screens/admin/Transaksi/TransaksiDetail.tsx");
-/* harmony import */ var dayjs_plugin_relativeTime__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! dayjs/plugin/relativeTime */ "./node_modules/dayjs/plugin/relativeTime.js");
-/* harmony import */ var dayjs_plugin_relativeTime__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(dayjs_plugin_relativeTime__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var lodash_get__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! lodash.get */ "./node_modules/lodash.get/index.js");
-/* harmony import */ var lodash_get__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(lodash_get__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/parse-int */ "./node_modules/@babel/runtime-corejs2/core-js/parse-int.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
+/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var _libs_queries_crud_rawQuery__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../libs/queries/crud/rawQuery */ "./pages/app/libs/queries/crud/rawQuery.ts");
+/* harmony import */ var _libs_ui_UIBody__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../libs/ui/UIBody */ "./pages/app/libs/ui/UIBody.tsx");
+/* harmony import */ var _libs_ui_UIButton__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../libs/ui/UIButton */ "./pages/app/libs/ui/UIButton.tsx");
+/* harmony import */ var _libs_ui_UIContainer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../libs/ui/UIContainer */ "./pages/app/libs/ui/UIContainer.tsx");
+/* harmony import */ var _libs_ui_UIHead__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../libs/ui/UIHead */ "./pages/app/libs/ui/UIHead.tsx");
+/* harmony import */ var _libs_ui_UIList__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../libs/ui/UIList */ "./pages/app/libs/ui/UIList.tsx");
+/* harmony import */ var _libs_ui_UIListItem__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../libs/ui/UIListItem */ "./pages/app/libs/ui/UIListItem.tsx");
+/* harmony import */ var mobx_react_lite__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! mobx-react-lite */ "./node_modules/mobx-react-lite/dist/index.module.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react-native-web */ "./node_modules/react-native-web/dist/index.js");
+/* harmony import */ var _libs_nav_StackNav__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../../libs/nav/StackNav */ "./pages/app/libs/nav/StackNav.tsx");
+/* harmony import */ var _TransaksiDetail__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./TransaksiDetail */ "./pages/app/screens/admin/Transaksi/TransaksiDetail.tsx");
+/* harmony import */ var dayjs_plugin_relativeTime__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! dayjs/plugin/relativeTime */ "./node_modules/dayjs/plugin/relativeTime.js");
+/* harmony import */ var dayjs_plugin_relativeTime__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(dayjs_plugin_relativeTime__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var lodash_get__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! lodash.get */ "./node_modules/lodash.get/index.js");
+/* harmony import */ var lodash_get__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(lodash_get__WEBPACK_IMPORTED_MODULE_16__);
+
 
 
 var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/admin/Transaksi/Transaksi.tsx";
@@ -70793,27 +70796,27 @@ var dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js"
 
 
 
-dayjs.extend(dayjs_plugin_relativeTime__WEBPACK_IMPORTED_MODULE_14___default.a);
-var Transaksi = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_9__["observer"])(function (_ref) {
+dayjs.extend(dayjs_plugin_relativeTime__WEBPACK_IMPORTED_MODULE_15___default.a);
+var Transaksi = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_10__["observer"])(function (_ref) {
   var navigation = _ref.navigation;
-  var data = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_9__["useObservable"])({
+  var data = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_10__["useObservable"])({
     list: [],
     loading: true
   });
-  Object(react__WEBPACK_IMPORTED_MODULE_10__["useEffect"])(function () {
+  Object(react__WEBPACK_IMPORTED_MODULE_11__["useEffect"])(function () {
     var fetch =
     /*#__PURE__*/
     function () {
-      var _ref2 = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])(
+      var _ref2 = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])(
       /*#__PURE__*/
-      _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+      _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
         var result;
-        return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+        return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
                 _context.next = 2;
-                return Object(_libs_queries_crud_rawQuery__WEBPACK_IMPORTED_MODULE_2__["default"])("{\n        transaksi(order_by: {tstamp: asc}) {\n          id\n          status\n          tstamp\n          murid {\n            id\n            nama_murid\n            nsa\n            kelas_murids {\n              kelas {\n                nama_kelas\n              }\n            }\n          }\n          kewajiban {\n            nama_kewajiban\n          }\n        }\n      }\n      ");
+                return Object(_libs_queries_crud_rawQuery__WEBPACK_IMPORTED_MODULE_3__["default"])("{\n        transaksi(order_by: {tstamp: asc}) {\n          id\n          status\n          tstamp\n          amount: detail(path:\"amount\")\n          detail(path:\"status\")\n          paid(path:\"status\")\n          murid {\n            id\n            nama_murid\n            nsa\n            kelas_murids {\n              kelas {\n                nama_kelas\n              }\n            }\n          }\n          kewajiban {\n            nama_kewajiban\n          }\n        }\n      }\n      ");
 
               case 2:
                 result = _context.sent;
@@ -70835,21 +70838,21 @@ var Transaksi = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_9__["observer"])
 
     fetch();
   }, []);
-  return react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_libs_ui_UIContainer__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  return react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement(_libs_ui_UIContainer__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 56
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_libs_ui_UIHead__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement(_libs_ui_UIHead__WEBPACK_IMPORTED_MODULE_7__["default"], {
     navigation: navigation,
     title: "Transaksi",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 57
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_libs_ui_UIButton__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement(_libs_ui_UIButton__WEBPACK_IMPORTED_MODULE_5__["default"], {
     size: "small",
     onPress: function onPress() {
       navigation.navigate("TransaksiDetail", {
@@ -70861,24 +70864,29 @@ var Transaksi = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_9__["observer"])
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 58
     },
     __self: this
-  }, "+ Transaksi Baru")), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_libs_ui_UIBody__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, "+ Transaksi Baru")), react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement(_libs_ui_UIBody__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 72
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_libs_ui_UIList__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement(_libs_ui_UIList__WEBPACK_IMPORTED_MODULE_8__["default"], {
     data: data.list,
     loading: data.loading,
     render: function render(list) {
       var item = list.item;
       var tgl = dayjs(item.tstamp);
       var fromday = tgl.fromNow();
-      var kelas = lodash_get__WEBPACK_IMPORTED_MODULE_15___default()(item, 'murid.kelas_murids[0].kelas.nama_kelas');
-      return react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_libs_ui_UIListItem__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      var kelas = lodash_get__WEBPACK_IMPORTED_MODULE_16___default()(item, "murid.kelas_murids[0].kelas.nama_kelas") || "Semua Kelas";
+
+      var nominal = _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(item.amount || item.nominal);
+
+      var status = (item.paid || item.detail || item.status).toLowerCase();
+      if (status === "paid") status = "success";
+      return react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement(_libs_ui_UIListItem__WEBPACK_IMPORTED_MODULE_9__["default"], {
         onPress: function onPress() {
           navigation.navigate("TransaksiDetail", {
             item: item
@@ -70886,16 +70894,16 @@ var Transaksi = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_9__["observer"])
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 80
+          lineNumber: 89
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_11__["View"], {
+      }, react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_12__["View"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 87
+          lineNumber: 96
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_11__["Text"], {
+      }, react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_12__["Text"], {
         style: {
           fontSize: 15,
           fontWeight: "bold",
@@ -70903,57 +70911,57 @@ var Transaksi = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_9__["observer"])
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 88
+          lineNumber: 97
         },
         __self: this
-      }, "#", item.id, " ", item.kewajiban.nama_kewajiban, " - Rp ", (item.nominal || 0).toLocaleString()), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_11__["Text"], {
+      }, "#", item.id, " ", item.kewajiban.nama_kewajiban, " - Rp", " ", (nominal || 0).toLocaleString(), " ", "(", status, ")"), react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_12__["Text"], {
         style: {
           fontSize: 14
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 93
+          lineNumber: 104
         },
         __self: this
-      }, item.murid.nama_murid, " - ", kelas)), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_11__["View"], {
+      }, item.murid.nama_murid, " - ", kelas)), react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_12__["View"], {
         style: {
           alignItems: "flex-end"
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 95
+          lineNumber: 108
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_11__["Text"], {
+      }, react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_12__["Text"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 96
+          lineNumber: 109
         },
         __self: this
-      }, fromday), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_11__["Text"], {
+      }, fromday), react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_12__["Text"], {
         style: {
           fontSize: 12
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 97
+          lineNumber: 110
         },
         __self: this
       }, tgl.format("DD MMM YYYY - hh.mm"))));
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 73
     },
     __self: this
   })));
 });
-/* harmony default export */ __webpack_exports__["default"] = (Object(_libs_nav_StackNav__WEBPACK_IMPORTED_MODULE_12__["default"])({
+/* harmony default export */ __webpack_exports__["default"] = (Object(_libs_nav_StackNav__WEBPACK_IMPORTED_MODULE_13__["default"])({
   Transaksi: {
     screen: Transaksi
   },
   TransaksiDetail: {
-    screen: _TransaksiDetail__WEBPACK_IMPORTED_MODULE_13__["default"]
+    screen: _TransaksiDetail__WEBPACK_IMPORTED_MODULE_14__["default"]
   }
 }));
 
@@ -70968,7 +70976,8 @@ var Transaksi = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_9__["observer"])
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _libs_queries_crud_rawQuery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../libs/queries/crud/rawQuery */ "./pages/app/libs/queries/crud/rawQuery.ts");
+/* harmony import */ var _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/parse-int */ "./node_modules/@babel/runtime-corejs2/core-js/parse-int.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _libs_ui_UIBody__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../libs/ui/UIBody */ "./pages/app/libs/ui/UIBody.tsx");
 /* harmony import */ var _libs_ui_UICol__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../libs/ui/UICol */ "./pages/app/libs/ui/UICol.tsx");
 /* harmony import */ var _libs_ui_UIContainer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../libs/ui/UIContainer */ "./pages/app/libs/ui/UIContainer.tsx");
@@ -70977,9 +70986,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var mobx_react_lite__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! mobx-react-lite */ "./node_modules/mobx-react-lite/dist/index.module.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _libs_ui_UIJson__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../libs/ui/UIJson */ "./pages/app/libs/ui/UIJson.tsx");
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/admin/Transaksi/TransaksiDetail.tsx";
+/* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-native-web */ "./node_modules/react-native-web/dist/index.js");
 
+var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/admin/Transaksi/TransaksiDetail.tsx";
 
 
 
@@ -70994,43 +71003,38 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/a
     form: navigation.getParam("item")
   });
   var item = data.form;
-  Object(react__WEBPACK_IMPORTED_MODULE_7__["useEffect"])(function () {
-    if (data.form.id) {
-      Object(_libs_queries_crud_rawQuery__WEBPACK_IMPORTED_MODULE_0__["default"])("\n      {\n        transaksi(where: {id: {_eq: ".concat(data.form.id, "}}) {\n          detail\n          paid\n        }\n      }\n    ")).then(function (res) {
-        if (res.transaksi.length > 0) {
-          data.form.detail = res.transaksi[0].detail;
-          data.form.paid = res.transaksi[0].paid;
-        }
-      });
-    }
-  }, []);
+
+  var nominal = _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(item.amount || item.nominal || 0);
+
+  var status = (item.paid || item.detail || item.status).toLowerCase();
+  if (status === "paid") status = "success";
   return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_libs_ui_UIContainer__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 20
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_libs_ui_UIHead__WEBPACK_IMPORTED_MODULE_4__["default"], {
     navigation: navigation,
-    title: "#".concat(item.id, " ").concat(item.kewajiban.nama_kewajiban, " - Rp ").concat((item.nominal || 0).toLocaleString()),
+    title: "#".concat(item.id, " ").concat(item.kewajiban.nama_kewajiban, " - Rp ").concat(nominal.toLocaleString()),
     onBack: function onBack() {
       navigation.goBack();
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 21
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_libs_ui_UIBody__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 30
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_libs_ui_UIRow__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 31
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_libs_ui_UICol__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -71039,7 +71043,7 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/a
     sizemd: 4,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 32
     },
     __self: this
   }, "Siswa:"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_libs_ui_UICol__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -71048,13 +71052,13 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/a
     sizemd: 8,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 35
     },
     __self: this
   }, item.murid.nama_murid)), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_libs_ui_UIRow__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 39
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_libs_ui_UICol__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -71063,7 +71067,7 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/a
     sizemd: 4,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 40
     },
     __self: this
   }, "Kelas:"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_libs_ui_UICol__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -71072,17 +71076,64 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/a
     sizemd: 8,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 43
     },
     __self: this
-  }, item.murid.kelas_murids[0].kelas.nama_kelas)), data.form.detail && react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_libs_ui_UIJson__WEBPACK_IMPORTED_MODULE_9__["default"], {
-    data: data.form.detail,
+  }, item.murid.kelas_murids[0].kelas.nama_kelas || "Semua Kelas")), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_libs_ui_UIRow__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 47
     },
     __self: this
-  })));
+  }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_libs_ui_UICol__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    size: 1,
+    sizexs: 4,
+    sizemd: 4,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 48
+    },
+    __self: this
+  }, "Nominal:"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_libs_ui_UICol__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    size: 11,
+    sizexs: 8,
+    sizemd: 8,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 51
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_8__["Text"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 52
+    },
+    __self: this
+  }, "Rp ", nominal.toLocaleString()))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_libs_ui_UIRow__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 55
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_libs_ui_UICol__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    size: 1,
+    sizexs: 4,
+    sizemd: 4,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 56
+    },
+    __self: this
+  }, "Status:"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_libs_ui_UICol__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    size: 11,
+    sizexs: 8,
+    sizemd: 8,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 59
+    },
+    __self: this
+  }, status))));
 }));
 
 /***/ }),
@@ -72093,7 +72144,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 0:
+/***/ 1:
 /*!**************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FVolumes%2FData%2FProjects%2Fedumatis-rnwa%2Fweb%2Fpages%2Findex.js ***!
   \**************************************************************************************************************************************/
@@ -72116,5 +72167,5 @@ module.exports = dll_7aff549c98b978433226;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

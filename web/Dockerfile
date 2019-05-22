@@ -1,6 +1,5 @@
-FROM rapidoid
+FROM nginx:latest
 
-COPY out/ /app/static/
-COPY config.yaml app/config.yaml
+COPY out/ /usr/share/nginx/html/
 
 EXPOSE 80
