@@ -69,49 +69,47 @@ export default observer(
                 paddingHorizontal: 0
               }}
               onPress={() => {
-                let hasDetail = true;
+                let hasDetail = false;
                 const list = toJS(data.list);
                 list.forEach(item => {
-                  if (!item.detail || !item.detail.nik) {
-                    hasDetail = false;
+                  if (item.data && item.data.nik) {
+                    hasDetail = true;
                   }
                 });
 
                 const header: any = [];
                 const finalList: any = [];
+
+                header.push("nisn");
+                header.push("nsa");
+                header.push("nama_lengkap");
+                header.push("tgl_lahir");
+
                 if (hasDetail) {
                   list.forEach(item => {
-                    if (item.detail && item.detail.nik) {
-                      if (header.length === 0) {
-                        for (let i in item.detail) {
-                          header.push(i);
-                        }
-                        finalList.push(header);
+                    if (item.data && item.data.nik) {
+                      for (let i in item.data) {
+                        header.push(i);
                       }
-                      const newitem = [];
-                      for (let i in item.detail) {
-                        newitem.push(item[i]);
-                      }
-                      finalList.push(newitem);
                     }
-                  });
-                } else {
-                  list.forEach(item => {
-                    if (header.length === 0) {
-                      header.push("nisn");
-                      header.push("nsa");
-                      header.push("nama_lengkap");
-                      header.push("tgl_lahir");
-                      finalList.push(header);
-                    }
-                    const newitem = [];
-                    newitem.push(item.nisn);
-                    newitem.push(item.nsa);
-                    newitem.push(item.nama_murid);
-                    newitem.push(item.tgl_lahir);
-                    finalList.push(newitem);
                   });
                 }
+
+                finalList.push(header);
+                list.forEach(item => {
+                  const row = [];
+                  row.push(item["nisn"]);
+                  row.push(item["nsa"]);
+                  row.push(item["nama_murid"]);
+                  row.push(item["tgl_lahir"]);
+                  if (item.data && item.data.nik) {
+                    for (let i in item.data) {
+                      row.push(item.data[i]);
+                    }
+                  }
+                  finalList.push(row);
+                });
+                console.log(finalList);
 
                 var finalVal = "";
                 for (var i = 0; i < finalList.length; i++) {

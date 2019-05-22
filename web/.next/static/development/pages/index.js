@@ -21113,10 +21113,10 @@ if (typeof __MOBX_DEVTOOLS_GLOBAL_HOOK__ === "object") {
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FVolumes%2FData%2FProjects%2Fedumatis-rnwa%2Fweb%2Fpages%2Findex.js!./":
-/*!**********************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FVolumes%2FData%2FProjects%2Fedumatis-rnwa%2Fweb%2Fpages%2Findex.js ***!
-  \**********************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2Fmedia%2Friz%2Fdata%2FProjects%2Fedumatis%2Fweb%2Fpages%2Findex.js!./":
+/*!*********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2Fmedia%2Friz%2Fdata%2FProjects%2Fedumatis%2Fweb%2Fpages%2Findex.js ***!
+  \*********************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -21512,12 +21512,12 @@ module.exports = normalizeColor;
 
 /***/ "./node_modules/object-assign/index.js":
 /*!***************************************************************************************************!*\
-  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_7aff549c98b978433226 ***!
+  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_829b10deddf10e1653a8 ***!
   \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_7aff549c98b978433226 */ "dll-reference dll_7aff549c98b978433226"))("./node_modules/object-assign/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_829b10deddf10e1653a8 */ "dll-reference dll_829b10deddf10e1653a8"))("./node_modules/object-assign/index.js");
 
 /***/ }),
 
@@ -21718,12 +21718,12 @@ process.umask = function() { return 0; };
 
 /***/ "./node_modules/prop-types/checkPropTypes.js":
 /*!*********************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_7aff549c98b978433226 ***!
+  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_829b10deddf10e1653a8 ***!
   \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_7aff549c98b978433226 */ "dll-reference dll_7aff549c98b978433226"))("./node_modules/prop-types/checkPropTypes.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_829b10deddf10e1653a8 */ "dll-reference dll_829b10deddf10e1653a8"))("./node_modules/prop-types/checkPropTypes.js");
 
 /***/ }),
 
@@ -22358,12 +22358,12 @@ if (true) {
 
 /***/ "./node_modules/prop-types/lib/ReactPropTypesSecret.js":
 /*!*******************************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_7aff549c98b978433226 ***!
+  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_829b10deddf10e1653a8 ***!
   \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_7aff549c98b978433226 */ "dll-reference dll_7aff549c98b978433226"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_829b10deddf10e1653a8 */ "dll-reference dll_829b10deddf10e1653a8"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
 
 /***/ }),
 
@@ -37110,12 +37110,12 @@ module.exports = unstableNativeDependencies;
 
 /***/ "./node_modules/react-dom/index.js":
 /*!***********************************************************************************************!*\
-  !*** delegated ./node_modules/react-dom/index.js from dll-reference dll_7aff549c98b978433226 ***!
+  !*** delegated ./node_modules/react-dom/index.js from dll-reference dll_829b10deddf10e1653a8 ***!
   \***********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_7aff549c98b978433226 */ "dll-reference dll_7aff549c98b978433226"))("./node_modules/react-dom/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_829b10deddf10e1653a8 */ "dll-reference dll_829b10deddf10e1653a8"))("./node_modules/react-dom/index.js");
 
 /***/ }),
 
@@ -62913,12 +62913,12 @@ module.exports = TimerMixin;
 
 /***/ "./node_modules/react/index.js":
 /*!*******************************************************************************************!*\
-  !*** delegated ./node_modules/react/index.js from dll-reference dll_7aff549c98b978433226 ***!
+  !*** delegated ./node_modules/react/index.js from dll-reference dll_829b10deddf10e1653a8 ***!
   \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_7aff549c98b978433226 */ "dll-reference dll_7aff549c98b978433226"))("./node_modules/react/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_829b10deddf10e1653a8 */ "dll-reference dll_829b10deddf10e1653a8"))("./node_modules/react/index.js");
 
 /***/ }),
 
@@ -63704,23 +63704,23 @@ if (hadRuntime) {
 
 /***/ "./node_modules/scheduler/index.js":
 /*!***********************************************************************************************!*\
-  !*** delegated ./node_modules/scheduler/index.js from dll-reference dll_7aff549c98b978433226 ***!
+  !*** delegated ./node_modules/scheduler/index.js from dll-reference dll_829b10deddf10e1653a8 ***!
   \***********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_7aff549c98b978433226 */ "dll-reference dll_7aff549c98b978433226"))("./node_modules/scheduler/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_829b10deddf10e1653a8 */ "dll-reference dll_829b10deddf10e1653a8"))("./node_modules/scheduler/index.js");
 
 /***/ }),
 
 /***/ "./node_modules/scheduler/tracing.js":
 /*!*************************************************************************************************!*\
-  !*** delegated ./node_modules/scheduler/tracing.js from dll-reference dll_7aff549c98b978433226 ***!
+  !*** delegated ./node_modules/scheduler/tracing.js from dll-reference dll_829b10deddf10e1653a8 ***!
   \*************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_7aff549c98b978433226 */ "dll-reference dll_7aff549c98b978433226"))("./node_modules/scheduler/tracing.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_829b10deddf10e1653a8 */ "dll-reference dll_829b10deddf10e1653a8"))("./node_modules/scheduler/tracing.js");
 
 /***/ }),
 
@@ -63999,12 +63999,12 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 
 /***/ "./node_modules/webpack/buildin/global.js":
 /*!******************************************************************************************************!*\
-  !*** delegated ./node_modules/webpack/buildin/global.js from dll-reference dll_7aff549c98b978433226 ***!
+  !*** delegated ./node_modules/webpack/buildin/global.js from dll-reference dll_829b10deddf10e1653a8 ***!
   \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_7aff549c98b978433226 */ "dll-reference dll_7aff549c98b978433226"))("./node_modules/webpack/buildin/global.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_829b10deddf10e1653a8 */ "dll-reference dll_829b10deddf10e1653a8"))("./node_modules/webpack/buildin/global.js");
 
 /***/ }),
 
@@ -64219,7 +64219,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var mobx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! mobx */ "./node_modules/mobx/lib/mobx.module.js");
 
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/nav/NavContainer.tsx";
+var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/app/libs/nav/NavContainer.tsx";
 
 
 
@@ -64338,7 +64338,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ui_Style__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../ui/Style */ "./pages/app/libs/ui/Style.tsx");
 /* harmony import */ var _NavContainer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./NavContainer */ "./pages/app/libs/nav/NavContainer.tsx");
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/nav/SideNav.tsx";
+var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/app/libs/nav/SideNav.tsx";
 
 
 
@@ -64512,7 +64512,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _NavContainer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./NavContainer */ "./pages/app/libs/nav/NavContainer.tsx");
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/nav/StackNav.tsx";
+var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/app/libs/nav/StackNav.tsx";
 
 
 /* harmony default export */ __webpack_exports__["default"] = (function (data) {
@@ -66036,7 +66036,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-native-web */ "./node_modules/react-native-web/dist/index.js");
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/ui/UIBody.tsx";
+var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/app/libs/ui/UIBody.tsx";
 
 
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
@@ -66082,7 +66082,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-native-web */ "./node_modules/react-native-web/dist/index.js");
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/ui/UIButton.tsx";
+var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/app/libs/ui/UIButton.tsx";
 
 
 
@@ -66185,7 +66185,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-native-web */ "./node_modules/react-native-web/dist/index.js");
 /* harmony import */ var _Style__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Style */ "./pages/app/libs/ui/Style.tsx");
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/ui/UICol.tsx";
+var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/app/libs/ui/UICol.tsx";
 
 
 
@@ -66266,7 +66266,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-native-web */ "./node_modules/react-native-web/dist/index.js");
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/ui/UIContainer.tsx";
+var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/app/libs/ui/UIContainer.tsx";
 
 
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
@@ -66299,7 +66299,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-native-web */ "./node_modules/react-native-web/dist/index.js");
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/ui/UIField.tsx";
+var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/app/libs/ui/UIField.tsx";
 
 
 
@@ -66348,7 +66348,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-native-web */ "./node_modules/react-native-web/dist/index.js");
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/ui/UIFieldSelectNative.tsx";
+var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/app/libs/ui/UIFieldSelectNative.tsx";
 
 
 
@@ -66447,7 +66447,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Style__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Style */ "./pages/app/libs/ui/Style.tsx");
 
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/ui/UIFieldText.tsx";
+var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/app/libs/ui/UIFieldText.tsx";
 
 
 
@@ -66553,7 +66553,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var mobx_react_lite__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! mobx-react-lite */ "./node_modules/mobx-react-lite/dist/index.module.js");
 /* harmony import */ var _Style__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Style */ "./pages/app/libs/ui/Style.tsx");
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/ui/UIHead.tsx";
+var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/app/libs/ui/UIHead.tsx";
 
 
 
@@ -66710,7 +66710,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/ui/UIImage.tsx";
+var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/app/libs/ui/UIImage.tsx";
 
 /* harmony default export */ __webpack_exports__["default"] = (function (props) {
   var myprops = {
@@ -66743,7 +66743,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-native-web */ "./node_modules/react-native-web/dist/index.js");
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/ui/UIJson.tsx";
+var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/app/libs/ui/UIJson.tsx";
 
 
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
@@ -66780,7 +66780,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-native-web */ "./node_modules/react-native-web/dist/index.js");
 /* harmony import */ var _UIButton__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./UIButton */ "./pages/app/libs/ui/UIButton.tsx");
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/ui/UIList.tsx";
+var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/app/libs/ui/UIList.tsx";
 
 
 
@@ -66789,7 +66789,7 @@ var UIList = function UIList(props) {
   Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
     if (props.reload) props.reload();
   }, []);
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_2__["View"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props.style, {
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_2__["ScrollView"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props.style, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 17
@@ -66847,7 +66847,7 @@ var UIList = function UIList(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 35
     },
     __self: this
   }));
@@ -66874,7 +66874,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-native-web */ "./node_modules/react-native-web/dist/index.js");
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/ui/UIListItem.tsx";
+var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/app/libs/ui/UIListItem.tsx";
 
 
 var width = react_native_web__WEBPACK_IMPORTED_MODULE_2__["Dimensions"].get("window").width;
@@ -66926,7 +66926,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-native-web */ "./node_modules/react-native-web/dist/index.js");
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/ui/UIRow.tsx";
+var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/app/libs/ui/UIRow.tsx";
 
 
 /* harmony default export */ __webpack_exports__["default"] = (function (props) {
@@ -66958,7 +66958,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/libs/ui/UIWebView.tsx";
+var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/app/libs/ui/UIWebView.tsx";
 
 /* harmony default export */ __webpack_exports__["default"] = (function (props) {
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
@@ -67572,7 +67572,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/Login.tsx";
+var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/app/screens/Login.tsx";
 
 
 
@@ -67931,7 +67931,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _MuridDetail__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./MuridDetail */ "./pages/app/screens/admin/Kelas/MuridDetail.tsx");
 
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/admin/Kelas/Kelas.tsx";
+var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/app/screens/admin/Kelas/Kelas.tsx";
 
 
 
@@ -68124,7 +68124,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/admin/Kelas/KelasDetail.tsx";
+var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/app/screens/admin/Kelas/KelasDetail.tsx";
 
 
 
@@ -68301,7 +68301,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/admin/Kelas/KelasPicker.tsx";
+var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/app/screens/admin/Kelas/KelasPicker.tsx";
 
 
 
@@ -68555,7 +68555,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/admin/Kelas/MuridDetail.tsx";
+var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/app/screens/admin/Kelas/MuridDetail.tsx";
 
 
 
@@ -68900,11 +68900,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _MuridDetailSide__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./MuridDetailSide */ "./pages/app/screens/admin/Kelas/MuridDetailSide.tsx");
 /* harmony import */ var _libs_ui_UIButton__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../libs/ui/UIButton */ "./pages/app/libs/ui/UIButton.tsx");
 /* harmony import */ var _MuridDetail__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./MuridDetail */ "./pages/app/screens/admin/Kelas/MuridDetail.tsx");
-/* harmony import */ var _libs_ui_UIJson__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../../libs/ui/UIJson */ "./pages/app/libs/ui/UIJson.tsx");
+/* harmony import */ var _libs_ui_UIJson__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../../libs/ui/UIJson */ "./pages/app/libs/ui/UIJson.tsx");
 
 
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/admin/Kelas/MuridDetailProfil.tsx";
+var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/app/screens/admin/Kelas/MuridDetailProfil.tsx";
 
 
 
@@ -68996,7 +68996,7 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/a
       lineNumber: 49
     },
     __self: this
-  }, data.form.data ? react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_libs_ui_UIJson__WEBPACK_IMPORTED_MODULE_12__["default"], {
+  }, data.form.data ? react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_libs_ui_UIJson__WEBPACK_IMPORTED_MODULE_13__["default"], {
     data: data.form.data,
     __source: {
       fileName: _jsxFileName,
@@ -69029,7 +69029,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-native-web */ "./node_modules/react-native-web/dist/index.js");
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/admin/Kelas/MuridDetailSide.tsx";
+var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/app/screens/admin/Kelas/MuridDetailSide.tsx";
 
 
 
@@ -69134,7 +69134,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-native-web */ "./node_modules/react-native-web/dist/index.js");
 /* harmony import */ var mobx__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! mobx */ "./node_modules/mobx/lib/mobx.module.js");
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/admin/Kelas/MuridList.tsx";
+var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/app/screens/admin/Kelas/MuridList.tsx";
 
 
 
@@ -69205,55 +69205,47 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/a
       paddingHorizontal: 0
     },
     onPress: function onPress() {
-      var hasDetail = true;
+      var hasDetail = false;
       var list = Object(mobx__WEBPACK_IMPORTED_MODULE_8__["toJS"])(data.list);
       list.forEach(function (item) {
-        if (!item.detail || !item.detail.nik) {
-          hasDetail = false;
+        if (item.data && item.data.nik) {
+          hasDetail = true;
         }
       });
       var header = [];
       var finalList = [];
+      header.push("nisn");
+      header.push("nsa");
+      header.push("nama_lengkap");
+      header.push("tgl_lahir");
 
       if (hasDetail) {
         list.forEach(function (item) {
-          if (item.detail && item.detail.nik) {
-            if (header.length === 0) {
-              for (var _i in item.detail) {
-                header.push(_i);
-              }
-
-              finalList.push(header);
+          if (item.data && item.data.nik) {
+            for (var _i in item.data) {
+              header.push(_i);
             }
-
-            var newitem = [];
-
-            for (var _i2 in item.detail) {
-              newitem.push(item[_i2]);
-            }
-
-            finalList.push(newitem);
           }
-        });
-      } else {
-        list.forEach(function (item) {
-          if (header.length === 0) {
-            header.push("nisn");
-            header.push("nsa");
-            header.push("nama_lengkap");
-            header.push("tgl_lahir");
-            finalList.push(header);
-          }
-
-          var newitem = [];
-          newitem.push(item.nisn);
-          newitem.push(item.nsa);
-          newitem.push(item.nama_murid);
-          newitem.push(item.tgl_lahir);
-          finalList.push(newitem);
         });
       }
 
+      finalList.push(header);
+      list.forEach(function (item) {
+        var row = [];
+        row.push(item["nisn"]);
+        row.push(item["nsa"]);
+        row.push(item["nama_murid"]);
+        row.push(item["tgl_lahir"]);
+
+        if (item.data && item.data.nik) {
+          for (var _i2 in item.data) {
+            row.push(item.data[_i2]);
+          }
+        }
+
+        finalList.push(row);
+      });
+      console.log(finalList);
       var finalVal = "";
 
       for (var i = 0; i < finalList.length; i++) {
@@ -69295,7 +69287,7 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/a
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 146
+      lineNumber: 144
     },
     __self: this
   }), "Export CSV"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_libs_ui_UIButton__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -69319,7 +69311,7 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/a
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 152
+      lineNumber: 150
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_libs_ui_UIImage__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -69331,7 +69323,7 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/a
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 169
+      lineNumber: 167
     },
     __self: this
   }), "Tambah Siswa"))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_libs_ui_UIList__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -69348,7 +69340,7 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/a
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 184
+          lineNumber: 182
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_7__["TouchableOpacity"], {
@@ -69372,7 +69364,7 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/a
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 187
+          lineNumber: 185
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_7__["Text"], {
@@ -69381,7 +69373,7 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/a
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 206
+          lineNumber: 204
         },
         __self: this
       }, meta.checked.indexOf(_babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(item.id)) >= 0 ? "☑" : "☐")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_libs_ui_UIListItem__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -69397,7 +69389,7 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/a
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 210
+          lineNumber: 208
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_7__["View"], {
@@ -69407,7 +69399,7 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/a
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 222
+          lineNumber: 220
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_7__["Text"], {
@@ -69418,13 +69410,13 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/a
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 223
+          lineNumber: 221
         },
         __self: this
       }, list.index + 1), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_7__["View"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 232
+          lineNumber: 230
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_7__["Text"], {
@@ -69433,7 +69425,7 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/a
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 233
+          lineNumber: 231
         },
         __self: this
       }, item.nama_murid), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_7__["View"], {
@@ -69443,7 +69435,7 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/a
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 234
+          lineNumber: 232
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_7__["Text"], {
@@ -69452,7 +69444,7 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/a
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 237
+          lineNumber: 235
         },
         __self: this
       }, item.is_active === "y" ? "Aktif" : "Non-Aktif", "\xA0 \u2022 \xA0"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_7__["Text"], {
@@ -69462,13 +69454,13 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/a
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 241
+          lineNumber: 239
         },
         __self: this
       }, item.data ? "Data diri tersedia" : "Tanpa data diri")))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_7__["View"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 252
+          lineNumber: 250
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_7__["Text"], {
@@ -69479,7 +69471,7 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/a
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 253
+          lineNumber: 251
         },
         __self: this
       }, "NSA: ", item.nsa), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_7__["Text"], {
@@ -69490,14 +69482,14 @@ var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/a
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 262
+          lineNumber: 260
         },
         __self: this
       }, "NISN: ", item.nisn))));
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 177
+      lineNumber: 175
     },
     __self: this
   }));
@@ -69532,7 +69524,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _KewajibanDetail__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./KewajibanDetail */ "./pages/app/screens/admin/Kewajiban/KewajibanDetail.tsx");
 
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/admin/Kewajiban/Kewajiban.tsx";
+var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/app/screens/admin/Kewajiban/Kewajiban.tsx";
 
 
 
@@ -69731,7 +69723,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/admin/Kewajiban/KewajibanDetail.tsx";
+var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/app/screens/admin/Kewajiban/KewajibanDetail.tsx";
 
 
 
@@ -70160,7 +70152,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _PengumumanDetail__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./PengumumanDetail */ "./pages/app/screens/admin/Pengumuman/PengumumanDetail.tsx");
 
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/admin/Pengumuman/Pengumuman.tsx";
+var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/app/screens/admin/Pengumuman/Pengumuman.tsx";
 
 
 
@@ -70353,7 +70345,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/admin/Pengumuman/PengumumanDetail.tsx";
+var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/app/screens/admin/Pengumuman/PengumumanDetail.tsx";
 
 
 
@@ -70630,7 +70622,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-native-web */ "./node_modules/react-native-web/dist/index.js");
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/admin/SideBar.tsx";
+var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/app/screens/admin/SideBar.tsx";
 
 
 
@@ -70815,7 +70807,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/admin/Transaksi/Transaksi.tsx";
+var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/app/screens/admin/Transaksi/Transaksi.tsx";
 
 
 
@@ -71025,7 +71017,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-native-web */ "./node_modules/react-native-web/dist/index.js");
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/admin/Transaksi/TransaksiDetail.tsx";
+var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/app/screens/admin/Transaksi/TransaksiDetail.tsx";
 
 
 
@@ -71240,7 +71232,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/siswa/Kewajiban/Kewajiban.tsx";
+var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/app/screens/siswa/Kewajiban/Kewajiban.tsx";
 
 
 
@@ -71468,7 +71460,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/siswa/Kewajiban/KewajibanDetail.tsx";
+var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/app/screens/siswa/Kewajiban/KewajibanDetail.tsx";
 
 
 
@@ -71708,7 +71700,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/siswa/Pengumuman/Pengumuman.tsx";
+var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/app/screens/siswa/Pengumuman/Pengumuman.tsx";
 
 
 
@@ -71865,7 +71857,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-native-web */ "./node_modules/react-native-web/dist/index.js");
 
-var _jsxFileName = "/Volumes/Data/Projects/edumatis-rnwa/web/pages/app/screens/siswa/SideBar.tsx";
+var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/app/screens/siswa/SideBar.tsx";
 
 
 
@@ -72182,25 +72174,25 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 0:
-/*!**************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FVolumes%2FData%2FProjects%2Fedumatis-rnwa%2Fweb%2Fpages%2Findex.js ***!
-  \**************************************************************************************************************************************/
+/*!*************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2Fmedia%2Friz%2Fdata%2FProjects%2Fedumatis%2Fweb%2Fpages%2Findex.js ***!
+  \*************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=%2FVolumes%2FData%2FProjects%2Fedumatis-rnwa%2Fweb%2Fpages%2Findex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FVolumes%2FData%2FProjects%2Fedumatis-rnwa%2Fweb%2Fpages%2Findex.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=%2Fmedia%2Friz%2Fdata%2FProjects%2Fedumatis%2Fweb%2Fpages%2Findex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2Fmedia%2Friz%2Fdata%2FProjects%2Fedumatis%2Fweb%2Fpages%2Findex.js!./");
 
 
 /***/ }),
 
-/***/ "dll-reference dll_7aff549c98b978433226":
+/***/ "dll-reference dll_829b10deddf10e1653a8":
 /*!*******************************************!*\
-  !*** external "dll_7aff549c98b978433226" ***!
+  !*** external "dll_829b10deddf10e1653a8" ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = dll_7aff549c98b978433226;
+module.exports = dll_829b10deddf10e1653a8;
 
 /***/ })
 
