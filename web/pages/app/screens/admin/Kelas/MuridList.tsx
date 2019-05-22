@@ -5,6 +5,7 @@ import UIListItem from "@app/libs/ui/UIListItem";
 import { observer, useObservable } from "mobx-react-lite";
 import React from "react";
 import { Text, View, TouchableOpacity } from "react-native";
+import { toJS } from "mobx";
 
 export default observer(
   (data: { kelas: any; list: any[]; loading: boolean; navigation: any }) => {
@@ -36,7 +37,7 @@ export default observer(
               alignItems: "center"
             }}
           >
-            {meta.checked.length > 0 && (
+            {false && meta.checked.length > 0 && (
               <UIButton
                 size="small"
                 fill="outline"
@@ -66,6 +67,80 @@ export default observer(
                 paddingTop: 2,
                 paddingBottom: 2,
                 paddingHorizontal: 0
+              }}
+              onPress={() => {
+                let hasDetail = true;
+                const list = toJS(data.list);
+                list.forEach(item => {
+                  if (!item.detail || !item.detail.nik) {
+                    hasDetail = false;
+                  }
+                });
+
+                const header: any = [];
+                const finalList: any = [];
+                if (hasDetail) {
+                  list.forEach(item => {
+                    if (item.detail && item.detail.nik) {
+                      if (header.length === 0) {
+                        for (let i in item.detail) {
+                          header.push(i);
+                        }
+                        finalList.push(header);
+                      }
+                      const newitem = [];
+                      for (let i in item.detail) {
+                        newitem.push(item[i]);
+                      }
+                      finalList.push(newitem);
+                    }
+                  });
+                } else {
+                  list.forEach(item => {
+                    if (header.length === 0) {
+                      header.push("nisn");
+                      header.push("nsa");
+                      header.push("nama_lengkap");
+                      header.push("tgl_lahir");
+                      finalList.push(header);
+                    }
+                    const newitem = [];
+                    newitem.push(item.nisn);
+                    newitem.push(item.nsa);
+                    newitem.push(item.nama_murid);
+                    newitem.push(item.tgl_lahir);
+                    finalList.push(newitem);
+                  });
+                }
+
+                var finalVal = "";
+                for (var i = 0; i < finalList.length; i++) {
+                  var value = finalList[i];
+
+                  for (var j = 0; j < value.length; j++) {
+                    var innerValue =
+                      value[j] === null ? "" : value[j].toString();
+                    var result = innerValue.replace(/"/g, '""');
+                    if (result.search(/("|,|\n)/g) >= 0)
+                      result = '"' + result + '"';
+                    if (j > 0) finalVal += ",";
+                    finalVal += result;
+                  }
+
+                  finalVal += "\n";
+                }
+                var pom = document.createElement("a");
+                var csvContent = finalVal; //here we load our csv data
+                var blob = new Blob([csvContent], {
+                  type: "text/csv;charset=utf-8;"
+                });
+                var url = URL.createObjectURL(blob);
+                pom.href = url;
+                pom.setAttribute(
+                  "download",
+                  `Kelas_${data.kelas.nama_kelas.replace(/[\W_]+/g, "_")}.csv`
+                );
+                pom.click();
               }}
             >
               <UIImage
