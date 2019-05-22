@@ -110,34 +110,28 @@ const Kewajiban = observer(({ navigation }: any) => {
                 }  
               }`
               );
-
               data.list = result.kewajiban.map((item: any) => {
-                let nominal = item.nominal;
                 Object.keys(item.kelas).forEach((i: any) => {
                   const k = item.kelas[i];
-                  if (k.nominal !== undefined) {
-                    nominal = k.nominal;
+                  if (
+                    kelas.indexOf(k.id + "") >= 0 &&
+                    k.nominal !== undefined
+                  ) {
+                    item.nominal = k.nominal * 1;
                   }
                   k.murid.forEach((m: any) => {
                     if (m && session.murid && m.id === session.murid.id) {
                       if (m.nominal !== undefined) {
-                        nominal = m.nominal;
+                        item.nominal = m.nominal * 1;
                       }
                     }
                   });
-                  item.nominal = nominal;
                 });
 
-                item.status = item.nominal === 0 ? "Lunas" : "Belum Lunas";
+                item.status = "Belum Lunas";
                 item.transaksi.forEach((t: any) => {
-                  if (item.tipe_pembayaran === "Insidentil") {
-                    if (t.status === "success") {
-                      item.status = "Lunas";
-                    }
-                  } else {
-                    if (t.status === "success") {
-                      item.status = "Lunas";
-                    }
+                  if (t.paid === "success") {
+                    item.status = "Lunas";
                   }
                 });
 

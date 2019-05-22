@@ -1,43 +1,28 @@
-import rawQuery from "@app/libs/queries/crud/rawQuery";
 import UIBody from "@app/libs/ui/UIBody";
 import UICol from "@app/libs/ui/UICol";
 import UIContainer from "@app/libs/ui/UIContainer";
 import UIHead from "@app/libs/ui/UIHead";
 import UIRow from "@app/libs/ui/UIRow";
 import { observer, useObservable } from "mobx-react-lite";
-import React, { useEffect } from "react";
-import UIJson from "@app/libs/ui/UIJson";
+import React from "react";
+import { Text } from "react-native";
 
 export default observer(({ navigation }: any) => {
   const data = useObservable({
     form: navigation.getParam("item")
   });
   const item = data.form;
-  useEffect(() => {
-    if (data.form.id) {
-      rawQuery(`
-      {
-        transaksi(where: {id: {_eq: ${data.form.id}}}) {
-          detail
-          paid
-        }
-      }
-    `).then((res: any) => {
-        if (res.transaksi.length > 0) {
-          data.form.detail = res.transaksi[0].detail;
-          data.form.paid = res.transaksi[0].paid;
-        }
-      });
-    }
-  }, []);
-
+  const nominal = parseInt(item.amount || item.nominal || 0);
+  let status = (item.paid || item.detail || item.status).toLowerCase();
+  if (status === "paid") status = "success";
+  
   return (
     <UIContainer>
       <UIHead
         navigation={navigation}
-        title={`#${item.id} ${item.kewajiban.nama_kewajiban} - Rp ${(
-          item.nominal || 0
-        ).toLocaleString()}`}
+        title={`#${item.id} ${
+          item.kewajiban.nama_kewajiban
+        } - Rp ${nominal.toLocaleString()}`}
         onBack={() => {
           navigation.goBack();
         }}
@@ -56,10 +41,25 @@ export default observer(({ navigation }: any) => {
             Kelas:
           </UICol>
           <UICol size={11} sizexs={8} sizemd={8}>
-            {item.murid.kelas_murids[0].kelas.nama_kelas}
+            {item.murid.kelas_murids[0].kelas.nama_kelas || "Semua Kelas"}
           </UICol>
         </UIRow>
-        {data.form.detail && <UIJson data={data.form.detail} />}
+        <UIRow>
+          <UICol size={1} sizexs={4} sizemd={4}>
+            Nominal:
+          </UICol>
+          <UICol size={11} sizexs={8} sizemd={8}>
+            <Text>Rp {nominal.toLocaleString()}</Text>
+          </UICol>
+        </UIRow>
+        <UIRow>
+          <UICol size={1} sizexs={4} sizemd={4}>
+            Status:
+          </UICol>
+          <UICol size={11} sizexs={8} sizemd={8}>
+            {status}
+          </UICol>
+        </UIRow>
       </UIBody>
     </UIContainer>
   );

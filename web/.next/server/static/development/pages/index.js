@@ -5507,7 +5507,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _MuridDetailSide__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./MuridDetailSide */ "./pages/app/screens/admin/Kelas/MuridDetailSide.tsx");
 /* harmony import */ var _libs_ui_UIButton__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../libs/ui/UIButton */ "./pages/app/libs/ui/UIButton.tsx");
 /* harmony import */ var _MuridDetail__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./MuridDetail */ "./pages/app/screens/admin/Kelas/MuridDetail.tsx");
-/* harmony import */ var _libs_ui_UIJson__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../../libs/ui/UIJson */ "./pages/app/libs/ui/UIJson.tsx");
+/* harmony import */ var _libs_ui_UIJson__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../../libs/ui/UIJson */ "./pages/app/libs/ui/UIJson.tsx");
 
 
 
@@ -5603,7 +5603,7 @@ var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/app/screens/admi
       lineNumber: 49
     },
     __self: this
-  }, data.form.data ? react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_libs_ui_UIJson__WEBPACK_IMPORTED_MODULE_13__["default"], {
+  }, data.form.data ? react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_libs_ui_UIJson__WEBPACK_IMPORTED_MODULE_12__["default"], {
     data: data.form.data,
     __source: {
       fileName: _jsxFileName,
@@ -6679,7 +6679,7 @@ var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/app/screens/admi
         __self: this
       }, "Rp ", _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(kelas.nominal).toLocaleString(), " ");
     },
-    renderKelas: function renderKelas(kelas) {
+    renderKelas: function renderKelas(kelas, k) {
       return react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_17__["View"], {
         __source: {
           fileName: _jsxFileName,
@@ -6687,7 +6687,7 @@ var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/app/screens/admi
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(_libs_ui_UIFieldText__WEBPACK_IMPORTED_MODULE_12__["default"], {
-        label: "Nominal untuk semua murid kelas ini",
+        label: "Nominal untuk murid kelas ".concat(k.nama_kelas),
         value: kelas.nominal,
         setValue: function setValue(value) {
           kelas.nominal = value;
@@ -7993,35 +7993,26 @@ var Kewajiban = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_13__["observer"]
             case 12:
               result = _context.sent;
               data.list = result.kewajiban.map(function (item) {
-                var nominal = item.nominal;
-
                 _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_1___default()(item.kelas).forEach(function (i) {
                   var k = item.kelas[i];
 
-                  if (k.nominal !== undefined) {
-                    nominal = k.nominal;
+                  if (kelas.indexOf(k.id + "") >= 0 && k.nominal !== undefined) {
+                    item.nominal = k.nominal * 1;
                   }
 
                   k.murid.forEach(function (m) {
                     if (m && session.murid && m.id === session.murid.id) {
                       if (m.nominal !== undefined) {
-                        nominal = m.nominal;
+                        item.nominal = m.nominal * 1;
                       }
                     }
                   });
-                  item.nominal = nominal;
                 });
 
-                item.status = item.nominal === 0 ? "Lunas" : "Belum Lunas";
+                item.status = "Belum Lunas";
                 item.transaksi.forEach(function (t) {
-                  if (item.tipe_pembayaran === "Insidentil") {
-                    if (t.status === "success") {
-                      item.status = "Lunas";
-                    }
-                  } else {
-                    if (t.status === "success") {
-                      item.status = "Lunas";
-                    }
+                  if (t.paid === "success") {
+                    item.status = "Lunas";
                   }
                 });
                 return item;
@@ -8480,17 +8471,24 @@ dayjs__WEBPACK_IMPORTED_MODULE_9___default.a.extend(dayjs_plugin_relativeTime__W
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/objectSpread */ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectSpread.js");
-/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../config */ "./pages/app/config.ts");
-/* harmony import */ var _libs_nav_NavContainer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../libs/nav/NavContainer */ "./pages/app/libs/nav/NavContainer.tsx");
-/* harmony import */ var _libs_ui_UIImage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../libs/ui/UIImage */ "./pages/app/libs/ui/UIImage.tsx");
-/* harmony import */ var _stores_RootStore__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../stores/RootStore */ "./pages/app/stores/RootStore.ts");
-/* harmony import */ var mobx_react_lite__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! mobx-react-lite */ "mobx-react-lite");
-/* harmony import */ var mobx_react_lite__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(mobx_react_lite__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-native-web */ "react-native-web");
-/* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_native_web__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
+/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/objectSpread */ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectSpread.js");
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../config */ "./pages/app/config.ts");
+/* harmony import */ var _libs_nav_NavContainer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../libs/nav/NavContainer */ "./pages/app/libs/nav/NavContainer.tsx");
+/* harmony import */ var _libs_ui_UIImage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../libs/ui/UIImage */ "./pages/app/libs/ui/UIImage.tsx");
+/* harmony import */ var _stores_RootStore__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../stores/RootStore */ "./pages/app/stores/RootStore.ts");
+/* harmony import */ var mobx_react_lite__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! mobx-react-lite */ "mobx-react-lite");
+/* harmony import */ var mobx_react_lite__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(mobx_react_lite__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-native-web */ "react-native-web");
+/* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react_native_web__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _libs_queries_user_getsetSession__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../libs/queries/user/getsetSession */ "./pages/app/libs/queries/user/getsetSession.ts");
+/* harmony import */ var _libs_queries_crud_rawQuery__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../libs/queries/crud/rawQuery */ "./pages/app/libs/queries/crud/rawQuery.ts");
+
+
 
 var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/app/screens/siswa/SideBar.tsx";
 
@@ -8500,20 +8498,22 @@ var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/app/screens/sisw
 
 
 
-var Button = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_5__["observer"])(function (props) {
-  return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_7__["TouchableOpacity"], {
+
+
+var Button = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_7__["observer"])(function (props) {
+  return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_9__["TouchableOpacity"], {
     onPress: props.onPress,
-    style: Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props.style, {
+    style: Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_2__["default"])({}, props.style, {
       flexDirection: "row",
       alignItems: "center",
       alignContent: "center"
     }),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 14
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_libs_ui_UIImage__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_libs_ui_UIImage__WEBPACK_IMPORTED_MODULE_5__["default"], {
     style: {
       width: 20,
       margin: 10,
@@ -8522,41 +8522,89 @@ var Button = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_5__["observer"])(fu
     source: props.image,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 23
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_7__["Text"], {
+  }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_9__["Text"], {
     style: {
-      color: _config__WEBPACK_IMPORTED_MODULE_1__["default"].color.mainText
+      color: _config__WEBPACK_IMPORTED_MODULE_3__["default"].color.mainText
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 31
     },
     __self: this
   }, props.text));
 });
-/* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
+/* harmony default export */ __webpack_exports__["default"] = (Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_7__["observer"])(function (_ref) {
   var navigation = _ref.navigation;
-  var navigateTo = Object(_libs_nav_NavContainer__WEBPACK_IMPORTED_MODULE_2__["createNavigateTo"])(navigation);
-  return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_7__["View"], {
+  var navigateTo = Object(_libs_nav_NavContainer__WEBPACK_IMPORTED_MODULE_4__["createNavigateTo"])(navigation);
+  var data = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_7__["useObservable"])({
+    session: {
+      murid: {}
+    },
+    kelas: {}
+  });
+  Object(react__WEBPACK_IMPORTED_MODULE_8__["useEffect"])(function () {
+    var load =
+    /*#__PURE__*/
+    function () {
+      var _ref2 = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])(
+      /*#__PURE__*/
+      _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+        var kelas;
+        return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.next = 2;
+                return Object(_libs_queries_user_getsetSession__WEBPACK_IMPORTED_MODULE_10__["getSession"])();
+
+              case 2:
+                data.session = _context.sent;
+                _context.next = 5;
+                return Object(_libs_queries_crud_rawQuery__WEBPACK_IMPORTED_MODULE_11__["default"])("{\n        kelas_murid(where: {murid_id: {_eq: ".concat(data.session.murid.id, "}}) {\n          kelas {\n            nama_kelas\n          }\n        }\n      }\n      "));
+
+              case 5:
+                kelas = _context.sent;
+
+                if (kelas.kelas_murid.length > 0) {
+                  data.kelas = kelas.kelas_murid[0].kelas;
+                }
+
+              case 7:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }));
+
+      return function load() {
+        return _ref2.apply(this, arguments);
+      };
+    }();
+
+    load();
+  }, []);
+  return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_9__["View"], {
     style: s.container,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 64
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_7__["View"], {
+  }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_9__["View"], {
     style: {
       alignItems: "center",
       justifyContent: "center"
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 65
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_libs_ui_UIImage__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_libs_ui_UIImage__WEBPACK_IMPORTED_MODULE_5__["default"], {
     source: __webpack_require__(/*! ../../imgs/logo.png */ "./pages/app/imgs/logo.png"),
     mobileStyle: {
       height: 160
@@ -8568,19 +8616,74 @@ var Button = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_5__["observer"])(fu
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 71
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_7__["View"], {
+  })), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_9__["View"], {
+    style: {
+      borderTopColor: "#8F7DD8",
+      borderTopWidth: 1,
+      marginBottom: 15
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 83
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_9__["Text"], {
+    style: {
+      padding: 10,
+      paddingVertical: 2,
+      color: "white"
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 84
+    },
+    __self: this
+  }, "NSA: ", data.session.murid.nsa), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_9__["Text"], {
+    style: {
+      padding: 10,
+      paddingVertical: 2,
+      color: "white"
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 87
+    },
+    __self: this
+  }, "Nama: ", data.session.murid.nama_murid), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_9__["Text"], {
+    style: {
+      padding: 10,
+      paddingVertical: 2,
+      color: "white"
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 90
+    },
+    __self: this
+  }, "Kelas: ", data.kelas.nama_kelas), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_9__["View"], {
+    style: {
+      borderTopColor: "#8F7DD8",
+      borderTopWidth: 1,
+      marginVertical: 15
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 93
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_9__["View"], {
     style: {
       flex: 1
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 94
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(Button, {
+  }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(Button, {
     text: "Kewajiban",
     onPress: function onPress() {
       navigateTo("Kewajiban");
@@ -8588,10 +8691,10 @@ var Button = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_5__["observer"])(fu
     image: __webpack_require__(/*! ../../imgs/kewajiban.png */ "./pages/app/imgs/kewajiban.png"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 95
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(Button, {
+  }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(Button, {
     text: "Pengumuman",
     onPress: function onPress() {
       navigateTo("Pengumuman");
@@ -8599,32 +8702,32 @@ var Button = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_5__["observer"])(fu
     image: __webpack_require__(/*! ../../imgs/pengumuman.png */ "./pages/app/imgs/pengumuman.png"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 102
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(Button, {
+  }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(Button, {
     text: "Logout",
     style: {
       marginTop: 20
     },
     image: __webpack_require__(/*! ../../imgs/logout.png */ "./pages/app/imgs/logout.png"),
     onPress: function onPress() {
-      _stores_RootStore__WEBPACK_IMPORTED_MODULE_4__["RootStore"].session.logout();
+      _stores_RootStore__WEBPACK_IMPORTED_MODULE_6__["RootStore"].session.logout();
       navigation.popToTop();
       navigation.replace("Login");
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 110
     },
     __self: this
   })));
-});
-var s = react_native_web__WEBPACK_IMPORTED_MODULE_7__["StyleSheet"].create({
+}));
+var s = react_native_web__WEBPACK_IMPORTED_MODULE_9__["StyleSheet"].create({
   container: {
     flex: 1,
     flexWrap: "wrap",
-    backgroundColor: _config__WEBPACK_IMPORTED_MODULE_1__["default"].color.main
+    backgroundColor: _config__WEBPACK_IMPORTED_MODULE_3__["default"].color.main
   }
 });
 

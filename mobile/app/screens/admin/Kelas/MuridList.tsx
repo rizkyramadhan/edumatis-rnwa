@@ -5,6 +5,7 @@ import UIListItem from "@app/libs/ui/UIListItem";
 import { observer, useObservable } from "mobx-react-lite";
 import React from "react";
 import { Text, View, TouchableOpacity } from "react-native";
+import { toJS } from "mobx";
 
 export default observer(
   (data: { kelas: any; list: any[]; loading: boolean; navigation: any }) => {
@@ -36,7 +37,7 @@ export default observer(
               alignItems: "center"
             }}
           >
-            {meta.checked.length > 0 && (
+            {false && meta.checked.length > 0 && (
               <UIButton
                 size="small"
                 fill="outline"
@@ -66,6 +67,78 @@ export default observer(
                 paddingTop: 2,
                 paddingBottom: 2,
                 paddingHorizontal: 0
+              }}
+              onPress={() => {
+                let hasDetail = false;
+                const list = toJS(data.list);
+                list.forEach(item => {
+                  if (item.data && item.data.nik) {
+                    hasDetail = true;
+                  }
+                });
+
+                const header: any = [];
+                const finalList: any = [];
+
+                header.push("nisn");
+                header.push("nsa");
+                header.push("nama_lengkap");
+                header.push("tgl_lahir");
+
+                if (hasDetail) {
+                  list.forEach(item => {
+                    if (item.data && item.data.nik) {
+                      for (let i in item.data) {
+                        header.push(i);
+                      }
+                    }
+                  });
+                }
+
+                finalList.push(header);
+                list.forEach(item => {
+                  const row = [];
+                  row.push(item["nisn"]);
+                  row.push(item["nsa"]);
+                  row.push(item["nama_murid"]);
+                  row.push(item["tgl_lahir"]);
+                  if (item.data && item.data.nik) {
+                    for (let i in item.data) {
+                      row.push(item.data[i]);
+                    }
+                  }
+                  finalList.push(row);
+                });
+                console.log(finalList);
+
+                var finalVal = "";
+                for (var i = 0; i < finalList.length; i++) {
+                  var value = finalList[i];
+
+                  for (var j = 0; j < value.length; j++) {
+                    var innerValue =
+                      value[j] === null ? "" : value[j].toString();
+                    var result = innerValue.replace(/"/g, '""');
+                    if (result.search(/("|,|\n)/g) >= 0)
+                      result = '"' + result + '"';
+                    if (j > 0) finalVal += ",";
+                    finalVal += result;
+                  }
+
+                  finalVal += "\n";
+                }
+                var pom = document.createElement("a");
+                var csvContent = finalVal; //here we load our csv data
+                var blob = new Blob([csvContent], {
+                  type: "text/csv;charset=utf-8;"
+                });
+                var url = URL.createObjectURL(blob);
+                pom.href = url;
+                pom.setAttribute(
+                  "download",
+                  `Kelas_${data.kelas.nama_kelas.replace(/[\W_]+/g, "_")}.csv`
+                );
+                pom.click();
               }}
             >
               <UIImage

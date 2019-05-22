@@ -185,11 +185,11 @@ export default observer(({ navigation }: any) => {
           renderKelasTitle={(kelas: any) => (
             <Text>Rp {parseInt(kelas.nominal).toLocaleString()} </Text>
           )}
-          renderKelas={(kelas: any) => {
+          renderKelas={(kelas: any, k: any) => {
             return (
               <View>
                 <UIFieldText
-                  label="Nominal untuk semua murid kelas ini"
+                  label={`Nominal untuk murid kelas ${k.nama_kelas}`}
                   value={kelas.nominal}
                   setValue={(value: any) => {
                     kelas.nominal = value;

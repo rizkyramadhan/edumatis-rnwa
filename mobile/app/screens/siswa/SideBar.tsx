@@ -2,9 +2,12 @@ import config from "@app/config";
 import { createNavigateTo } from "@app/libs/nav/NavContainer";
 import UIImage from "@app/libs/ui/UIImage";
 import { RootStore } from "@app/stores/RootStore";
-import { observer } from "mobx-react-lite";
-import React from "react";
+import { observer, useObservable } from "mobx-react-lite";
+import React, { useEffect } from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { getSession } from "@app/libs/queries/user/getsetSession";
+import rawQuery from "@app/libs/queries/crud/rawQuery";
+import { toJS } from "mobx";
 
 const Button = observer((props: any) => {
   return (
@@ -30,8 +33,32 @@ const Button = observer((props: any) => {
   );
 });
 
-export default ({ navigation }: any) => {
+export default observer(({ navigation }: any) => {
   const navigateTo = createNavigateTo(navigation);
+  const data = useObservable({
+    session: {
+      murid: {}
+    },
+    kelas: {}
+  });
+
+  useEffect(() => {
+    const load = async function() {
+      data.session = await getSession();
+      let kelas = await rawQuery(`{
+        kelas_murid(where: {murid_id: {_eq: ${data.session.murid.id}}}) {
+          kelas {
+            nama_kelas
+          }
+        }
+      }
+      `);
+      if (kelas.kelas_murid.length > 0) {
+        data.kelas = kelas.kelas_murid[0].kelas;
+      }
+    };
+    load();
+  }, []);
 
   return (
     <View style={s.container}>
@@ -53,6 +80,17 @@ export default ({ navigation }: any) => {
           }}
         />
       </View>
+      <View style={{ borderTopColor: "#8F7DD8", borderTopWidth: 1,marginBottom:15 }} />
+      <Text style={{ padding: 10, paddingVertical: 2, color: "white" }}>
+        NSA: {data.session.murid.nsa}
+      </Text>
+      <Text style={{ padding: 10, paddingVertical: 2, color: "white" }}>
+        Nama: {data.session.murid.nama_murid}
+      </Text>
+      <Text style={{ padding: 10, paddingVertical: 2, color: "white" }}>
+        Kelas: {data.kelas.nama_kelas}
+      </Text>
+      <View style={{ borderTopColor: "#8F7DD8", borderTopWidth: 1,marginVertical:15 }} />
       <View style={{ flex: 1 }}>
         <Button
           text="Kewajiban"
@@ -82,7 +120,7 @@ export default ({ navigation }: any) => {
       </View>
     </View>
   );
-};
+});
 
 const s = StyleSheet.create({
   container: {
