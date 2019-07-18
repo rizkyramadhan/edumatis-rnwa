@@ -8,7 +8,9 @@ module.exports = {
         alias: {
           "@app": "./app"
         }
-      }
+      },
+
+     // "transform-es2015-modules-amd",
     ]
   ]
 };

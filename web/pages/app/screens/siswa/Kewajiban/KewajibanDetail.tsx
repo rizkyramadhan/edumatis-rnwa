@@ -50,8 +50,8 @@ export default observer(({ navigation }: any) => {
         var params: any = {
           external_id: transaksi.id,
           payer_email: session.murid.email || `j@edumatis.id`,
-          description: data.form.nama_kewajiban,
-          amount: data.form.nominal
+          description: `${session.sekolah.nama} - ${session.kelas.nama} - ${session.murid.nama_murid} - ${data.form.nama_kewajiban}`,
+          amount: parseInt(data.form.nominal) + parseInt(session.sekolah.margin) 
         };
 
         var myHeaders = new Headers();

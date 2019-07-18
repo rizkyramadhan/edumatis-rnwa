@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([["b6f5"],{lVTf:function(n,w,p){(window.__NEXT_P=window.__NEXT_P||[]).push(["/app/libs/ui/Style",function(){var n=p("cjKJ");return{page:n.default||n}}])}},[["lVTf","5d41","9da1"]]]);
