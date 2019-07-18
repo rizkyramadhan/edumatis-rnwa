@@ -639,7 +639,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   user: {
     login_columns: ["nsa", "nama_murid"],
-    columns: ["id", "nisn", "nsa", "nama_murid", "password", "email"]
+    columns: ["id", "nisn", "nsa", "nama_murid", "password", "email", "sekolah_id"]
   },
   color: {
     main: "#613EEA",
@@ -4258,40 +4258,42 @@ var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/app/screens/Logi
     style: {
       backgroundColor: "#fff"
     },
-    contentContainerStyle: {
-      alignItems: "center",
-      paddingTop: 100,
-      maxWidth: 800,
-      justifyContent: "center",
-      alignSelf: "center",
-      minWidth: 430
-    },
     __source: {
       fileName: _jsxFileName,
       lineNumber: 54
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_libs_ui_UIImage__WEBPACK_IMPORTED_MODULE_7__["default"], {
-    source: __webpack_require__(/*! ../imgs/logob.png */ "./pages/app/imgs/logob.png"),
-    mobileStyle: {
-      height: 120,
-      marginBottom: 20
-    },
+  }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_11__["View"], {
     style: {
-      width: 200
+      alignSelf: "center",
+      flexBasis: "100%",
+      minWidth: 400
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 59
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_libs_ui_UIImage__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    source: __webpack_require__(/*! ../imgs/logob.png */ "./pages/app/imgs/logob.png"),
+    mobileStyle: {
+      height: 150,
+      marginBottom: -10
+    },
+    style: {
+      width: 200,
+      alignSelf: "center",
+      marginTop: 50
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 60
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_libs_ui_UIFieldText__WEBPACK_IMPORTED_MODULE_6__["default"], {
     label: "ID Sekolah",
     sublabel: meta.sekolah,
     value: data.sekolah_id,
-    style: {
-      width: "70%"
-    },
     setValue: function setValue(value) {
       return data.sekolah_id = value;
     },
@@ -4339,16 +4341,13 @@ var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/app/screens/Logi
     })),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 65
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_libs_ui_UIFieldText__WEBPACK_IMPORTED_MODULE_6__["default"], {
     label: "Nomor Induk / NSA",
     sublabel: meta.murid,
     value: data.nsa,
-    style: {
-      width: "70%"
-    },
     setValue: function setValue(value) {
       return data.nsa = value;
     },
@@ -4389,7 +4388,7 @@ var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/app/screens/Logi
     })),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92
+      lineNumber: 84
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_libs_ui_UIFieldText__WEBPACK_IMPORTED_MODULE_6__["default"], {
@@ -4399,18 +4398,12 @@ var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/app/screens/Logi
     setValue: function setValue(value) {
       return data.password = value;
     },
-    style: {
-      width: "70%"
-    },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 110
+      lineNumber: 101
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_libs_ui_UIButton__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    style: {
-      width: "50%"
-    },
     onPress:
     /*#__PURE__*/
     Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])(
@@ -4453,10 +4446,10 @@ var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/app/screens/Logi
     })),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 117
+      lineNumber: 107
     },
     __self: this
-  }, "Login"));
+  }, "Login")));
 }));
 
 /***/ }),
@@ -7806,6 +7799,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _SideBar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SideBar */ "./pages/app/screens/siswa/SideBar.tsx");
 /* harmony import */ var _libs_nav_SideNav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../libs/nav/SideNav */ "./pages/app/libs/nav/SideNav.tsx");
 /* harmony import */ var _Pengumuman_Pengumuman__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Pengumuman/Pengumuman */ "./pages/app/screens/siswa/Pengumuman/Pengumuman.tsx");
+/* harmony import */ var _UbahPassword__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./UbahPassword */ "./pages/app/screens/siswa/UbahPassword.tsx");
+
 
 
 
@@ -7816,6 +7811,9 @@ __webpack_require__.r(__webpack_exports__);
   },
   Pengumuman: {
     screen: _Pengumuman_Pengumuman__WEBPACK_IMPORTED_MODULE_3__["default"]
+  },
+  UbahPassword: {
+    screen: _UbahPassword__WEBPACK_IMPORTED_MODULE_4__["default"]
   }
 }, {
   contentComponent: _SideBar__WEBPACK_IMPORTED_MODULE_1__["default"]
@@ -8638,7 +8636,7 @@ var Button = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_7__["observer"])(fu
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84
+      lineNumber: 90
     },
     __self: this
   }, "NSA: ", data.session.murid.nsa), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_9__["Text"], {
@@ -8649,7 +8647,7 @@ var Button = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_7__["observer"])(fu
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87
+      lineNumber: 93
     },
     __self: this
   }, "Nama: ", data.session.murid.nama_murid), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_9__["Text"], {
@@ -8660,10 +8658,35 @@ var Button = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_7__["observer"])(fu
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 90
+      lineNumber: 96
     },
     __self: this
-  }, "Kelas: ", data.kelas.nama_kelas), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_9__["View"], {
+  }, "Kelas: ", data.kelas.nama_kelas), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_9__["TouchableOpacity"], {
+    style: {
+      marginTop: 10,
+      marginLeft: 3
+    },
+    onPress: function onPress() {
+      navigateTo("UbahPassword");
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 99
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_9__["Text"], {
+    style: {
+      padding: 7,
+      paddingVertical: 2,
+      color: "white",
+      fontSize: 11
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 105
+    },
+    __self: this
+  }, "Ubah Password")), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_9__["View"], {
     style: {
       borderTopColor: "#8F7DD8",
       borderTopWidth: 1,
@@ -8671,7 +8694,7 @@ var Button = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_7__["observer"])(fu
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93
+      lineNumber: 116
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_9__["View"], {
@@ -8680,7 +8703,7 @@ var Button = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_7__["observer"])(fu
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 123
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(Button, {
@@ -8691,7 +8714,7 @@ var Button = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_7__["observer"])(fu
     image: __webpack_require__(/*! ../../imgs/kewajiban.png */ "./pages/app/imgs/kewajiban.png"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 95
+      lineNumber: 124
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(Button, {
@@ -8702,7 +8725,7 @@ var Button = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_7__["observer"])(fu
     image: __webpack_require__(/*! ../../imgs/pengumuman.png */ "./pages/app/imgs/pengumuman.png"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 102
+      lineNumber: 131
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(Button, {
@@ -8718,7 +8741,7 @@ var Button = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_7__["observer"])(fu
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 110
+      lineNumber: 139
     },
     __self: this
   })));
@@ -8730,6 +8753,221 @@ var s = react_native_web__WEBPACK_IMPORTED_MODULE_9__["StyleSheet"].create({
     backgroundColor: _config__WEBPACK_IMPORTED_MODULE_3__["default"].color.main
   }
 });
+
+/***/ }),
+
+/***/ "./pages/app/screens/siswa/UbahPassword.tsx":
+/*!**************************************************!*\
+  !*** ./pages/app/screens/siswa/UbahPassword.tsx ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
+/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var _libs_ui_UIBody__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../libs/ui/UIBody */ "./pages/app/libs/ui/UIBody.tsx");
+/* harmony import */ var _libs_ui_UIButton__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../libs/ui/UIButton */ "./pages/app/libs/ui/UIButton.tsx");
+/* harmony import */ var _libs_ui_UIContainer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../libs/ui/UIContainer */ "./pages/app/libs/ui/UIContainer.tsx");
+/* harmony import */ var _libs_ui_UIFieldText__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../libs/ui/UIFieldText */ "./pages/app/libs/ui/UIFieldText.tsx");
+/* harmony import */ var _libs_ui_UIHead__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../libs/ui/UIHead */ "./pages/app/libs/ui/UIHead.tsx");
+/* harmony import */ var mobx_react_lite__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! mobx-react-lite */ "mobx-react-lite");
+/* harmony import */ var mobx_react_lite__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(mobx_react_lite__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-native-web */ "react-native-web");
+/* harmony import */ var react_native_web__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react_native_web__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _libs_queries_user_getsetSession__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../libs/queries/user/getsetSession */ "./pages/app/libs/queries/user/getsetSession.ts");
+/* harmony import */ var _libs_queries_crud_updateRecord__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../libs/queries/crud/updateRecord */ "./pages/app/libs/queries/crud/updateRecord.ts");
+/* harmony import */ var _libs_queries_user_hashPassword__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../libs/queries/user/hashPassword */ "./pages/app/libs/queries/user/hashPassword.ts");
+
+
+var _jsxFileName = "/media/riz/data/Projects/edumatis/web/pages/app/screens/siswa/UbahPassword.tsx";
+
+
+
+
+
+
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_7__["observer"])(function (_ref) {
+  var navigation = _ref.navigation;
+  var data = Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_7__["useObservable"])({
+    new1: "",
+    new2: "",
+    old: "",
+    loading: false
+  });
+  return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_libs_ui_UIContainer__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_libs_ui_UIHead__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    navigation: navigation,
+    title: "Ubah Password",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_libs_ui_UIBody__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_libs_ui_UIFieldText__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    type: "password",
+    label: "Password Lama",
+    value: data.old,
+    setValue: function setValue(value) {
+      return data.old = value;
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_libs_ui_UIFieldText__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    type: "password",
+    label: "Password Baru",
+    value: data.new1,
+    setValue: function setValue(value) {
+      return data.new1 = value;
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_libs_ui_UIFieldText__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    type: "password",
+    label: "Ulangi Password Baru",
+    value: data.new2,
+    setValue: function setValue(value) {
+      return data.new2 = value;
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
+    },
+    __self: this
+  }), data.loading ? react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_native_web__WEBPACK_IMPORTED_MODULE_9__["Text"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 46
+    },
+    __self: this
+  }, "Loading...") : react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_libs_ui_UIButton__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    onPress:
+    /*#__PURE__*/
+    Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])(
+    /*#__PURE__*/
+    _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+      var a, session, response, res;
+      return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              a = react_native_web__WEBPACK_IMPORTED_MODULE_9__["Platform"].OS === "web" ? alert : react_native_web__WEBPACK_IMPORTED_MODULE_9__["Alert"].alert;
+              _context.next = 3;
+              return Object(_libs_queries_user_getsetSession__WEBPACK_IMPORTED_MODULE_10__["getSession"])();
+
+            case 3:
+              session = _context.sent;
+
+              if (!(!data.new1 || !data.new2 || !data.old)) {
+                _context.next = 7;
+                break;
+              }
+
+              a("Mohon isi password dengan lengkap");
+              return _context.abrupt("return", false);
+
+            case 7:
+              if (!(data.new1 !== data.new2)) {
+                _context.next = 10;
+                break;
+              }
+
+              a("Password tidak sama ");
+              return _context.abrupt("return", false);
+
+            case 10:
+              data.loading = true;
+              _context.next = 13;
+              return fetch("https://backend.cap.edumatis.id", {
+                method: "GET",
+                headers: {
+                  "Content-Type": "application/json",
+                  "X-Hasura-Username": session.murid.nsa,
+                  "X-Hasura-Password": data.old,
+                  "X-Hasura-Cid": session.murid.sekolah_id + ""
+                }
+              });
+
+            case 13:
+              response = _context.sent;
+              _context.next = 16;
+              return response.json();
+
+            case 16:
+              res = _context.sent;
+              console.log(res, {
+                "Content-Type": "application/json",
+                "X-Hasura-Username": session.murid.nsa,
+                "X-Hasura-Password": data.old,
+                "X-Hasura-Cid": session.murid.sekolah_id + ""
+              });
+
+              if (!(res["X-Hasura-Role"] !== "anonymous")) {
+                _context.next = 26;
+                break;
+              }
+
+              _context.next = 21;
+              return Object(_libs_queries_crud_updateRecord__WEBPACK_IMPORTED_MODULE_11__["default"])("murid", {
+                id: session.murid.id,
+                password: data.new1
+              });
+
+            case 21:
+              _context.next = 23;
+              return Object(_libs_queries_user_hashPassword__WEBPACK_IMPORTED_MODULE_12__["hashPassword"])(session.murid.id);
+
+            case 23:
+              a("Password berhasil di-ubah!");
+              _context.next = 27;
+              break;
+
+            case 26:
+              a("Password lama salah");
+
+            case 27:
+              data.loading = false;
+
+            case 28:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    })),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 48
+    },
+    __self: this
+  }, "Ubah Password")));
+}));
 
 /***/ }),
 
@@ -8892,7 +9130,7 @@ var UserRecord = Object(_libs_utils_Record__WEBPACK_IMPORTED_MODULE_0__["default
     username: mobx_state_tree__WEBPACK_IMPORTED_MODULE_1__["types"].optional(mobx_state_tree__WEBPACK_IMPORTED_MODULE_1__["types"].string, ""),
     password: mobx_state_tree__WEBPACK_IMPORTED_MODULE_1__["types"].maybeNull(mobx_state_tree__WEBPACK_IMPORTED_MODULE_1__["types"].string),
     role: mobx_state_tree__WEBPACK_IMPORTED_MODULE_1__["types"].optional(mobx_state_tree__WEBPACK_IMPORTED_MODULE_1__["types"].string, "sales"),
-    client_id: mobx_state_tree__WEBPACK_IMPORTED_MODULE_1__["types"].optional(mobx_state_tree__WEBPACK_IMPORTED_MODULE_1__["types"].integer, 0),
+    sekolah_id: mobx_state_tree__WEBPACK_IMPORTED_MODULE_1__["types"].optional(mobx_state_tree__WEBPACK_IMPORTED_MODULE_1__["types"].integer, 0),
     status: mobx_state_tree__WEBPACK_IMPORTED_MODULE_1__["types"].optional(mobx_state_tree__WEBPACK_IMPORTED_MODULE_1__["types"].string, "active")
   }
 });

@@ -10,6 +10,7 @@
     "update": "cd init && node update.js",
     "web": "cd web && yarn dev",
     "mobile": "cd mobile  && yarn start",
+    "bundle": "cd mobile && react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/",
     "android": "cd mobile &&  react-native run-android",
     "sync": "cd init && node sync.js"
   }

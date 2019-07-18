@@ -9,7 +9,7 @@ export const UserRecord = Record({
     username: types.optional(types.string, ""),
     password: types.maybeNull(types.string),
     role: types.optional(types.string, "sales"),
-    client_id: types.optional(types.integer, 0),
+    sekolah_id: types.optional(types.integer, 0),
     status: types.optional(types.string, "active")
   },
 });

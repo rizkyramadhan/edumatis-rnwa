@@ -55,88 +55,78 @@ export default observer(({ navigation }: any) => {
       style={{
         backgroundColor: "#fff"
       }}
-      contentContainerStyle={{
-        alignItems: "center",
-        paddingTop: 100,
-        maxWidth: 800,
-        justifyContent: "center",
-        alignSelf: "center",
-        minWidth: 430
-      }}
     >
-      <UIImage
-        source={require("@app/imgs/logob.png")}
-        mobileStyle={{ height: 120, marginBottom: 20 }}
-        style={{ width: 200 }}
-      />
-      <UIFieldText
-        label="ID Sekolah"
-        sublabel={meta.sekolah}
-        value={data.sekolah_id}
-        style={{ width: "70%" }}
-        setValue={(value: string) => (data.sekolah_id = value)}
-        onBlur={async () => {
-          try {
-            let res = await query("sekolah", ["nama_sekolah"], {
-              where: { id: parseInt(data.sekolah_id) },
+      <View style={{ alignSelf: "center", flexBasis: "100%", minWidth:400 }}>
+        <UIImage
+          source={require("@app/imgs/logob.png")}
+          mobileStyle={{ height: 150, marginBottom: -10 }}
+          style={{ width: 200, alignSelf: "center", marginTop:50 }} 
+        />
+        <UIFieldText
+          label="ID Sekolah"
+          sublabel={meta.sekolah}
+          value={data.sekolah_id}
+          setValue={(value: string) => (data.sekolah_id = value)}
+          onBlur={async () => {
+            try {
+              let res = await query("sekolah", ["nama_sekolah"], {
+                where: { id: parseInt(data.sekolah_id) },
+                useSession: false
+              });
+              if (res && res.nama_sekolah) {
+                meta.sekolah = res.nama_sekolah;
+              } else {
+                meta.sekolah = "Sekolah tidak ditemukan";
+              }
+            } catch (e) {}
+          }}
+        />
+        <UIFieldText
+          label="Nomor Induk / NSA"
+          sublabel={meta.murid}
+          value={data.nsa}
+          setValue={(value: string) => (data.nsa = value)}
+          onBlur={async () => {
+            let res = await query("murid", ["nama_murid"], {
+              where: { sekolah_id: parseInt(data.sekolah_id), nsa: data.nsa },
               useSession: false
             });
-            if (res && res.nama_sekolah) {
-              meta.sekolah = res.nama_sekolah;
+            if (res && res.nama_murid) {
+              meta.murid = "Nama: " + res.nama_murid;
             } else {
-              meta.sekolah = "Sekolah tidak ditemukan";
+              meta.murid = "Nomor Induk tidak ditemukan";
             }
-          } catch (e) {}
-        }}
-      />
-      <UIFieldText
-        label="Nomor Induk / NSA"
-        sublabel={meta.murid}
-        value={data.nsa}
-        style={{ width: "70%" }}
-        setValue={(value: string) => (data.nsa = value)}
-        onBlur={async () => {
-          let res = await query("murid", ["nama_murid"], {
-            where: { sekolah_id: parseInt(data.sekolah_id), nsa: data.nsa },
-            useSession: false
-          });
-          if (res && res.nama_murid) {
-            meta.murid = "Nama: " + res.nama_murid;
-          } else {
-            meta.murid = "Nomor Induk tidak ditemukan";
-          }
-        }}
-      />
-      <UIFieldText
-        type="password"
-        label="Password"
-        value={data.password}
-        setValue={(value: string) => (data.password = value)}
-        style={{ width: "70%" }}
-      />
-      <UIButton
-        style={{ width: "50%" }}
-        onPress={async () => {
-          meta.loading = true;
-          let session = await (RootStore.session as any).login(
-            data.sekolah_id,
-            data.nsa,
-            data.password
-          );
+          }}
+        />
+        <UIFieldText
+          type="password"
+          label="Password"
+          value={data.password}
+          setValue={(value: string) => (data.password = value)}
+        />
+        <UIButton
+          onPress={async () => {
+            meta.loading = true;
+            let session = await (RootStore.session as any).login(
+              data.sekolah_id,
+              data.nsa,
+              data.password
+            );
 
-          if (session && session.murid && session.murid.nsa) {
-            if (session.murid.nsa === "admin") {
-              navigation.replace("Admin");
-            } else {
-              navigation.replace("Siswa");
+            if (session && session.murid && session.murid.nsa) {
+              if (session.murid.nsa === "admin") {
+                navigation.replace("Admin");
+              } else {
+                navigation.replace("Siswa");
+              }
+              return;
             }
-            return;
-          }
-          meta.loading = false;
-        }}
-      >
-        Login
-      </UIButton>
+            meta.loading = false;
+          }}
+        >
+          Login
+        </UIButton>
+      </View>
     </ScrollView>
   );
 });

@@ -80,7 +80,13 @@ export default observer(({ navigation }: any) => {
           }}
         />
       </View>
-      <View style={{ borderTopColor: "#8F7DD8", borderTopWidth: 1,marginBottom:15 }} />
+      <View
+        style={{
+          borderTopColor: "#8F7DD8",
+          borderTopWidth: 1,
+          marginBottom: 15
+        }}
+      />
       <Text style={{ padding: 10, paddingVertical: 2, color: "white" }}>
         NSA: {data.session.murid.nsa}
       </Text>
@@ -90,7 +96,30 @@ export default observer(({ navigation }: any) => {
       <Text style={{ padding: 10, paddingVertical: 2, color: "white" }}>
         Kelas: {data.kelas.nama_kelas}
       </Text>
-      <View style={{ borderTopColor: "#8F7DD8", borderTopWidth: 1,marginVertical:15 }} />
+      <TouchableOpacity
+        style={{ marginTop: 10, marginLeft: 3 }}
+        onPress={() => {
+          navigateTo("UbahPassword");
+        }}
+      >
+        <Text
+          style={{
+            padding: 7,
+            paddingVertical: 2,
+            color: "white",
+            fontSize: 11
+          }}
+        >
+          Ubah Password
+        </Text>
+      </TouchableOpacity>
+      <View
+        style={{
+          borderTopColor: "#8F7DD8",
+          borderTopWidth: 1,
+          marginVertical: 15
+        }}
+      />
       <View style={{ flex: 1 }}>
         <Button
           text="Kewajiban"

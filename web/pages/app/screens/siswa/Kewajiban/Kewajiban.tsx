@@ -126,7 +126,7 @@ const Kewajiban = observer(({ navigation }: any) => {
                       }
                     }
                   });
-                });
+                }); 
 
                 item.status = "Belum Lunas";
                 item.transaksi.forEach((t: any) => {
