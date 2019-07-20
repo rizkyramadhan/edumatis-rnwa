@@ -70,6 +70,7 @@ const Kewajiban = observer(({ navigation }: any) => {
                 .startOf("month")
                 .subtract(1, "day")
                 .format("YYYY-MM-DD");
+                
               const monthEnd = dayjs()
                 .endOf("month")
                 .add(1, "day")
@@ -110,6 +111,7 @@ const Kewajiban = observer(({ navigation }: any) => {
                 }  
               }`
               );
+
               data.list = result.kewajiban.map((item: any) => {
                 Object.keys(item.kelas).forEach((i: any) => {
                   const k = item.kelas[i];
